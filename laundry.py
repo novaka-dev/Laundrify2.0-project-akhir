@@ -1,5 +1,11 @@
-print("vaka gantent")
-print("adli yg pertama ganzs, adli kw jlk")
-
-for i in range(1,21):
-    print("adli ganteng",i)
+print("****************************************************")
+print("                     ★ LAUNDRIFY ★                 ")
+print("****************************************************")
+print("                    ✦  Kelompok 2  ✦             ")
+print("----------------------------------------------------")
+print("   -Muhamad Adli Akbar                              ")
+print("   -Novaka Rizky Heny Saputra                       ")
+print("   -Restu Aji Prasetyo                              ")
+print("   -Rifky Al Adli                                   ")
+print("   -Arya Luqmannul Hakim                            ")
+print("****************************************************")
