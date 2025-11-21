@@ -4,104 +4,104 @@ Panduan ini dibuat agar semua kolaborator dapat bekerja secara
 **tertata, aman, dan tidak menimpa pekerjaan satu sama lain.**\
 Gunakan README ini sebagai pedoman utama saat bekerja di repository ini.
 
-------------------------------------------------------------------------
+---
 
-# 🚀 1. Clone Repository (Hanya Pertama Kali)
+## 🚀 1. Clone Repository (Hanya Pertama Kali)
 
-``` bash
+```bash
 git clone https://github.com/novaka-dev/Laundrify2.0-project-akhir.git
 cd Laundrify2.0-project-akhir
 ```
 
-------------------------------------------------------------------------
+---
 
-# 🔄 2. Workflow Diagram (Alur Kerja Kolaborator)
+## 🔄 2. Workflow Diagram (Alur Kerja Kolaborator)
 
               ┌──────────────┐
-              │   git pull   │   ← ambil update terbaru
+              │   git pull  │   ← ambil update terbaru
               └──────┬───────┘
                      │
           ┌──────────▼───────────┐
-          │   Buat / Masuk Branch │
+          │   Buat / Masuk Branch│
           └──────────┬───────────┘
                      │
               ┌──────▼───────┐
-              │     Coding    │
+              │     Coding   │
               └──────┬───────┘
                      │
              ┌───────▼────────┐
-             │  git add .      │
-             │  git commit -m  │
+             │  git add .     │
+             │  git commit -m │
              └───────┬────────┘
                      │
              ┌───────▼────────┐
-             │   git push      │
+             │   git push     │
              └───────┬────────┘
                      │
              ┌───────▼──────────────┐
-             │  Pull Request (PR)    │ ← merge ke main
+             │  Pull Request (PR)   │ ← merge ke main
              └──────────────────────┘
 
-------------------------------------------------------------------------
+---
 
-# 🌿 3. Cara Kerja Menggunakan Branch (Sangat Direkomendasikan)
+## 🌿 3. Cara Kerja Menggunakan Branch (Sangat Direkomendasikan)
 
 Agar kode aman dan tidak bentrok, setiap kolaborator **WAJIB bekerja di
 branch masing-masing.**
 
-## ✔️ Buat branch baru (pertama kali)
+### ✔️ Buat branch baru (pertama kali)
 
-``` bash
+```bash
 git checkout -b fitur-transaksi
 ```
 
-## ✔️ Pindah ke branch yang sudah ada
+### ✔️ Pindah ke branch yang sudah ada
 
-``` bash
+```bash
 git checkout fitur-transaksi
 ```
 
-## ✔️ Cek branch yang aktif
+### ✔️ Cek branch yang aktif
 
-``` bash
+```bash
 git branch
 ```
 
-------------------------------------------------------------------------
+---
 
-# 🔄 4. WAJIB: git pull Sebelum Mulai Kerja
+## 🔄 4. WAJIB: git pull Sebelum Mulai Kerja
 
 Selalu lakukan ini supaya branch kalian up-to-date:
 
-``` bash
+```bash
 git pull origin main
 ```
 
-------------------------------------------------------------------------
+---
 
-# ✏️ 5. Add → Commit → Push (Langkah Kerja Harian)
+## ✏️ 5. Add → Commit → Push (Langkah Kerja Harian)
 
-## ✔️ Add file yang berubah
+### ✔️ Add file yang berubah
 
-``` bash
+```bash
 git add .
 ```
 
-## ✔️ Commit perubahan
+### ✔️ Commit perubahan
 
-``` bash
+```bash
 git commit -m "deskripsi perubahan yang jelas"
 ```
 
-## ✔️ Push ke branch masing-masing
+### ✔️ Push ke branch masing-masing
 
-``` bash
+```bash
 git push origin nama-branch-kamu
 ```
 
-------------------------------------------------------------------------
+---
 
-# 🔃 6. Buat Pull Request (PR) untuk Merge ke Main
+## 🔃 6. Buat Pull Request (PR) untuk Merge ke Main
 
 Setelah push:
 
@@ -110,17 +110,17 @@ Setelah push:
 3.  Isi deskripsi PR\
 4.  Klik **Create Pull Request**
 
-------------------------------------------------------------------------
+---
 
-# ⚠️ 7. Aturan Penting Kolaborasi
+## ⚠️ 7. Aturan Penting Kolaborasi
 
--   Jangan coding tanpa git pull dulu\
--   Jangan push langsung ke main\
--   Semua perubahan harus lewat branch → PR\
--   Commit harus jelas & deskriptif\
--   Jangan ubah file orang tanpa izin
+- Jangan coding tanpa git pull dulu\
+- Jangan push langsung ke main\
+- Semua perubahan harus lewat branch → PR\
+- Commit harus jelas & deskriptif\
+- Jangan ubah file orang tanpa izin
 
-------------------------------------------------------------------------
+---
 
 # 🎉 8. Selesai!
 
