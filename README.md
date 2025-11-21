@@ -18,7 +18,7 @@ cd Laundrify2.0-project-akhir
 ## 🔄 2. Workflow Diagram (Alur Kerja Kolaborator)
 
               ┌──────────────┐
-              │   git pull  │   ← ambil update terbaru
+              │   git pull   │   ← ambil update terbaru
               └──────┬───────┘
                      │
           ┌──────────▼───────────┐
