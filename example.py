@@ -15,27 +15,26 @@ Main features:
 """
 
 import os
-  import json
-  import uuid
-  import datetime
-  from typing import List, Dict, Any
+import json
+import uuid
+import datetime
+from typing import List, Dict, Any
 
-  DATA_DIR = "data_laundry"
-  SERVICES_FILE = os.path.join(DATA_DIR, "services.json")
-  CUSTOMERS_FILE = os.path.join(DATA_DIR, "customers.json")
-  ORDERS_FILE = os.path.join(DATA_DIR, "orders.json")
-  RECEIPT_DIR = os.path.join(DATA_DIR, "receipts")
+DATA_DIR = "data_laundry"
+SERVICES_FILE = os.path.join(DATA_DIR, "services.json")
+CUSTOMERS_FILE = os.path.join(DATA_DIR, "customers.json")
+ORDERS_FILE = os.path.join(DATA_DIR, "orders.json")
+RECEIPT_DIR = os.path.join(DATA_DIR, "receipts")
 
-
-  def ensure_data_dir():
-      if not os.path.exists(DATA_DIR):
-          os.makedirs(DATA_DIR)
-      if not os.path.exists(RECEIPT_DIR):
-          os.makedirs(RECEIPT_DIR)
-      for path in (SERVICES_FILE, CUSTOMERS_FILE, ORDERS_FILE):
-          if not os.path.exists(path):
-              with open(path, "w") as f:
-                json.dump([], f)
+def ensure_data_dir():
+    if not os.path.exists(DATA_DIR):
+        os.makedirs(DATA_DIR)
+    if not os.path.exists(RECEIPT_DIR):
+        os.makedirs(RECEIPT_DIR)
+    for path in (SERVICES_FILE, CUSTOMERS_FILE, ORDERS_FILE):
+        if not os.path.exists(path):
+            with open(path, "w") as f:
+             json.dump([], f)
 
 
 def load_json(path):
