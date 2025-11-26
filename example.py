@@ -252,7 +252,7 @@ def update_order_status():
         expected = datetime.date.fromisoformat(o["expected_ready"])
         late_days = (today - expected).days
         late_days = late_days if late_days > 0 else 0
-        late_fee = late_days * o.get("late_fee_per_day", 0.0)
+        late_fee = late_days * o.get("late_fee_per_day", 0.0) 
         o["tanggal_delivered"] = today.isoformat()
         o["status"] = "DELIVERED"
         if late_fee > 0:

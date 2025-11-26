@@ -32,3 +32,7 @@ print("****************************************************")
 print("testubgf")
 for i in range(5):
   print(i)
+
+x = 10
+if x < 10 : 
+  print("testt")
