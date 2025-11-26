@@ -1,20 +1,19 @@
-print("****************************************************")
-print("                    ✦  Kelompok 2  ✦             ")
-print("----------------------------------------------------")
-print("   -Muhamad Adli Akbar                              ")
-print("   -Novaka Rizky Heny Saputra                       ")
-print("   -Restu Aji Prasetyo                              ")
-print("   -Rifky Al Adli                                   ")
-print("   -Arya Luqmannul Hakim                            ")
-print("****************************************************")
+# print("****************************************************")
+# print("                    ✦  Kelompok 2  ✦             ")
+# print("----------------------------------------------------")
+# print("   -Muhamad Adli Akbar                              ")
+# print("   -Novaka Rizky Heny Saputra                       ")
+# print("   -Restu Aji Prasetyo                              ")
+# print("   -Rifky Al Adli                                   ")
+# print("   -Arya Luqmannul Hakim                            ")
+# print("****************************************************")
+
+
 print("                     ★ LAUNDRIFY ★                 ")
 print("****************************************************")
-
-def main_menu():
-    menu = {
-        "1" : ("Tambah Layanan Service "),
-        "2" : ("Lihat layanan"),
-        "3" : ("Tambah pelanggan "),
-    }
-
-main_menu()
+print(f"{"Kode":8} {"Nama Layanan":25} {"Harga/kg":15} {"Estimasi":15}")
+print("-" * 63)
+print(f"{"SV-CG":8} {"Cuci + Gosok (Reguler)":25} {"Rp10.000":15} {"2":15}")
+print(f"{"SV-EX":8} {"Cuci + Gosok (Express)":25} {"Rp15.000":15} {"1":15}")
+print(f"{"SV-C":8} {"Cuci Kering":25} {"Rp8.000":15} {"2":15}")
+print("-" * 63)

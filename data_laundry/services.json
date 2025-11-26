@@ -1,8 +1,20 @@
 [
   {
-    "kode": "SV-d2763a12",
-    "nama": "cuci + gosok express",
-    "harga_per_kg": 20000.0,
+    "kode": "SV-CG",
+    "nama": "Cuci + Gosok (Reguler)",
+    "harga_per_kg": 10000.0,
+    "est_days": 2
+  },
+  {
+    "kode": "SV-EX",
+    "nama": "Cuci + Gosok (Express)",
+    "harga_per_kg": 15000.0,
     "est_days": 1
+  },
+  {
+    "kode": "SV-C",
+    "nama": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "est_days": 2
   }
 ]
