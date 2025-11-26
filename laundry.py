@@ -26,4 +26,5 @@ print("6.  Update Status Order")
 print("7.  Pembayaran Order")
 print("8.  Laporan Pendapatan")
 print("9.  Laporan Pending")
-print("10.  Cetak Struk") #Ini mau disatuin sama menu ke-7 atau kaga?
+print("10. Cetak Struk") #Ini mau disatuin sama menu ke-7 atau kaga?
+print("0.  Keluar Program")
