@@ -42,3 +42,9 @@ i = 0
 while i < 5:
   print(i)
   i += 1
+
+
+def perkalian(a,b):
+  return a*b
+
+print(10,20)
