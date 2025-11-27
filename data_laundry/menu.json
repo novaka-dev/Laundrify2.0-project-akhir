@@ -1,0 +1,12 @@
+{
+  "kiloan": {
+    "reguler": 8000,
+    "expres": 12000,
+    "super_express": 17000
+  },
+  "satuan": {
+    "selimut": 30000,
+    "bed cover": 40000,
+    "bantal": 25000
+  }
+}

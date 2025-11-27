@@ -8,6 +8,14 @@
 # print("   -Arya Luqmannul Hakim                            ")
 # print("****************************************************")
 
+import os
+import json
+
+DATA_DIR = "data_laundry"
+MENU_FILE = os.path.join(DATA_DIR, "menu.json")
+
+with open(MENU_FILE, "r") as file:
+    menu = json.load(file)
 
 print("                     ★ LAUNDRIFY ★                 ")
 print("****************************************************")
@@ -29,22 +37,17 @@ print("9.  Laporan Pending")
 print("10.  Cetak Struk") #Ini mau disatuin sama menu ke-7 atau kaga?
 
 print("****************************************************")
-print("testubgf")
-for i in range(5):
-  print(i)
-
-x = 10
-if x < 10 :
-  print("testt")
-print("testubgf")
-print("testubgf")
-i = 0
-while i < 5:
-  print(i)
-  i += 1
 
 
-def perkalian(a,b):
-  return a*b
+# function menuu 
+def menu_laundry():
+  print("ini yang kiloan")
+  for name, price in menu["kiloan"].items():
+    print(f"- {name} : Rp {price:,}")
 
-print(10,20)
+  print("ini yang satuan")
+  for name, price in menu["satuan"].items():
+    print(f"- {name} : Rp {price:,}")
+  
+
+menu_laundry()
