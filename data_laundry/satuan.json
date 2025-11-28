@@ -1,0 +1,32 @@
+[
+  {
+    "kode": "1",
+    "nama": "Karpet",
+    "harga_per_kg": 50000.0,
+    "est_days": "5 hari"
+  },
+  {
+    "kode": "2",
+    "nama": "Jas",
+    "harga_per_kg": 25000.0,
+    "est_days":"3 hari"
+  },
+  {
+    "kode": "3",
+    "nama": "Bed Cover",
+    "harga_per_kg": 30000.0,
+    "est_days":"3 hari"
+  },
+  {
+    "kode": "4",
+    "nama": "Selimut",
+    "harga_per_kg": 25000.0,
+    "est_days":"3 hari"
+  },
+  {
+    "kode": "5",
+    "nama": "Boneka",
+    "harga_per_kg": 20000.0,
+    "est_days":"3 hari"
+  }
+]
