@@ -14,16 +14,12 @@ keluar = True
 while keluar:
     print("                     ★ LAUNDRIFY ★                 ")
     print("****************************************************")
-    print("1.  Tambah Pelanggan")
-    print("2.  Lihat Pelanggan")
-    print("3.  Buat Order")
-    print("4.  Lihat Daftar Order")
-    print("5.  Lihat Detail Order")
-    print("6.  Update Status Order")
-    print("7.  Pembayaran Order")
-    print("8.  Laporan Pendapatan")
-    print("9.  Laporan Pending")
-    print("10. Cetak Struk") #Ini mau disatuin sama menu ke-7 atau kaga?
+    print("1.  Buat Order")
+    print("2.  Lihat Detail Order")
+    print("3.  Pembayaran Order")
+    print("4.  Tambah Layanan")
+    print("5.  Edit Layanan")
+    print("6.  Laporan Pendapatan")
     print("0.  Keluar Program")
     menu = int(input("Pilih Menu:"))
     #Tambah Pelanggan
