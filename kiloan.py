@@ -18,7 +18,7 @@ def kiloan():
     for item in data:
         print(f'{item["kode"]}. {item["nama"]:<31} Rp{item["harga_per_kg"]:<10,.0f}  {item["est_days"]}')
     print("-"* 58)
-    
+
     while True:
             pilihan = input("masukan input layanan : ")
 
@@ -43,7 +43,7 @@ def kiloan():
                 continue
 
             break
-        
+
         except ValueError:
             print("harus angka contoh 2/3")
 
@@ -64,12 +64,16 @@ def kiloan():
     save_data(FILE_ORDER, data)
 
     return order
-transaksi = kiloan()
 
-print(f"layanan     : {transaksi['layanan']}")
-print(f"Berat       : {transaksi['berat']}")
-print(f"Harga/kg    : Rp{transaksi['harga_per_kg']}")
-print(f"Total Bayar : {transaksi['total_harga']}")
-print(f"estimasi    : {transaksi['estimasi']}")
+def print_ringkasan_kiloan(transaksi):
+    print("\n===== RINGKASAN ORDER (KILOAN) =====")
+    print(f"Jenis Layanan : {transaksi['layanan']}")
+    print(f"Berat         : {transaksi['berat']} kg")
+    print(f"Harga / kg    : Rp{transaksi['harga_per_kg']:,}")
+    print(f"Total Harga   : Rp{transaksi['total_harga']:,}")
+    print(f"Estimasi      : {transaksi['estimasi']}")
+    print("====================================\n")
 
 # tanggal_received = datetime.date.today()
+
+
