@@ -1,5 +1,15 @@
 from manage_data import data_json, save_data, FILE_KILOAN, FILE_ORDER
+import datetime
 
+def list_customers():
+    customers = load_json(CUSTOMERS_FILE)
+    if not customers:
+        print("Belum ada pelanggan.")
+        return
+    print(f"{'ID':10} {'Nama':25} {'Phone':15}")
+    print("-"*55)
+    for c in customers:
+        print(f"{c['id']:10} {c['name'][:25]:25} {c.get('phone','')[:15]:15}")
 def kiloan():
     data = data_json(FILE_KILOAN)
 
@@ -38,13 +48,16 @@ def kiloan():
             print("harus angka contoh 2/3")
 
     total = kg * item["harga_per_kg"]
-
+    stats = ["Proses", "Selesai", "Diantar", "Diterima"]
+    today = datetime.date.today().isoformat()
     order = {
         "layanan": item["nama"],
         "harga_per_kg": item["harga_per_kg"],
         "estimasi": item["est_days"],
         "berat": kg,
-        "total_harga": total
+        "total_harga": total,
+        "tanggal_diterima": today,
+        "status": stats[0]
     }
     data = data_json(FILE_ORDER)
     data.append(order)
@@ -58,3 +71,5 @@ print(f"Berat       : {transaksi['berat']}")
 print(f"Harga/kg    : Rp{transaksi['harga_per_kg']}")
 print(f"Total Bayar : {transaksi['total_harga']}")
 print(f"estimasi    : {transaksi['estimasi']}")
+
+# tanggal_received = datetime.date.today()
