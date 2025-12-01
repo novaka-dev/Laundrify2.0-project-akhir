@@ -1,16 +1,11 @@
-import os
-import json
+from manage_data import data_json, save_data, FILE_KILOAN, FILE_ORDER
 
-DATA_DIR = "data_laundry"
-MENU_FILE = os.path.join(DATA_DIR, "kiloan.json")
+def kiloan():
+    data = data_json(FILE_KILOAN)
 
-with open(MENU_FILE, "r", encoding="utf-8") as file:
-    data_kiloan = json.load(file)
-
-def kiloan(data):
     print(f"{"kode":8} {"Nama Layanan":25} {"Harga/kg":13} {"Estimasi":13}")
     print("-"* 58)
-    for item in data_kiloan:
+    for item in data:
         print(f'{item["kode"]}. {item["nama"]:<31} Rp{item["harga_per_kg"]:<10,.0f}  {item["est_days"]}')
     print("-"* 58)
     
@@ -44,15 +39,19 @@ def kiloan(data):
 
     total = kg * item["harga_per_kg"]
 
-    return{
+    order = {
         "layanan": item["nama"],
         "harga_per_kg": item["harga_per_kg"],
         "estimasi": item["est_days"],
         "berat": kg,
         "total_harga": total
     }
+    data = data_json(FILE_ORDER)
+    data.append(order)
+    save_data(FILE_ORDER, data)
 
-transaksi = kiloan(data_kiloan)
+    return order
+transaksi = kiloan()
 
 print(f"layanan     : {transaksi['layanan']}")
 print(f"Berat       : {transaksi['berat']}")
