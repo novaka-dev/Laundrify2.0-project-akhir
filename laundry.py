@@ -41,7 +41,7 @@ while keluar:
       # Layanan Satuan
       elif kategori == 2:
           transaksi = satuan()
-          print_ringkasan_satuan(transaksi)
+          
 
 
       else:

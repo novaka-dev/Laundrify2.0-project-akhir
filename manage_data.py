@@ -1,5 +1,5 @@
 import os
-import json 
+import json
 import uuid
 DATA_DIR = "data_laundry"
 FILE_KILOAN = os.path.join(DATA_DIR, "kiloan.json")
@@ -10,9 +10,9 @@ FILE_ORDER = os.path.join(DATA_DIR, "orders1.json")
 def data_manage():
     os.makedirs(DATA_DIR, exist_ok=True)
 
-    for f in (FILE_KILOAN, FILE_SATUAN, FILE_ORDER):
-        if not os.path.exists(f):
-            with open(f , "w") as file:
+    for path in (FILE_KILOAN, FILE_SATUAN, FILE_ORDER):
+        if not os.path.exists(path):
+            with open(path , "w") as file:
                 json.dump([], file)
 
 def data_json(path):

@@ -95,4 +95,3 @@ def print_ringkasan_kiloan(transaksi):
     print(f"Total Harga   : Rp{transaksi['total_harga']:,}")
     print(f"Estimasi      : {transaksi['estimasi']}")
     print("====================================\n")
-add_customer()

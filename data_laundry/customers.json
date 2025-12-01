@@ -1,28 +1,14 @@
 [
   {
-    "id": "CU-demo01",
-    "name": "Budi Santoso",
-    "phone": "081234567890"
-  },
-  {
-    "id": "CU-b20dbd9f",
-    "name": "restu",
-    "phone": "098089"
-  },
-  {
-    "id": "CU-9371a9ae",
-    "name": "Restu",
-    "phone": "089637756829"
-  },
-  {
-    "id": "CU-a3ce8609",
-    "name": "Restu",
-    "phone": "0894"
-  },
-  {
     "id": "CU-1406729b",
     "name": "Vaya",
     "phone": "0897564383445",
     "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+  },
+  {
+    "id": "CU-a7520dc0",
+    "name": "asdasd",
+    "phone": "322323",
+    "address": "asdassd"
   }
 ]
