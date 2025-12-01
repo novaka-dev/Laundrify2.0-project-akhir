@@ -1,15 +1,42 @@
-from manage_data import data_json, save_data, FILE_KILOAN, FILE_ORDER
+from manage_data import * #data_json, save_data, FILE_KILOAN, FILE_ORDER, FILE_CUSTOMER
 import datetime
+import json
+import uuid
+def load_json(path):
+    with open(path, "r") as f:
+        try:
+            return json.load(f)
+        except json.JSONDecodeError:
+            return []
+
+
+def add_customer():
+    customers = load_json(FILE_CUSTOMER)
+    name = input("Nama pelanggan: ").strip()
+    if not name:
+        print("Nama wajib diisi.")
+        return
+    phone = input("No. HP (opsional): ").strip()
+    address = input("Alamat: ").strip()
+    existing = next((c for c in customers if c["name"].lower()==name.lower() and c.get("phone","")==phone and c["address"]==address), None)
+    if existing:
+        print("Pelanggan sudah terdaftar:", existing["id"])
+        return
+    cid = gen_id("CU")
+    customers.append({"id": cid, "name": name, "phone": phone, "address": address})
+    save_json(CUSTOMERS_FILE, customers)
+    print(f"Pelanggan berhasil ditambahkan. ID: {cid}")
+
 
 def list_customers():
-    customers = load_json(CUSTOMERS_FILE)
+    customers = load_json(FILE_CUSTOMER)
     if not customers:
         print("Belum ada pelanggan.")
         return
-    print(f"{'ID':10} {'Nama':25} {'Phone':15}")
+    print(f"{'ID':10} {'Nama':25} {'No.Telp':15} {'Alamat':15}")
     print("-"*55)
     for c in customers:
-        print(f"{c['id']:10} {c['name'][:25]:25} {c.get('phone','')[:15]:15}")
+        print(f"{c['id']:10} {c['name'][:25]:25} {c.get('phone','')[:15]:15} {c['address'][:25]:25}")
 def kiloan():
     data = data_json(FILE_KILOAN)
 
@@ -73,7 +100,4 @@ def print_ringkasan_kiloan(transaksi):
     print(f"Total Harga   : Rp{transaksi['total_harga']:,}")
     print(f"Estimasi      : {transaksi['estimasi']}")
     print("====================================\n")
-
-# tanggal_received = datetime.date.today()
-
-
+add_customer()
