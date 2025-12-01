@@ -1,0 +1,23 @@
+==============================
+     NOTA LAUNDRY KILOAN
+==============================
+ID Order      : OR-0ee31f39
+Nama Customer : ARYA VAYA ADLI ADLI RESTU
+Layanan       : Cuci + Gosok (Express) (SV-EX)
+Berat         : 2.9 kg
+Harga/kg      : Rp 15.000
+Subtotal      : Rp 43.500
+
+Denda/Lainnya : Rp 0
+Total Bayar   : Rp 43.500
+Bayar         : Rp 50.000
+Kembalian      : Rp 6.500
+
+Tanggal Terima  : 2025-11-24
+Estimasi Selesai: 2025-11-25
+Tanggal Diambil  : 2025-11-24
+
+Status: DELIVERED & PAID
+==============================
+   TERIMA KASIH, SEMOGA HARI ANDA MENYENANGKAN!
+==============================

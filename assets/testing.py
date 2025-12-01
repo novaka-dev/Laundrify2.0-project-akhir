@@ -51,3 +51,11 @@ def menu_laundry():
   
 
 menu_laundry()
+if kategori == 7 :
+  print("ini yang kiloan")
+  for name, price in menu["kiloan"].items():
+    print(f"- {name} : Rp {price:,}")
+
+  print("ini yang satuan")
+  for name, price in menu["satuan"].items():
+    print(f"- {name} : Rp {price:,}")
