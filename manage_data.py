@@ -1,9 +1,10 @@
 import os
 import json 
-
+import uuid
 DATA_DIR = "data_laundry"
 FILE_KILOAN = os.path.join(DATA_DIR, "kiloan.json")
 FILE_SATUAN = os.path.join(DATA_DIR, "satuan.json")
+FILE_CUSTOMER = os.path.join(DATA_DIR, "customers.json")
 FILE_ORDER = os.path.join(DATA_DIR, "orders1.json")
 
 def data_manage():

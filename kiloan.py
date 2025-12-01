@@ -2,16 +2,14 @@ from manage_data import * #data_json, save_data, FILE_KILOAN, FILE_ORDER, FILE_C
 import datetime
 import json
 import uuid
-def load_json(path):
-    with open(path, "r") as f:
-        try:
-            return json.load(f)
-        except json.JSONDecodeError:
-            return []
-
-
+# def load_json(path):
+#     with open(path, "r") as f:
+#         try:
+#             return json.load(f)
+#         except json.JSONDecodeError:
+#             return []
 def add_customer():
-    customers = load_json(FILE_CUSTOMER)
+    customers = data_json(FILE_CUSTOMER)
     name = input("Nama pelanggan: ").strip()
     if not name:
         print("Nama wajib diisi.")
@@ -24,12 +22,10 @@ def add_customer():
         return
     cid = gen_id("CU")
     customers.append({"id": cid, "name": name, "phone": phone, "address": address})
-    save_json(CUSTOMERS_FILE, customers)
+    save_data(FILE_CUSTOMER, customers)
     print(f"Pelanggan berhasil ditambahkan. ID: {cid}")
-
-
 def list_customers():
-    customers = load_json(FILE_CUSTOMER)
+    customers = data_json(FILE_CUSTOMER)
     if not customers:
         print("Belum ada pelanggan.")
         return
@@ -91,7 +87,6 @@ def kiloan():
     save_data(FILE_ORDER, data)
 
     return order
-
 def print_ringkasan_kiloan(transaksi):
     print("\n===== RINGKASAN ORDER (KILOAN) =====")
     print(f"Jenis Layanan : {transaksi['layanan']}")
