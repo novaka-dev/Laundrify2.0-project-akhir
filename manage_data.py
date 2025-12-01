@@ -24,3 +24,6 @@ def data_json(path):
 def save_data(path, data):
     with open(path, "w") as f:
         json.dump(data, f , indent=2)
+
+def gen_id(prefix: str):
+    return f"{prefix}-{uuid.uuid4().hex[:8]}"
