@@ -256,5 +256,75 @@
       "estimasi": "3 hari",
       "total_harga": 120000.0
     }
+  },
+  {
+    "id": "ORD-KIL-382d96c8",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CU-1406729b",
+      "name": "Vaya",
+      "phone": "0897564383445",
+      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Express)",
+      "harga_per_kg": 15000.0,
+      "berat": 2.0,
+      "estimasi": "1 hari",
+      "total_harga": 30000.0
+    },
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-a1bcfce2",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-448c85ef",
+      "name": "arya",
+      "phone": "10250020",
+      "address": "Jl Nonchalant Rt fineshyt"
+    },
+    "detail": {
+      "layanan": "Bed Cover",
+      "harga_satuan": 30000.0,
+      "jumlah": 2,
+      "estimasi": "3 hari",
+      "total_harga": 60000.0
+    }
+  },
+  {
+    "id": "ORD-SAT-fea346e8",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-448c85ef",
+      "name": "arya",
+      "phone": "10250020",
+      "address": "Jl Nonchalant Rt fineshyt"
+    },
+    "detail": {
+      "layanan": "Jas",
+      "harga_satuan": 25000.0,
+      "jumlah": 3,
+      "estimasi": "3 hari",
+      "total_harga": 75000.0
+    }
+  },
+  {
+    "id": "ORD-SAT-fb7f9766",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-448c85ef",
+      "name": "arya",
+      "phone": "10250020",
+      "address": "Jl Nonchalant Rt fineshyt"
+    },
+    "detail": {
+      "layanan": "Bed Cover",
+      "harga_satuan": 30000.0,
+      "jumlah": 2,
+      "estimasi": "3 hari",
+      "total_harga": 60000.0
+    }
   }
 ]

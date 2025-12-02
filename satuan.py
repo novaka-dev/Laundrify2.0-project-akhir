@@ -39,8 +39,6 @@ def satuan(customer):
 
     # RETURN RINGKASAN
     ringkasan = {
-        "order_id": order_id,
-        "customer": customer,
         "layanan": item["nama"],
         "harga_satuan": item["harga_satuan"],
         "jumlah": jumlah,
@@ -49,12 +47,12 @@ def satuan(customer):
     }
 
     print("\n=== RINGKASAN ORDER SATUAN ===")
-    print(f"ID Order     : {ringkasan['order_id']}")
+    print(f"ID Order     : {order_id}")
     print(f"Customer     : {customer['name']}")
     print(f"Layanan      : {ringkasan['layanan']}")
     print(f"Harga/unit   : Rp{ringkasan['harga_satuan']}")
     print(f"Jumlah       : {ringkasan['jumlah']}")
-    print(f"Estimasi     : {ringkasan['estimasi']} hari")
+    print(f"Estimasi     : {ringkasan['estimasi']}")
     print(f"Total Harga  : Rp{ringkasan['total_harga']}")
 
     # simpan order ke json
