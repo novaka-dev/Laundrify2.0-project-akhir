@@ -41,7 +41,7 @@ def list_customers():
         print(f"{c['id']:10} {c['name'][:25]:25} {c.get('phone','')[:15]:15} {c['address'][:25]:25}")
 
 # kiloan
-def kiloan(cid, name):
+def kiloan():
     data = data_json(FILE_KILOAN)
 
     print(f'{"kode":8} {"Nama Layanan":25} {"Harga/kg":13} {"Estimasi":13}')
@@ -79,10 +79,6 @@ def kiloan(cid, name):
     today = datetime.date.today().isoformat()
     order = {
         "order_id": gen_id("OR"),
-        "customer": {
-            "id": cid,
-            "name" : name,
-        },
         "layanan": item["nama"],
         "harga_per_kg": item["harga_per_kg"],
         "estimasi": item["est_days"],
@@ -100,8 +96,6 @@ def kiloan(cid, name):
 def print_ringkasan_kiloan(transaksi):
     print("\n===== RINGKASAN ORDER (KILOAN) =====")
     print(f"Id order      : {transaksi['order_id']}")
-    print(f"Id Pelanggan  : {transaksi['customer']['id']}")
-    print(f"Nama Pelanggan: {transaksi['customer']['name']}")
     print(f"Jenis Layanan : {transaksi['layanan']}")
     print(f"Berat         : {transaksi['berat']} kg")
     print(f"Harga / kg    : Rp{transaksi['harga_per_kg']:,}")

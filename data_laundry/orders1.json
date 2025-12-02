@@ -44,5 +44,49 @@
     "total_harga": 100000.0,
     "tanggal_diterima": "2025-12-02",
     "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-7a244a7f",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CU-741ddafb",
+      "name": "Restu Aji",
+      "phone": "089637756829",
+      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
+    },
+    "detail": {
+      "layanan": "Jas",
+      "harga_satuan": 25000.0,
+      "jumlah": 3,
+      "estimasi": "3 hari",
+      "total_harga": 75000.0
+    }
+  },
+  {
+    "id": "ORD-SAT-2494936d",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CU-741ddafb",
+      "name": "Restu Aji",
+      "phone": "089637756829",
+      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
+    },
+    "detail": {
+      "layanan": "Bed Cover",
+      "harga_satuan": 30000.0,
+      "jumlah": 2,
+      "estimasi": "3 hari",
+      "total_harga": 60000.0
+    }
+  },
+  {
+    "order_id": "OR-8149fdef",
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 2.0,
+    "total_harga": 16000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
   }
 ]

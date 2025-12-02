@@ -12,6 +12,51 @@ from satuan import *
 from kiloan import *
 from pembayaran_order import *
 import random
+
+import os
+from manage_data import *
+
+DATA_DIR = "data_laundry"
+CUSTOMERS_FILE = os.path.join(DATA_DIR, "customers.json")
+
+def pilih_customer():
+    customers = data_json(CUSTOMERS_FILE)
+
+    print("\n=== DATA CUSTOMER ===")
+    if len(customers) == 0:
+        print("(Belum ada customer)")
+
+    for c in customers:
+        print(f"{c['id']} - {c['name']} ({c['phone']}) {c['address']}")
+
+    opsi = input("\nPakai customer existing? (y/n): ").lower()
+
+    if opsi == "y":
+        while True:
+            cid = input("Masukkan ID customer: ")
+            cocok = next((c for c in customers if c["id"] == cid), None)
+            if cocok:
+                return cocok
+            print("ID tidak ditemukan, coba lagi.")
+    else:
+        nama = input("Nama customer: ")
+        telepon = input("No. telepon: ")
+        alamat = input("Alamat: ")
+        cus_id = gen_id("CUS")
+
+        new_cus = {
+            "id": cus_id,
+            "name": nama,        # PERBAIKAN
+            "phone": telepon,
+            "address": alamat
+        }
+
+        customers.append(new_cus)
+        save_data(CUSTOMERS_FILE, customers)
+
+        return new_cus
+
+
 data_pelanggan = []
 keluar = True
 while keluar:
@@ -33,7 +78,7 @@ while keluar:
       print("2. Laundry Satuan")
 
       kategori = int(input("Silahkan Memilih Kategori Layanan : "))
-      cid , name = pilih_customer()
+      customer = pilih_customer()
       # layanan kiloan
       if kategori == 1 :
           transaksi = kiloan()
@@ -41,7 +86,7 @@ while keluar:
 
       # Layanan Satuan
       elif kategori == 2:
-          transaksi = satuan()
+          transaksi = satuan(customer)
       else:
           print("Kategori Tidak Valid!")
           continue

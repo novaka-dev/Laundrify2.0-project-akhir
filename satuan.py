@@ -48,15 +48,14 @@ def pilih_customer():
         customers.append(new_cus)
         save_data(CUSTOMERS_FILE, customers)
 
-        return new_cus
+        return cus_id, nama # new_cus
 
 
 # ============================================
 #         PILIH LAYANAN SATUAN
 # ============================================
-def satuan():
+def satuan(customer):
     print("\n=== TRANSAKSI SATUAN ===")
-    customer = pilih_customer()
 
     # Tampilkan menu layanan
     print(f'{"kode":8} {"Nama Layanan":25} {"Harga":13} {"Estimasi":10}')
