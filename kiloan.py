@@ -41,7 +41,7 @@ def list_customers():
         print(f"{c['id']:10} {c['name'][:25]:25} {c.get('phone','')[:15]:15} {c['address'][:25]:25}")
 
 # kiloan
-def kiloan():
+def kiloan(customer):
     data = data_json(FILE_KILOAN)
 
     print(f'{"kode":8} {"Nama Layanan":25} {"Harga/kg":13} {"Estimasi":13}')
@@ -77,28 +77,46 @@ def kiloan():
     total = kg * item["harga_per_kg"]
     stats = ["Proses", "Selesai", "Diantar", "Diterima"]
     today = datetime.date.today().isoformat()
-    order = {
-        "order_id": gen_id("OR"),
-        "layanan": item["nama"],
-        "harga_per_kg": item["harga_per_kg"],
-        "estimasi": item["est_days"],
-        "berat": kg,
-        "total_harga": total,
+    orders = data_json(FILE_ORDER)
+
+    # simpan order ke json
+    orders = data_json(FILE_ORDER)
+    new_order = {
+        "id": gen_id("ORD-KIL"),
+        "tipe": "kiloan",
+        "customer": {
+            "id": customer["id"],
+            "name": customer["name"],
+            "phone": customer.get("phone", ""),
+            "address": customer.get("address", "")
+        },
+        "detail": {
+            "layanan": item["nama"],
+            "harga_per_kg": item["harga_per_kg"],
+            "berat": kg,
+            "estimasi": item["est_days"],
+            "total_harga": total
+        },
         "tanggal_diterima": today,
         "status": stats[0]
     }
-    data = data_json(FILE_ORDER)
-    data.append(order)
-    save_data(FILE_ORDER, data)
 
-    return order
+    orders.append(new_order)
+    save_data(FILE_ORDER, orders)
+
+    return new_order
 # ringkasan order
 def print_ringkasan_kiloan(transaksi):
     print("\n===== RINGKASAN ORDER (KILOAN) =====")
-    print(f"Id order      : {transaksi['order_id']}")
-    print(f"Jenis Layanan : {transaksi['layanan']}")
-    print(f"Berat         : {transaksi['berat']} kg")
-    print(f"Harga / kg    : Rp{transaksi['harga_per_kg']:,}")
-    print(f"Total Harga   : Rp{transaksi['total_harga']:,}")
-    print(f"Estimasi      : {transaksi['estimasi']}")
+    print(f"Id order      : {transaksi['id']}")
+    print(f"Nama Pelanggan: {transaksi['customer']['name']}")
+
+    # Detail inside transaksi["detail"]
+    detail = transaksi["detail"]
+
+    print(f"Jenis Layanan : {detail['layanan']}")
+    print(f"Berat         : {detail['berat']} kg")
+    print(f"Harga / kg    : Rp{detail['harga_per_kg']:,}")
+    print(f"Total Harga   : Rp{detail['total_harga']:,}")
+    print(f"Estimasi      : {detail['estimasi']}")
     print("====================================\n")

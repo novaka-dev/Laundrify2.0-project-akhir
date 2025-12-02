@@ -81,7 +81,7 @@ while keluar:
       customer = pilih_customer()
       # layanan kiloan
       if kategori == 1 :
-          transaksi = kiloan()
+          transaksi = kiloan(customer)
           print_ringkasan_kiloan(transaksi)
 
       # Layanan Satuan
