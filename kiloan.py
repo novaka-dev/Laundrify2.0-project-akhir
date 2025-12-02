@@ -2,7 +2,7 @@ from manage_data import * #data_json, save_data, FILE_KILOAN, FILE_ORDER, FILE_C
 import datetime
 import json
 import uuid
-import satuan
+from satuan import *
 # def load_json(path):
 #     with open(path, "r") as f:
 #         try:
@@ -39,7 +39,7 @@ def list_customers():
     print("-"*55)
     for c in customers:
         print(f"{c['id']:10} {c['name'][:25]:25} {c.get('phone','')[:15]:15} {c['address'][:25]:25}")
-        
+
 # kiloan
 def kiloan(cid, name):
     data = data_json(FILE_KILOAN)
