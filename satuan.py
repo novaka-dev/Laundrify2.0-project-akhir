@@ -48,7 +48,7 @@ def pilih_customer():
         customers.append(new_cus)
         save_data(CUSTOMERS_FILE, customers)
 
-        return cus_id, nama # new_cus
+        return new_cus
 
 
 # ============================================

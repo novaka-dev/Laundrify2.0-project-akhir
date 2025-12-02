@@ -28,13 +28,12 @@ while keluar:
 
     #Tambah Pelanggan
     if menu == 1:
-      cid , name = add_customer()#pilih_customer()
       print("\n=== PILIH KATEGORI LAYANAN ===")
       print("1. Laundry Kiloan")
       print("2. Laundry Satuan")
 
       kategori = int(input("Silahkan Memilih Kategori Layanan : "))
-
+      cid , name = pilih_customer()
       # layanan kiloan
       if kategori == 1 :
           transaksi = kiloan(cid,name)
@@ -46,8 +45,8 @@ while keluar:
       else:
           print("Kategori Tidak Valid!")
           continue
-      
-      #tekan enter maka akan kembali 
+
+      #tekan enter maka akan kembali
       input("tekan ENTER untuk kembali ke menu...")
       print("\n")
 
@@ -74,4 +73,4 @@ while keluar:
     #Keluar Program
     elif menu == 0:
         keluar = False
-    
+

@@ -10,7 +10,7 @@ from satuan import *
 #         except json.JSONDecodeError:
 #             return []
 # tambahkan pelanggan
-pilih_customer()
+# pilih_customer()
 # def add_customer():
 #     customers = data_json(FILE_CUSTOMER)
 #     name = input("Nama pelanggan: ").strip()
@@ -22,7 +22,7 @@ pilih_customer()
 #     existing = next((c for c in customers if c["name"].lower()==name.lower() and c.get("phone","")==phone and c["address"]==address), None)
 #     if existing:
 #         print("Pelanggan sudah terdaftar:", existing["id"])
-#         return 
+#         return
 #     cid = gen_id("CU")
 #     customers.append({"id": cid, "name": name, "phone": phone, "address": address})
 #     save_data(FILE_CUSTOMER, customers)
