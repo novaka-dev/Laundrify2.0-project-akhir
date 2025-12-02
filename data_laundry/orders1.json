@@ -1,161 +1,5 @@
 [
   {
-    "order_id": "OR-4b836858",
-    "customer": {
-      "id": "CU-9fc5b4b8",
-      "name": "yui",
-      "alamat": "btr",
-      "no_telp": "0888"
-    },
-    "layanan": "Cuci + Gosok (Reguler)",
-    "harga_per_kg": 10000.0,
-    "estimasi": "3 hari",
-    "berat": 30.0,
-    "total_harga": 300000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "order_id": "OR-5f1defbc",
-    "customer": {
-      "id": "CU-f4523a85",
-      "name": "adli",
-      "alamat": "btr",
-      "no_telp": "0888"
-    },
-    "layanan": "Cuci + Gosok (Super Express)",
-    "harga_per_kg": 20000.0,
-    "estimasi": "6 jam",
-    "berat": 10.0,
-    "total_harga": 200000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "order_id": "OR-a0145b19",
-    "customer": {
-      "id": "CU-741ddafb",
-      "name": "Restu Aji"
-    },
-    "layanan": "Cuci + Gosok (Reguler)",
-    "harga_per_kg": 10000.0,
-    "estimasi": "3 hari",
-    "berat": 10.0,
-    "total_harga": 100000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "id": "ORD-SAT-7a244a7f",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CU-741ddafb",
-      "name": "Restu Aji",
-      "phone": "089637756829",
-      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
-    },
-    "detail": {
-      "layanan": "Jas",
-      "harga_satuan": 25000.0,
-      "jumlah": 3,
-      "estimasi": "3 hari",
-      "total_harga": 75000.0
-    }
-  },
-  {
-    "id": "ORD-SAT-2494936d",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CU-741ddafb",
-      "name": "Restu Aji",
-      "phone": "089637756829",
-      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
-    },
-    "detail": {
-      "layanan": "Bed Cover",
-      "harga_satuan": 30000.0,
-      "jumlah": 2,
-      "estimasi": "3 hari",
-      "total_harga": 60000.0
-    }
-  },
-  {
-    "order_id": "OR-8149fdef",
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 2.0,
-    "total_harga": 16000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "id": "ORD-SAT-9e0fc4ab",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CU-741ddafb",
-      "name": "Restu Aji",
-      "phone": "089637756829",
-      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
-    },
-    "detail": {
-      "layanan": "Jas",
-      "harga_satuan": 25000.0,
-      "jumlah": 3,
-      "estimasi": "3 hari",
-      "total_harga": 75000.0
-    }
-  },
-  {
-    "id": "ORD-SAT-e86ab908",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CU-741ddafb",
-      "name": "Restu Aji",
-      "phone": "089637756829",
-      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
-    },
-    "detail": {
-      "layanan": "Bed Cover",
-      "harga_satuan": 30000.0,
-      "jumlah": 2,
-      "estimasi": "3 hari",
-      "total_harga": 60000.0
-    }
-  },
-  {
-    "order_id": "OR-635f88f0",
-    "customer": {
-      "id": "CU-741ddafb",
-      "name": "Restu Aji",
-      "phone": "089637756829",
-      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
-    },
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 2.0,
-    "total_harga": 16000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "order_id": "OR-4ae6dfe0",
-    "customer": {
-      "id": "CU-741ddafb",
-      "name": "Restu Aji",
-      "phone": "089637756829",
-      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
-    },
-    "layanan": "Cuci + Gosok (Express)",
-    "harga_per_kg": 15000.0,
-    "estimasi": "1 hari",
-    "berat": 1.0,
-    "total_harga": 15000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
     "id": "ORD-KIL-116cc266",
     "tipe": "kiloan",
     "customer": {
@@ -326,5 +170,24 @@
       "estimasi": "3 hari",
       "total_harga": 60000.0
     }
+  },
+  {
+    "id": "ORD-KIL-60066236",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-d18f7c81",
+      "name": "adli",
+      "phone": "085894800204",
+      "address": "btr"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Super Express)",
+      "harga_per_kg": 20000.0,
+      "berat": 50.0,
+      "estimasi": "6 jam",
+      "total_harga": 1000000.0
+    },
+    "tanggal_diterima": "2025-12-03",
+    "status": "Proses"
   }
 ]
