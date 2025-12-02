@@ -27,7 +27,7 @@ while keluar:
     menu = int(input("Pilih Menu:"))
     #Tambah Pelanggan
     if menu == 1:
-        
+      cid , name = add_customer()
       print("\n=== PILIH KATEGORI LAYANAN ===")
       print("1. Laundry Kiloan")
       print("2. Laundry Satuan")
@@ -36,7 +36,7 @@ while keluar:
 
       # layanan kiloan
       if kategori == 1 :
-          transaksi = kiloan()
+          transaksi = kiloan(cid,name)
           print_ringkasan_kiloan(transaksi)
 
       # Layanan Satuan

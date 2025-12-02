@@ -19,11 +19,13 @@ def add_customer():
     existing = next((c for c in customers if c["name"].lower()==name.lower() and c.get("phone","")==phone and c["address"]==address), None)
     if existing:
         print("Pelanggan sudah terdaftar:", existing["id"])
-        return
+        return 
     cid = gen_id("CU")
     customers.append({"id": cid, "name": name, "phone": phone, "address": address})
     save_data(FILE_CUSTOMER, customers)
     print(f"Pelanggan berhasil ditambahkan. ID: {cid}")
+    return cid, name
+
 def list_customers():
     customers = data_json(FILE_CUSTOMER)
     if not customers:
@@ -33,10 +35,10 @@ def list_customers():
     print("-"*55)
     for c in customers:
         print(f"{c['id']:10} {c['name'][:25]:25} {c.get('phone','')[:15]:15} {c['address'][:25]:25}")
-def kiloan():
+def kiloan(cid, name):
     data = data_json(FILE_KILOAN)
 
-    print(f"{"kode":8} {"Nama Layanan":25} {"Harga/kg":13} {"Estimasi":13}")
+    print(f'{"kode":8} {"Nama Layanan":25} {"Harga/kg":13} {"Estimasi":13}')
     print("-"* 58)
     for item in data:
         print(f'{item["kode"]}. {item["nama"]:<31} Rp{item["harga_per_kg"]:<10,.0f}  {item["est_days"]}')
@@ -74,6 +76,11 @@ def kiloan():
     stats = ["Proses", "Selesai", "Diantar", "Diterima"]
     today = datetime.date.today().isoformat()
     order = {
+        "order_id": gen_id("OR"),
+        "customer": {
+            "id": cid,
+            "name" : name,
+        },
         "layanan": item["nama"],
         "harga_per_kg": item["harga_per_kg"],
         "estimasi": item["est_days"],
@@ -87,8 +94,12 @@ def kiloan():
     save_data(FILE_ORDER, data)
 
     return order
+
 def print_ringkasan_kiloan(transaksi):
     print("\n===== RINGKASAN ORDER (KILOAN) =====")
+    print(f"Id order      : {transaksi['order_id']}")
+    print(f"Id Pelanggan  : {transaksi['customer']['id']}")
+    print(f"Nama Pelanggan: {transaksi['customer']['name']}")
     print(f"Jenis Layanan : {transaksi['layanan']}")
     print(f"Berat         : {transaksi['berat']} kg")
     print(f"Harga / kg    : Rp{transaksi['harga_per_kg']:,}")

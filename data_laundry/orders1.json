@@ -1,212 +1,29 @@
 [
   {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 2.0,
-    "total_harga": 16000.0,
-    "tanggal_diterima": "2025-12-01"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 2.0,
-    "total_harga": 16000.0,
-    "tanggal_diterima": "2025-12-01"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 2.0,
-    "total_harga": 16000.0,
-    "tanggal_diterima": "2025-12-01",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 2.0,
-    "total_harga": 16000.0,
-    "tanggal_diterima": "2025-12-01",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 2.0,
-    "total_harga": 16000.0,
-    "tanggal_diterima": "2025-12-01",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 10.0,
-    "total_harga": 80000.0,
-    "tanggal_diterima": "2025-12-01",
-    "status": "Proses"
-  },
-  {
+    "order_id": "OR-4b836858",
+    "customer": {
+      "id": "CU-9fc5b4b8",
+      "name": "yui"
+    },
     "layanan": "Cuci + Gosok (Reguler)",
     "harga_per_kg": 10000.0,
     "estimasi": "3 hari",
+    "berat": 30.0,
+    "total_harga": 300000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "order_id": "OR-5f1defbc",
+    "customer": {
+      "id": "CU-f4523a85",
+      "name": "adli"
+    },
+    "layanan": "Cuci + Gosok (Super Express)",
+    "harga_per_kg": 20000.0,
+    "estimasi": "6 jam",
     "berat": 10.0,
-    "total_harga": 100000.0,
-    "tanggal_diterima": "2025-12-01",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 17.0,
-    "total_harga": 136000.0,
-    "tanggal_diterima": "2025-12-01",
-    "status": "Proses"
-  },
-  {
-    "id": "ORD-SAT-28d4c981",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CU-1406729b",
-      "name": "Vaya",
-      "phone": "0897564383445",
-      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
-    },
-    "detail": {
-      "layanan": "Karpet",
-      "harga_satuan": 50000.0,
-      "jumlah": 2,
-      "estimasi": "5 hari",
-      "total_harga": 100000.0
-    }
-  },
-  {
-    "id": "ORD-SAT-fe32009d",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CU-1406729b",
-      "name": "Vaya",
-      "phone": "0897564383445",
-      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
-    },
-    "detail": {
-      "layanan": "Karpet",
-      "harga_satuan": 50000.0,
-      "jumlah": 2,
-      "estimasi": "5 hari",
-      "total_harga": 100000.0
-    }
-  },
-  {
-    "id": "ORD-SAT-59cf9b50",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CU-1406729b",
-      "name": "Vaya",
-      "phone": "0897564383445",
-      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
-    },
-    "detail": {
-      "layanan": "Jas",
-      "harga_satuan": 25000.0,
-      "jumlah": 1,
-      "estimasi": "3 hari",
-      "total_harga": 25000.0
-    }
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 12.0,
-    "total_harga": 96000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 10.0,
-    "total_harga": 80000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 12.0,
-    "total_harga": 96000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 12.0,
-    "total_harga": 96000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 12.0,
-    "total_harga": 96000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 12.0,
-    "total_harga": 96000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 12.0,
-    "total_harga": 96000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 12.0,
-    "total_harga": 96000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 2.0,
-    "total_harga": 16000.0,
-    "tanggal_diterima": "2025-12-02",
-    "status": "Proses"
-  },
-  {
-    "layanan": "Cuci Kering",
-    "harga_per_kg": 8000.0,
-    "estimasi": "2 hari",
-    "berat": 12.0,
-    "total_harga": 96000.0,
+    "total_harga": 200000.0,
     "tanggal_diterima": "2025-12-02",
     "status": "Proses"
   }
