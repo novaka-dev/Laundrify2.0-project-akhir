@@ -3,7 +3,9 @@
     "order_id": "OR-4b836858",
     "customer": {
       "id": "CU-9fc5b4b8",
-      "name": "yui"
+      "name": "yui",
+      "alamat": "btr",
+      "no_telp": "0888"
     },
     "layanan": "Cuci + Gosok (Reguler)",
     "harga_per_kg": 10000.0,
@@ -17,7 +19,9 @@
     "order_id": "OR-5f1defbc",
     "customer": {
       "id": "CU-f4523a85",
-      "name": "adli"
+      "name": "adli",
+      "alamat": "btr",
+      "no_telp": "0888"
     },
     "layanan": "Cuci + Gosok (Super Express)",
     "harga_per_kg": 20000.0,
