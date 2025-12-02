@@ -33,22 +33,18 @@ while keluar:
       print("2. Laundry Satuan")
 
       kategori = int(input("Silahkan Memilih Kategori Layanan : "))
-
       # layanan kiloan
       if kategori == 1 :
           transaksi = kiloan(cid,name)
           print_ringkasan_kiloan(transaksi)
-
       # Layanan Satuan
       elif kategori == 2:
           transaksi = satuan()
-          
-
-
       else:
           print("Kategori Tidak Valid!")
           continue
-
+      
+      #tekan enter maka akan kembali 
       input("tekan ENTER untuk kembali ke menu...")
       print("\n")
 

@@ -8,6 +8,7 @@ import uuid
 #             return json.load(f)
 #         except json.JSONDecodeError:
 #             return []
+# tambahkan pelanggan
 def add_customer():
     customers = data_json(FILE_CUSTOMER)
     name = input("Nama pelanggan: ").strip()
@@ -25,7 +26,7 @@ def add_customer():
     save_data(FILE_CUSTOMER, customers)
     print(f"Pelanggan berhasil ditambahkan. ID: {cid}")
     return cid, name
-
+# list customer
 def list_customers():
     customers = data_json(FILE_CUSTOMER)
     if not customers:
@@ -35,6 +36,7 @@ def list_customers():
     print("-"*55)
     for c in customers:
         print(f"{c['id']:10} {c['name'][:25]:25} {c.get('phone','')[:15]:15} {c['address'][:25]:25}")
+# kiloan
 def kiloan(cid, name):
     data = data_json(FILE_KILOAN)
 
@@ -50,13 +52,10 @@ def kiloan(cid, name):
             if not pilihan.isdigit():
                 print("pilihan tidak ada")
                 continue
-
             item = next((x for x in data if x["kode"] == pilihan), None)
-
             if item is None:
                 print("kode tidak ditemukan")
                 continue
-
             break
 
     while True:
@@ -66,7 +65,6 @@ def kiloan(cid, name):
             if kg <= 0 :
                 print("berat harus lebih dari 0")
                 continue
-
             break
 
         except ValueError:
@@ -94,7 +92,7 @@ def kiloan(cid, name):
     save_data(FILE_ORDER, data)
 
     return order
-
+# ringkasan order
 def print_ringkasan_kiloan(transaksi):
     print("\n===== RINGKASAN ORDER (KILOAN) =====")
     print(f"Id order      : {transaksi['order_id']}")
