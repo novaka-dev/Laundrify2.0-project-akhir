@@ -101,7 +101,10 @@ while keluar:
 
     #Pembayaran Order
     elif menu == 3:
-        pass
+        pembayaran = pembayaran_order()
+        input("tekan ENTER untuk kembali ke menu...")
+        print("\n")
+
 
     #Tambah Layanan
     elif menu == 4:
