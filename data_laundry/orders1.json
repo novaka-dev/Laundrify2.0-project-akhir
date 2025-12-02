@@ -119,5 +119,95 @@
       "estimasi": "3 hari",
       "total_harga": 25000.0
     }
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 12.0,
+    "total_harga": 96000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 10.0,
+    "total_harga": 80000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 12.0,
+    "total_harga": 96000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 12.0,
+    "total_harga": 96000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 12.0,
+    "total_harga": 96000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 12.0,
+    "total_harga": 96000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 12.0,
+    "total_harga": 96000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 12.0,
+    "total_harga": 96000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 2.0,
+    "total_harga": 16000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
+  },
+  {
+    "layanan": "Cuci Kering",
+    "harga_per_kg": 8000.0,
+    "estimasi": "2 hari",
+    "berat": 12.0,
+    "total_harga": 96000.0,
+    "tanggal_diterima": "2025-12-02",
+    "status": "Proses"
   }
 ]

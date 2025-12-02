@@ -10,7 +10,7 @@
 
 from satuan import *
 from kiloan import *
-
+from pembayaran_order import *
 import random
 data_pelanggan = []
 keluar = True
@@ -27,6 +27,7 @@ while keluar:
     menu = int(input("Pilih Menu:"))
     #Tambah Pelanggan
     if menu == 1:
+        
       print("\n=== PILIH KATEGORI LAYANAN ===")
       print("1. Laundry Kiloan")
       print("2. Laundry Satuan")
@@ -50,5 +51,28 @@ while keluar:
 
       input("tekan ENTER untuk kembali ke menu...")
       print("\n")
-    else:
+
+    #Lihat Detail Order
+    elif menu == 2:
+        pass
+
+    #Pembayaran Order
+    elif menu == 3:
+        pass
+
+    #Tambah Layanan
+    elif menu == 4:
+        pass
+
+    #Edit Layanan
+    elif menu == 5:
+        pass
+
+    #Laporan Pendapatan
+    elif menu == 6:
+        pass
+
+    #Keluar Program
+    elif menu == 0:
         keluar = False
+    
