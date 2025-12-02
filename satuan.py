@@ -37,9 +37,9 @@ def pilih_customer():
         nama = input("Nama customer: ")
         telepon = input("No. telepon: ")
         alamat = input("Alamat: ")
-
+        cus_id = gen_id("CUS")
         new_cus = {
-            "id": gen_id("CUS"),
+            "id": cus_id,
             "nama": nama,
             "telepon": telepon,
             "alamat": alamat
@@ -48,7 +48,7 @@ def pilih_customer():
         customers.append(new_cus)
         save_data(CUSTOMERS_FILE, customers)
 
-        return new_cus
+        return cus_id, nama # new_cus
 
 
 # ============================================
