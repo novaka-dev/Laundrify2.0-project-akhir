@@ -77,11 +77,14 @@ def kiloan(customer):
     total = kg * item["harga_per_kg"]
     stats = ["Proses", "Selesai", "Diantar", "Diterima"]
     # today = datetime.date.today().isoformat()
-    today = datetime.now().isoformat()
+    today = datetime.now()
     est = item["est_days"]
     est = est[:1]
+    est = int(est)
+    estimasi_hasil = today + timedelta(hours=est)
 
-    estimasi_hasil = est + timedelta(hours=est)
+    today = today.isoformat()
+    estimasi_hasil = estimasi_hasil.isoformat()
     # simpan order ke json
     orders = data_json(FILE_ORDER)
     new_order = {
@@ -118,9 +121,11 @@ def print_ringkasan_kiloan(transaksi):
     # Detail inside transaksi["detail"]
     detail = transaksi["detail"]
 
-    print(f"Jenis Layanan : {detail['layanan']}")
-    print(f"Berat         : {detail['berat']} kg")
-    print(f"Harga / kg    : Rp{detail['harga_per_kg']:,}")
-    print(f"Total Harga   : Rp{detail['total_harga']:,}")
-    print(f"Estimasi      : {detail['estimasi']} jam")
+    print(f"Jenis Layanan             : {detail['layanan']}")
+    print(f"Berat                     : {detail['berat']} kg")
+    print(f"Harga / kg                : Rp{detail['harga_per_kg']:,}")
+    print(f"Total Harga               : Rp{detail['total_harga']:,}")
+    print(f"Estimasi                  : {detail['estimasi']} jam")
+    print(f"Tanggal Order Dibuat      : {transaksi['tanggal_diterima']}")
+    print(f"Tanggal Selesai           : {transaksi['tanggal_selesai']}")
     print("====================================\n")

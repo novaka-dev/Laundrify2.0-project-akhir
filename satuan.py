@@ -1,6 +1,6 @@
 import os
 import json
-import datetime
+from datetime import *
 from manage_data import *
 
 DATA_DIR = "data_laundry"
