@@ -55,53 +55,6 @@
     }
   },
   {
-    "id": "ORD-SAT-963ee92b",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CU-1406729b",
-      "name": "Vaya",
-      "phone": "0897564383445",
-      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
-    },
-    "detail": {
-      "customer": {
-        "id": "CU-1406729b",
-        "name": "Vaya",
-        "phone": "0897564383445",
-        "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
-      },
-      "layanan": "Jas",
-      "harga_satuan": 25000.0,
-      "jumlah": 1,
-      "estimasi": "3 hari",
-      "total_harga": 25000.0
-    }
-  },
-  {
-    "id": "ORD-SAT-fdfc4f21",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CU-1406729b",
-      "name": "Vaya",
-      "phone": "0897564383445",
-      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
-    },
-    "detail": {
-      "order_id": "ORD-SAT-fdfc4f21",
-      "customer": {
-        "id": "CU-1406729b",
-        "name": "Vaya",
-        "phone": "0897564383445",
-        "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
-      },
-      "layanan": "Bed Cover",
-      "harga_satuan": 30000.0,
-      "jumlah": 4,
-      "estimasi": "3 hari",
-      "total_harga": 120000.0
-    }
-  },
-  {
     "id": "ORD-KIL-382d96c8",
     "tipe": "kiloan",
     "customer": {

@@ -28,3 +28,7 @@ def save_data(path, data):
 
 def gen_id(prefix: str):
     return f"{prefix}-{uuid.uuid4().hex[:8]}"
+
+def back(a):
+    kembali = a
+    return kembali

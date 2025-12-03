@@ -3,7 +3,8 @@ import json
 from manage_data import *
 import uuid
 
-def detai_order():
+def detail_order():
+  while True:
     orders = data_json(FILE_ORDER)
 
     print(f"{"No":4} {'Id Pelanggan':18} {'Id Order':18} {'Nama Pelanggan':18} {'No Telp':15} {'Alamat':50} {'Tanggal Estimasi'}")
@@ -21,5 +22,13 @@ def detai_order():
         print(f"{i:<4} {id_pelanggan:18} {id_order:18} {nama:18} {no_telp:15} {alamat:50} {tanggal_estimasi}")
 
     print("-" * 150)
-
-detai_order()
+    print("1.  Edit Status Order")
+    print("2.  Kembali ke Menu Utama")
+    opsi = int(input("Pilih Opsi: "))
+    if opsi == 1:
+        print("awokawok belum dibikin")
+        #Function update order nanti
+        return
+    else:
+        return
+    print("\n")

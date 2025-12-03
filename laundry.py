@@ -10,6 +10,7 @@
 
 from satuan import *
 from kiloan import *
+from lihat_detail_order import *
 from pembayaran_order import *
 import random
 
@@ -58,8 +59,8 @@ def pilih_customer():
 
 
 data_pelanggan = []
-keluar = True
-while keluar:
+
+while True:
     print("                     ★ LAUNDRIFY ★                 ")
     print("****************************************************")
     print("1.  Buat Order")
@@ -97,7 +98,8 @@ while keluar:
 
     #Lihat Detail Order
     elif menu == 2:
-        pass
+        detail_order()
+        
 
     #Pembayaran Order
     elif menu == 3:
