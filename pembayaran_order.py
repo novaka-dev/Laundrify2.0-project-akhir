@@ -1,7 +1,5 @@
-import datetime
 import json
-import uuid
-from manage_data import *
+from manage_data import data_json, save_data, FILE_ORDER
 
 def pembayaran_order():
     orders = data_json(FILE_ORDER)
@@ -17,7 +15,7 @@ def pembayaran_order():
     # Cari order
     order = None
     for o in orders:
-        if o.get("order_id") == order_id:
+        if o.get("id") == order_id:
             order = o
             break
 
@@ -29,31 +27,43 @@ def pembayaran_order():
         print("Order ini sudah lunas.")
         return
 
-    total = order.get("total_harga", 0)
+    detail = order.get("detail", {})
+    total  = detail.get("total_harga", 0)
 
-    # Detail yang rapi
     print("\nDetail Order:")
-    print(f"ID Order     : {order.get('order_id')}")
-    print(f"Layanan      : {order.get('layanan', '-')}")
-    
-    if "berat" in order:
-        print(f"Berat        : {order.get('berat')} kg")
-        print(f"Harga/kg     : Rp{order.get('harga_per_kg'):,}")
+    print(f"ID Order     : {order.get('id')}")
+    print(f"Layanan      : {detail.get('layanan', '-')}")
 
-    if "detail" in order and isinstance(order["detail"], dict):
-        d = order["detail"]
-        print(f"Jumlah       : {d.get('jumlah', '-')} item")
-        print(f"Harga/item   : Rp{d.get('harga_satuan', 0):,}")
+    # ==============================
+    #   AUTO DETECT KILOAN / SATUAN
+    # ==============================
+    if "berat" in detail:   # ← KILOAN
+        print(f"Berat        : {detail.get('berat')} kg")
+        print(f"Harga/kg     : Rp{detail.get('harga_per_kg', 0):,}")
 
-    print(f"Estimasi     : {order.get('estimasi', '-')}")
+    if "jumlah" in detail:  # ← SATUAN
+        print(f"Jumlah       : {detail.get('jumlah')} item")
+        print(f"Harga/item   : Rp{detail.get('harga_satuan', 0):,}")
+
+    print(f"Estimasi     : {detail.get('estimasi', '-')} hari")
     print(f"Total Harga  : Rp{total:,}")
 
-    bayar = int(input("\nMasukkan nominal pembayaran: "))
+    # ============================
+    #        LOOP PEMBAYARAN
+    # ============================
+    while True:
+        try:
+            bayar = int(input("\nMasukkan nominal pembayaran: "))
+        except ValueError:
+            print("Bro... itu bukan angka 😭 coba lagi.")
+            continue
 
-    if bayar < total:
-        print("Uang kurang.")
-        return
+        if bayar < total:
+            print(f"Kurang bro, totalnya Rp{total:,}. Coba lagi.")
+        else:
+            break
 
+    # Hitung kembalian
     kembalian = bayar - total
 
     print("\nPembayaran Berhasil:")
@@ -61,9 +71,8 @@ def pembayaran_order():
     print(f"Total        : Rp{total:,}")
     print(f"Kembalian    : Rp{kembalian:,}")
 
-    # Update status
+    # Update status jadi LUNAS
     order["status"] = "LUNAS"
     save_data(FILE_ORDER, orders)
 
-    print("\nTransaksi berhasil yey horrey\n")
-
+    print("\nTransaksi berhasil yey horrey!\n")

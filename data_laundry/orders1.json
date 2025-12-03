@@ -37,6 +37,26 @@
     },
     "tanggal_diterima": "2025-12-03T21:37:25.809416",
     "tanggal_selesai": "2025-12-04T01:37:25.809416",
+    "status": "LUNAS"
+  },
+  {
+    "id": "ORD-KIL-ca512eaf",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-448c85ef",
+      "name": "arya",
+      "phone": "10250020",
+      "address": "Jl Nonchalant Rt fineshyt"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 12.0,
+      "estimasi": 4,
+      "total_harga": 96000.0
+    },
+    "tanggal_diterima": "2025-12-03T21:54:22.092008",
+    "tanggal_selesai": "2025-12-04T01:54:22.092008",
     "status": "Proses"
   },
   {
