@@ -172,5 +172,85 @@
     },
     "tanggal_diterima": "2025-12-03T22:14:36.447346",
     "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-91726a1a",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CU-1406729b",
+      "name": "Vaya",
+      "phone": "0897564383445",
+      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 2.0,
+      "estimasi": 4,
+      "total_harga": 16000.0
+    },
+    "tanggal_diterima": "2025-12-03T22:20:58.202533",
+    "tanggal_selesai": "2025-12-04T02:20:58.202533",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-42798232",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-d18f7c81",
+      "name": "adli",
+      "phone": "085894800204",
+      "address": "btr"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Reguler)",
+      "harga_per_kg": 10000.0,
+      "berat": 3.0,
+      "estimasi": 7,
+      "total_harga": 30000.0
+    },
+    "tanggal_diterima": "2025-12-03T22:31:28.069201",
+    "tanggal_selesai": "2025-12-04T05:31:28.069201",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-30c74974",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CU-741ddafb",
+      "name": "Restu Aji",
+      "phone": "089637756829",
+      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 2.0,
+      "estimasi": 48,
+      "total_harga": 16000.0
+    },
+    "tanggal_diterima": "2025-12-03T22:35:19.243542",
+    "tanggal_selesai": "2025-12-05T22:35:19.243542",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-80c4bd65",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CU-741ddafb",
+      "name": "Restu Aji",
+      "phone": "089637756829",
+      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Reguler)",
+      "harga_per_kg": 10000.0,
+      "berat": 3.0,
+      "estimasi": 72,
+      "total_harga": 30000.0
+    },
+    "tanggal_diterima": "2025-12-03T22:36:26.835011",
+    "tanggal_selesai": "2025-12-06T22:36:26.835011",
+    "status": "Proses"
   }
 ]

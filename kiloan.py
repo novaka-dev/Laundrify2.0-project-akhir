@@ -79,7 +79,8 @@ def kiloan(customer):
     # today = datetime.date.today().isoformat()
     today = datetime.now()
     est = item["est_days"]
-    est = est[:1]
+    index = est.find(" ")
+    est = est[:index]
     est = int(est)
     estimasi_hasil = today + timedelta(hours=est)
 
@@ -115,8 +116,8 @@ def kiloan(customer):
 # ringkasan order
 def print_ringkasan_kiloan(transaksi):
     print("\n===== RINGKASAN ORDER (KILOAN) =====")
-    print(f"Id order      : {transaksi['id']}")
-    print(f"Nama Pelanggan: {transaksi['customer']['name']}")
+    print(f"Id order                  : {transaksi['id']}")
+    print(f"Nama Pelanggan            : {transaksi['customer']['name']}")
 
     # Detail inside transaksi["detail"]
     detail = transaksi["detail"]
@@ -126,6 +127,6 @@ def print_ringkasan_kiloan(transaksi):
     print(f"Harga / kg                : Rp{detail['harga_per_kg']:,}")
     print(f"Total Harga               : Rp{detail['total_harga']:,}")
     print(f"Estimasi                  : {detail['estimasi']} jam")
-    print(f"Tanggal Order Dibuat      : {transaksi['tanggal_diterima']}")
-    print(f"Tanggal Selesai           : {transaksi['tanggal_selesai']}")
+    print(f"Tanggal Order Dibuat      : {format_tanggal(transaksi['tanggal_diterima'])}")
+    print(f"Tanggal Selesai           : {format_tanggal(transaksi['tanggal_selesai'])}")
     print("====================================\n")
