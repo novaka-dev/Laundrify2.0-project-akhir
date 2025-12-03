@@ -1,5 +1,6 @@
 import os
 import json
+import datetime
 from manage_data import *
 
 DATA_DIR = "data_laundry"
@@ -33,6 +34,8 @@ def satuan(customer):
 
     jumlah = int(input("Masukkan jumlah item : "))
     total = jumlah * item["harga_satuan"]
+    stats = ["Proses", "Selesai", "Diantar", "Diterima"]
+    today = datetime.date.today().isoformat()
 
     # === BUAT ID DULUAN ===
     order_id = gen_id("ORD-SAT")
@@ -61,7 +64,9 @@ def satuan(customer):
         "id": order_id,
         "tipe": "satuan",
         "customer": customer,
-        "detail": ringkasan
+        "detail": ringkasan,
+        "tanggal_diterima": today,
+        "status": stats[0]
     }
     orders.append(new_order)
     save_data(ORDERS_FILE, orders)

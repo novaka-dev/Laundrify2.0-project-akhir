@@ -142,5 +142,24 @@
     },
     "tanggal_diterima": "2025-12-03",
     "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-c88da6ea",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-448c85ef",
+      "name": "arya",
+      "phone": "10250020",
+      "address": "Jl Nonchalant Rt fineshyt"
+    },
+    "detail": {
+      "layanan": "Boneka",
+      "harga_satuan": 20000.0,
+      "jumlah": 10,
+      "estimasi": "3 hari",
+      "total_harga": 200000.0
+    },
+    "tanggal_diterima": "2025-12-03",
+    "status": "Proses"
   }
 ]
