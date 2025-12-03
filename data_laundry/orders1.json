@@ -161,5 +161,24 @@
     },
     "tanggal_diterima": "2025-12-03",
     "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-3718cc22",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CU-741ddafb",
+      "name": "Restu Aji",
+      "phone": "089637756829",
+      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Super Express)",
+      "harga_per_kg": 20000.0,
+      "berat": 200.0,
+      "estimasi": 6,
+      "total_harga": 4000000.0
+    },
+    "tanggal_diterima": "2025-12-03",
+    "status": "Proses"
   }
 ]

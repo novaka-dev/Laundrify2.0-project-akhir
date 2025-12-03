@@ -1,5 +1,5 @@
 from manage_data import * #data_json, save_data, FILE_KILOAN, FILE_ORDER, FILE_CUSTOMER
-import datetime
+from datetime import *
 import json
 import uuid
 from satuan import *
@@ -76,9 +76,12 @@ def kiloan(customer):
 
     total = kg * item["harga_per_kg"]
     stats = ["Proses", "Selesai", "Diantar", "Diterima"]
-    today = datetime.date.today().isoformat()
-    orders = data_json(FILE_ORDER)
+    # today = datetime.date.today().isoformat()
+    today = datetime.now().isoformat()
+    est = item["est_days"]
+    est = est[:1]
 
+    estimasi_hasil = est + timedelta(hours=est)
     # simpan order ke json
     orders = data_json(FILE_ORDER)
     new_order = {
@@ -94,10 +97,11 @@ def kiloan(customer):
             "layanan": item["nama"],
             "harga_per_kg": item["harga_per_kg"],
             "berat": kg,
-            "estimasi": item["est_days"],
+            "estimasi": int(est),
             "total_harga": total
         },
         "tanggal_diterima": today,
+        "tanggal_selesai": estimasi_hasil,
         "status": stats[0]
     }
 
@@ -118,5 +122,5 @@ def print_ringkasan_kiloan(transaksi):
     print(f"Berat         : {detail['berat']} kg")
     print(f"Harga / kg    : Rp{detail['harga_per_kg']:,}")
     print(f"Total Harga   : Rp{detail['total_harga']:,}")
-    print(f"Estimasi      : {detail['estimasi']}")
+    print(f"Estimasi      : {detail['estimasi']} jam")
     print("====================================\n")
