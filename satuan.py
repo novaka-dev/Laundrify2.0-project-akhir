@@ -12,6 +12,14 @@ with open(MENU_FILE, "r", encoding="utf-8") as file:
     data_satuan = json.load(file)
 
 # ============================================
+#         FUNGSI FORMAT TANGGAL
+# ============================================
+def format_tanggal(dt: str):
+    d = datetime.fromisoformat(dt)
+    return d.strftime("%d-%m-%Y %H:%M")
+
+
+# ============================================
 #         PILIH LAYANAN SATUAN
 # ============================================
 def satuan(customer):
@@ -35,7 +43,15 @@ def satuan(customer):
     jumlah = int(input("Masukkan jumlah item : "))
     total = jumlah * item["harga_satuan"]
     stats = ["Proses", "Selesai", "Diantar", "Diterima"]
-    today = datetime.date.today().isoformat()
+
+    # tanggal diterima (hari ini)
+    today = datetime.now().isoformat()
+
+    # Ambil angka hari ini dari string
+    est_jam = int(item["est_days"].split()[0])
+
+    # estimasi selesai = hari ini + est hari
+    tanggal_selesai = (datetime.now() + timedelta(hours=est_jam)).isoformat()
 
     # === BUAT ID DULUAN ===
     order_id = gen_id("ORD-SAT")
@@ -45,18 +61,20 @@ def satuan(customer):
         "layanan": item["nama"],
         "harga_satuan": item["harga_satuan"],
         "jumlah": jumlah,
-        "estimasi": item["est_days"],
+        "estimasi": f"{est_jam} jam",
         "total_harga": total
     }
 
     print("\n=== RINGKASAN ORDER SATUAN ===")
-    print(f"ID Order     : {order_id}")
-    print(f"Customer     : {customer['name']}")
-    print(f"Layanan      : {ringkasan['layanan']}")
-    print(f"Harga/unit   : Rp{ringkasan['harga_satuan']}")
-    print(f"Jumlah       : {ringkasan['jumlah']}")
-    print(f"Estimasi     : {ringkasan['estimasi']}")
-    print(f"Total Harga  : Rp{ringkasan['total_harga']}")
+    print(f"ID Order            : {order_id}")
+    print(f"Customer            : {customer['name']}")
+    print(f"Layanan             : {ringkasan['layanan']}")
+    print(f"Harga/unit          : Rp{ringkasan['harga_satuan']}")
+    print(f"Jumlah              : {ringkasan['jumlah']}")
+    print(f"Estimasi            : {ringkasan['estimasi']}")
+    print(f"Tanggal order Dibuat: {format_tanggal(today)}")
+    print(f"Tanggal Selesai     : {format_tanggal(tanggal_selesai)}")
+    print(f"Total Harga         : Rp{ringkasan['total_harga']}")
 
     # simpan order ke json
     orders = data_json(ORDERS_FILE)

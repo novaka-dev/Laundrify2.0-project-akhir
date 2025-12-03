@@ -3,30 +3,30 @@
     "kode": "1",
     "nama": "Karpet",
     "harga_satuan": 50000.0,
-    "est_days": "5 hari"
+    "est_days": "120 jam"
   },
   {
     "kode": "2",
     "nama": "Jas",
     "harga_satuan": 25000.0,
-    "est_days":"3 hari"
+    "est_days": "72 jam"
   },
   {
     "kode": "3",
     "nama": "Bed Cover",
     "harga_satuan": 30000.0,
-    "est_days":"3 hari"
+    "est_days": "72 jam"
   },
   {
     "kode": "4",
     "nama": "Selimut",
     "harga_satuan": 25000.0,
-    "est_days":"3 hari"
+    "est_days": "72 jam"
   },
   {
     "kode": "5",
     "nama": "Boneka",
     "harga_satuan": 20000.0,
-    "est_days":"3 hari"
+    "est_days": "72 jam"
   }
 ]

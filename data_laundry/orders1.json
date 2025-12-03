@@ -38,5 +38,139 @@
     "tanggal_diterima": "2025-12-03T21:37:25.809416",
     "tanggal_selesai": "2025-12-04T01:37:25.809416",
     "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-75ce606f",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CU-1406729b",
+      "name": "Vaya",
+      "phone": "0897564383445",
+      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 2.0,
+      "estimasi": 4,
+      "total_harga": 16000.0
+    },
+    "tanggal_diterima": "2025-12-03T21:44:50.148956",
+    "tanggal_selesai": "2025-12-04T01:44:50.148956",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-adbc5633",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CU-1406729b",
+      "name": "Vaya",
+      "phone": "0897564383445",
+      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+    },
+    "detail": {
+      "layanan": "Karpet",
+      "harga_satuan": 50000.0,
+      "jumlah": 2,
+      "estimasi": "5 hari",
+      "total_harga": 100000.0
+    },
+    "tanggal_diterima": "2025-12-03T21:48:42.813290",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-fd1697ad",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CU-1406729b",
+      "name": "Vaya",
+      "phone": "0897564383445",
+      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+    },
+    "detail": {
+      "layanan": "Karpet",
+      "harga_satuan": 50000.0,
+      "jumlah": 2,
+      "estimasi": "5 hari",
+      "total_harga": 100000.0
+    },
+    "tanggal_diterima": "2025-12-03T21:57:31.176102",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-ead1adf1",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CU-1406729b",
+      "name": "Vaya",
+      "phone": "0897564383445",
+      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+    },
+    "detail": {
+      "layanan": "Karpet",
+      "harga_satuan": 50000.0,
+      "jumlah": 2,
+      "estimasi": "5 hari",
+      "total_harga": 100000.0
+    },
+    "tanggal_diterima": "2025-12-03T22:01:33.396494",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-265c706f",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CU-1406729b",
+      "name": "Vaya",
+      "phone": "0897564383445",
+      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+    },
+    "detail": {
+      "layanan": "Karpet",
+      "harga_satuan": 50000.0,
+      "jumlah": 2,
+      "estimasi": "120 jam",
+      "total_harga": 100000.0
+    },
+    "tanggal_diterima": "2025-12-03T22:10:21.193052",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-27bc8f3d",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CU-1406729b",
+      "name": "Vaya",
+      "phone": "0897564383445",
+      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+    },
+    "detail": {
+      "layanan": "Jas",
+      "harga_satuan": 25000.0,
+      "jumlah": 1,
+      "estimasi": "72 jam",
+      "total_harga": 25000.0
+    },
+    "tanggal_diterima": "2025-12-03T22:13:39.384296",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-93766077",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CU-741ddafb",
+      "name": "Restu Aji",
+      "phone": "089637756829",
+      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
+    },
+    "detail": {
+      "layanan": "Jas",
+      "harga_satuan": 25000.0,
+      "jumlah": 2,
+      "estimasi": "72 jam",
+      "total_harga": 50000.0
+    },
+    "tanggal_diterima": "2025-12-03T22:14:36.447346",
+    "status": "Proses"
   }
 ]
