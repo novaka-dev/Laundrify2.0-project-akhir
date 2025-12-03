@@ -22,5 +22,23 @@
     "name": "adli",
     "phone": "085894800204",
     "address": "btr"
+  },
+  {
+    "id": "CUS-fe2f3f2b",
+    "name": "Maki",
+    "phone": "089637756829",
+    "address": "Jl. Alinda, RT 06, RW 034, Kel. Kaliabang"
+  },
+  {
+    "id": "CUS-288cc3ca",
+    "name": "Miku",
+    "phone": "90978687879",
+    "address": "fwefwefwef"
+  },
+  {
+    "id": "CUS-fb3d4f30",
+    "name": "Toji",
+    "phone": "06808908",
+    "address": "fwfge"
   }
 ]

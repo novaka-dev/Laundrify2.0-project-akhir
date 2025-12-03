@@ -27,6 +27,53 @@ def pilih_customer():
     if len(customers) == 0:
         print("(Belum ada customer)")
 
+    # for c in customers:
+    #     print(f"{c['id']} - {c['name']} ({c['phone']}) {c['address']}")
+
+    #edit
+    print(f'{"ID Customer":20} {"Nama":30} {"No. Telp":20} {"Alamat":10}')
+    print("-" * 130)
+
+    for c in customers:
+        print(f'{c["id"]:<20} {c["name"]:<30} {c["phone"]:<20} {c["address"]:<10}')
+    #edit
+
+    opsi = input("\nPakai customer existing? (y/n): ").lower()
+
+    if opsi == "y":
+        while True:
+            cid = input("Masukkan ID customer: ")
+            cocok = next((c for c in customers if c["id"] == cid), None)
+            if cocok:
+                return cocok
+            print("ID tidak ditemukan, coba lagi.")
+    else:
+        nama = input("Nama customer: ")
+        telepon = input("No. telepon: ")
+        alamat = input("Alamat: ")
+        cus_id = gen_id("CUS")
+
+        new_cus = {
+            "id": cus_id,
+            "name": nama,        # PERBAIKAN
+            "phone": telepon,
+            "address": alamat
+        }
+
+        customers.append(new_cus)
+        save_data(CUSTOMERS_FILE, customers)
+        print("-" * 80)
+        print("Data Customer berhasil disimpan")
+        print("-" * 80)
+        return new_cus
+
+# def pilih_customer():
+    customers = data_json(CUSTOMERS_FILE)
+
+    print("\n=== DATA CUSTOMER ===")
+    if len(customers) == 0:
+        print("(Belum ada customer)")
+
     for c in customers:
         print(f"{c['id']} - {c['name']} ({c['phone']}) {c['address']}")
 
@@ -54,13 +101,15 @@ def pilih_customer():
 
         customers.append(new_cus)
         save_data(CUSTOMERS_FILE, customers)
-
+        print("-" * 80)
+        print("Data Customer berhasil disimpan")
+        print("-" * 80)
         return new_cus
 
 
 data_pelanggan = []
-
-while True:
+keluar = True
+while keluar:
     print("                     ★ LAUNDRIFY ★                 ")
     print("****************************************************")
     print("1.  Buat Order")

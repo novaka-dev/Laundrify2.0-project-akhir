@@ -272,5 +272,45 @@
     "tanggal_diterima": "2025-12-03T22:36:26.835011",
     "tanggal_selesai": "2025-12-06T22:36:26.835011",
     "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-88d158db",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CU-741ddafb",
+      "name": "Restu Aji",
+      "phone": "089637756829",
+      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 2.0,
+      "estimasi": 48,
+      "total_harga": 16000.0
+    },
+    "tanggal_diterima": "2025-12-03T23:06:25.712855",
+    "tanggal_selesai": "2025-12-05T23:06:25.712855",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-41e7756e",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-fe2f3f2b",
+      "name": "Maki",
+      "phone": "089637756829",
+      "address": "Jl. Alinda, RT 06, RW 034, Kel. Kaliabang"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 2.0,
+      "estimasi": 48,
+      "total_harga": 16000.0
+    },
+    "tanggal_diterima": "2025-12-03T23:08:56.608144",
+    "tanggal_selesai": "2025-12-05T23:08:56.608144",
+    "status": "Proses"
   }
 ]
