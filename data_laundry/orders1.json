@@ -17,7 +17,7 @@
     },
     "tanggal_diterima": "2025-12-03T21:32:23.405958",
     "tanggal_selesai": "2025-12-04T01:32:23.405958",
-    "status": "Proses"
+    "status": "diterima"
   },
   {
     "id": "ORD-KIL-9d0ae638",
@@ -37,7 +37,7 @@
     },
     "tanggal_diterima": "2025-12-03T21:37:25.809416",
     "tanggal_selesai": "2025-12-04T01:37:25.809416",
-    "status": "LUNAS"
+    "status": "Selesai"
   },
   {
     "id": "ORD-KIL-ca512eaf",
@@ -96,7 +96,7 @@
       "total_harga": 100000.0
     },
     "tanggal_diterima": "2025-12-03T21:48:42.813290",
-    "status": "Proses"
+    "status": "Diterima"
   },
   {
     "id": "ORD-SAT-fd1697ad",
@@ -311,6 +311,26 @@
     },
     "tanggal_diterima": "2025-12-03T23:08:56.608144",
     "tanggal_selesai": "2025-12-05T23:08:56.608144",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-19e57805",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-d18f7c81",
+      "name": "adli",
+      "phone": "085894800204",
+      "address": "btr"
+    },
+    "detail": {
+      "layanan": "cuci + gosok",
+      "harga_per_kg": 6000.0,
+      "berat": 100.0,
+      "estimasi": 24,
+      "total_harga": 600000.0
+    },
+    "tanggal_diterima": "2025-12-04T17:54:11.778158",
+    "tanggal_selesai": "2025-12-05T17:54:11.778158",
     "status": "Proses"
   }
 ]

@@ -10,8 +10,11 @@
 
 from satuan import *
 from kiloan import *
+from tambah_layanan import *
+from edit_layanan import *
 from lihat_detail_order import *
 from pembayaran_order import *
+from laporan_pendapatan import *
 import random
 
 import os
@@ -106,7 +109,6 @@ def pilih_customer():
         print("-" * 80)
         return new_cus
 
-
 data_pelanggan = []
 keluar = True
 while keluar:
@@ -147,8 +149,7 @@ while keluar:
 
     #Lihat Detail Order
     elif menu == 2:
-        detail_order()
-        
+        update_order()
 
     #Pembayaran Order
     elif menu == 3:
@@ -156,20 +157,18 @@ while keluar:
         input("tekan ENTER untuk kembali ke menu...")
         print("\n")
 
-
     #Tambah Layanan
     elif menu == 4:
-        pass
+        tambah_layanan()
 
     #Edit Layanan
     elif menu == 5:
-        pass
+        edit_layanan()
 
     #Laporan Pendapatan
     elif menu == 6:
-        pass
+        menu_laporan()
 
     #Keluar Program
     elif menu == 0:
         keluar = False
-

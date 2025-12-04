@@ -22,5 +22,11 @@
     "nama": "Cuci + Gosok (Super Express)",
     "harga_per_kg": 20000.0,
     "est_days": "6 jam"
+  },
+  {
+    "kode": "5",
+    "nama": "cuci + gosok",
+    "harga_per_kg": 6000.0,
+    "est_days": "24 jam"
   }
 ]

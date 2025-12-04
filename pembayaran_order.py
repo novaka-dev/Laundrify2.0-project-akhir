@@ -23,7 +23,7 @@ def pembayaran_order():
         print("Order tidak ditemukan.")
         return
 
-    if order.get("status") == "LUNAS":
+    if order.get("status") == "P":
         print("Order ini sudah lunas.")
         return
 

@@ -4,31 +4,76 @@ from manage_data import *
 import uuid
 
 def detail_order():
-  while True:
     orders = data_json(FILE_ORDER)
 
-    print(f"{"No":4} {'Id Pelanggan':18} {'Id Order':18} {'Nama Pelanggan':18} {'No Telp':15} {'Alamat':50} {'Tanggal Estimasi'}")
-    print("-" * 150)
+    if not orders:
+        print("Tidak ada data order.")
+        return None
 
-    # Loop tiap order
-    for i, order in enumerate(orders , start=1):
-        id_pelanggan = order["customer"].get("id", "")
-        id_order = order.get("id", "")
-        nama = order["customer"].get("name", "")
-        no_telp = order["customer"].get("phone", "")
-        alamat = order["customer"].get("address", "")
-        tanggal_estimasi = order.get("tanggal_diterima", "")
+    print("\n===== DAFTAR ORDER =====\n")
 
-        print(f"{i:<4} {id_pelanggan:18} {id_order:18} {nama:18} {no_telp:15} {alamat:50} {tanggal_estimasi}")
+    for i, order in enumerate(orders, start=1):
+        tipe = order.get("tipe", "")
+        detail = order.get("detail", {})
 
-    print("-" * 150)
-    print("1.  Edit Status Order")
-    print("2.  Kembali ke Menu Utama")
-    opsi = int(input("Pilih Opsi: "))
-    if opsi == 1:
-        print("awokawok belum dibikin")
-        #Function update order nanti
+        # ini buat tentuin berat sama kiloan
+        if tipe == "kiloan":
+            qty_label = f"Berat        : {detail.get('berat', 0)} Kg"
+        else:  # ini satuan nih
+            qty_label = f"Jumlah       : {detail.get('jumlah', 0)} item"
+
+        print(f"{i}.ID ORDER     : {order.get('id', '')}")
+        print(f"   TIPE         : {tipe}")
+        print(f"   CUSTOMER     : {order['customer'].get('name', '')}")
+        print(f"   NO TELP      : {order['customer'].get('phone', '')}")
+        print(f"   ALAMAT       : {order['customer'].get('address', '')}")
+        print(f"   LAYANAN      : {detail.get('layanan', '')}")
+        print(f"   {qty_label}")
+        print(f"   TOTAL HARGA  : Rp{int(detail.get('total_harga', 0)):,}")
+        print(f"   TANGGAL      : {order.get('tanggal_diterima', '')}")
+        print(f"   STATUS       : {order.get('status', '')}")
+        print("-" * 50)
+
+    try:
+        pilihan = int(input("\nPilih nomor order untuk update (0 = batal): "))
+
+        if pilihan == 0:
+            return None
+        
+        if 1 <= pilihan <= len(orders):
+            return orders[pilihan - 1]
+        else:
+            print("Nomor tidak valid!")
+            return None
+
+    except ValueError:
+        print("Input harus angka.")
+        return None
+
+def update_order():
+    orders = data_json(FILE_ORDER)
+    selected = detail_order()
+
+    if not selected:
+        print("Batal update.")
         return
-    else:
-        return
-    print("\n")
+
+    print("\n=== UPDATE ORDER ===")
+    print(f"ID Order       : {selected['id']}")
+    print(f"Nama Pelanggan : {selected['customer']['name']}")
+    print(f"Status Saat Ini: {selected['status']}")
+
+    new_status = input("Masukkan status baru (Proses / Selesai / Diantar / Diterima): ")
+
+    selected["status"] = new_status
+
+    # Update ke list asli
+    for i, order in enumerate(orders):
+        if order["id"] == selected["id"]:
+            orders[i] = selected
+            break
+
+    save_data(FILE_ORDER, orders)
+
+    print("\nStatus berhasil diperbarui!")
+    

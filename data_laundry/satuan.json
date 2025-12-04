@@ -28,5 +28,11 @@
     "nama": "Boneka",
     "harga_satuan": 20000.0,
     "est_days": "72 jam"
+  },
+  {
+    "kode": "6",
+    "nama": "sarung gajah duduk",
+    "harga_satuan": 20000.0,
+    "est_days": "24 jam"
   }
 ]
