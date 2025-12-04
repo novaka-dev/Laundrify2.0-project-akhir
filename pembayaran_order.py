@@ -55,11 +55,11 @@ def pembayaran_order():
         try:
             bayar = int(input("\nMasukkan nominal pembayaran: "))
         except ValueError:
-            print("Bro... itu bukan angka 😭 coba lagi.")
+            print("transaksi gagal. Coba lagi.")
             continue
 
         if bayar < total:
-            print(f"Kurang bro, totalnya Rp{total:,}. Coba lagi.")
+            print(f"transaksi gagal. Uang bayar kurang Rp{total:,}. Coba lagi.")
         else:
             break
 

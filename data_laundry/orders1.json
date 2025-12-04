@@ -191,7 +191,7 @@
       "total_harga": 50000.0
     },
     "tanggal_diterima": "2025-12-03T22:14:36.447346",
-    "status": "Proses"
+    "status": "LUNAS"
   },
   {
     "id": "ORD-KIL-91726a1a",
@@ -311,7 +311,7 @@
     },
     "tanggal_diterima": "2025-12-03T23:08:56.608144",
     "tanggal_selesai": "2025-12-05T23:08:56.608144",
-    "status": "Proses"
+    "status": "LUNAS"
   },
   {
     "id": "ORD-KIL-19e57805",
