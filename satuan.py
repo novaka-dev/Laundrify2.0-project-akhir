@@ -84,6 +84,7 @@ def satuan(customer):
         "customer": customer,
         "detail": ringkasan,
         "tanggal_diterima": today,
+        "tanggal_selesai": tanggal_selesai,
         "status": stats[0]
     }
     orders.append(new_order)

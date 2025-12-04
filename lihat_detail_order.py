@@ -1,5 +1,7 @@
 import os
 import json
+from datetime import *
+from satuan import format_tanggal
 from manage_data import *
 import uuid
 
@@ -18,20 +20,21 @@ def detail_order():
 
         # ini buat tentuin berat sama kiloan
         if tipe == "kiloan":
-            qty_label = f"Berat        : {detail.get('berat', 0)} Kg"
+            qty_label = f"Berat           : {detail.get('berat', 0)} Kg"
         else:  # ini satuan nih
-            qty_label = f"Jumlah       : {detail.get('jumlah', 0)} item"
+            qty_label = f"Jumlah          : {detail.get('jumlah', 0)} item"
 
-        print(f"{i}.ID ORDER     : {order.get('id', '')}")
-        print(f"   TIPE         : {tipe}")
-        print(f"   CUSTOMER     : {order['customer'].get('name', '')}")
-        print(f"   NO TELP      : {order['customer'].get('phone', '')}")
-        print(f"   ALAMAT       : {order['customer'].get('address', '')}")
-        print(f"   LAYANAN      : {detail.get('layanan', '')}")
+        print(f"{i}.ID ORDER        : {order.get('id', '')}")
+        print(f"   TIPE            : {tipe}")
+        print(f"   CUSTOMER        : {order['customer'].get('name', '')}")
+        print(f"   NO TELP         : {order['customer'].get('phone', '')}")
+        print(f"   ALAMAT          : {order['customer'].get('address', '')}")
+        print(f"   LAYANAN         : {detail.get('layanan', '')}")
         print(f"   {qty_label}")
-        print(f"   TOTAL HARGA  : Rp{int(detail.get('total_harga', 0)):,}")
-        print(f"   TANGGAL      : {order.get('tanggal_diterima', '')}")
-        print(f"   STATUS       : {order.get('status', '')}")
+        print(f"   TOTAL HARGA     : Rp{int(detail.get('total_harga', 0)):,}")
+        print(f"   TANGGAL ORDER   : {format_tanggal(order.get('tanggal_diterima', ''))}")
+        print(f"   ESTIMASI SELESAI: {format_tanggal(order.get('tanggal_selesai', ''))}")
+        print(f"   STATUS          : {order.get('status', '')}")
         print("-" * 50)
 
     try:
