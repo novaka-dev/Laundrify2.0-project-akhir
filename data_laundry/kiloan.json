@@ -28,5 +28,17 @@
     "nama": "cuci + gosok",
     "harga_per_kg": 6000.0,
     "est_days": "24 jam"
+  },
+  {
+    "kode": "6",
+    "nama": "cuci doang",
+    "harga_per_kg": 5000.0,
+    "est_days": "24 jam"
+  },
+  {
+    "kode": "7",
+    "nama": "gosok",
+    "harga_per_kg": 10000.0,
+    "est_days": "2 jam"
   }
 ]

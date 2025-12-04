@@ -8,8 +8,17 @@ def pembayaran_order():
         print("Belum ada order.")
         return
 
-    print("\n=== PEMBAYARAN ORDER ===")
-
+    print("\n================================================= PEMBAYARAN ORDER =================================================")
+    print(f"{'ID Order':20} {'Nama Pelanggan':20} {'Layanan':30} {'Status':15} {'Tanggal Diterima'}")
+    for i in orders:
+        print(
+            f"{i['id']:20} "
+            f"{i['customer']['name']:20} "
+            f"{i['detail']['layanan']:30} "
+            f"{i['status']:15} "
+            f"{i['tanggal_diterima']}"
+        )
+    print("="*116)
     order_id = input("Masukkan ID Order: ").strip()
 
     # Cari order
@@ -45,7 +54,7 @@ def pembayaran_order():
         print(f"Jumlah       : {detail.get('jumlah')} item")
         print(f"Harga/item   : Rp{detail.get('harga_satuan', 0):,}")
 
-    print(f"Estimasi     : {detail.get('estimasi', '-')} hari")
+    print(f"Estimasi     : {detail.get('estimasi', '-')} ")
     print(f"Total Harga  : Rp{total:,}")
 
     # ============================
@@ -56,7 +65,7 @@ def pembayaran_order():
             bayar = int(input("\nMasukkan nominal pembayaran: "))
         except ValueError:
             print("transaksi gagal. Coba lagi.")
-            continue
+            return
 
         if bayar < total:
             print(f"transaksi gagal. Uang bayar kurang Rp{total:,}. Coba lagi.")
@@ -72,7 +81,7 @@ def pembayaran_order():
     print(f"Kembalian    : Rp{kembalian:,}")
 
     # Update status jadi LUNAS
-    order["status"] = "LUNAS"
+    order["status"] = "Lunas"
     save_data(FILE_ORDER, orders)
 
     print("\nTransaksi berhasil yey horrey!\n")

@@ -238,5 +238,145 @@
     "tanggal_diterima": "2025-12-04T21:19:09.918110",
     "tanggal_selesai": "2025-12-05T21:19:09.918152",
     "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-db4bbeda",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-288cc3ca",
+      "name": "Miku",
+      "phone": "90978687879",
+      "address": "fwefwefwef"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Super Express)",
+      "harga_per_kg": 20000.0,
+      "berat": 100.0,
+      "estimasi": 6,
+      "total_harga": 2000000.0
+    },
+    "tanggal_diterima": "2025-12-04T22:14:36.771059",
+    "tanggal_selesai": "2025-12-05T04:14:36.771059",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-6bf01df3",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-fbadf437",
+      "name": "rifky adli",
+      "phone": "08888",
+      "address": "tambun"
+    },
+    "detail": {
+      "layanan": "cuci doang",
+      "harga_per_kg": 5000.0,
+      "berat": 20.0,
+      "estimasi": 24,
+      "total_harga": 100000.0
+    },
+    "tanggal_diterima": "2025-12-04T22:44:52.163425",
+    "tanggal_selesai": "2025-12-05T22:44:52.163425",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-84eb6a1e",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-086385e1",
+      "name": "muhib",
+      "phone": "08865",
+      "address": "tambun belakang"
+    },
+    "detail": {
+      "layanan": "dompet kosong",
+      "harga_satuan": 10000.0,
+      "jumlah": 1,
+      "estimasi": "1 jam",
+      "total_harga": 10000.0
+    },
+    "tanggal_diterima": "2025-12-04T22:45:33.574978",
+    "tanggal_selesai": "2025-12-04T23:45:33.575021",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-f6351506",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-086385e1",
+      "name": "muhib",
+      "phone": "08865",
+      "address": "tambun belakang"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 2.0,
+      "estimasi": 48,
+      "total_harga": 16000.0
+    },
+    "tanggal_diterima": "2025-12-04T22:54:17.407526",
+    "tanggal_selesai": "2025-12-06T22:54:17.407526",
+    "status": "Lunas"
+  },
+  {
+    "id": "ORD-SAT-965ac862",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-fbadf437",
+      "name": "rifky adli",
+      "phone": "08888",
+      "address": "tambun"
+    },
+    "detail": {
+      "layanan": "mousepad",
+      "harga_satuan": 3000.0,
+      "jumlah": 1,
+      "estimasi": "1 jam",
+      "total_harga": 3000.0
+    },
+    "tanggal_diterima": "2025-12-04T22:54:55.415933",
+    "tanggal_selesai": "2025-12-04T23:54:55.415963",
+    "status": "Lunas"
+  },
+  {
+    "id": "ORD-KIL-0eeae1d2",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-086385e1",
+      "name": "muhib",
+      "phone": "08865",
+      "address": "tambun belakang"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 1.0,
+      "estimasi": 48,
+      "total_harga": 8000.0
+    },
+    "tanggal_diterima": "2025-12-05T01:28:47.516416",
+    "tanggal_selesai": "2025-12-07T01:28:47.516416",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-777f405b",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-086385e1",
+      "name": "muhib",
+      "phone": "08865",
+      "address": "tambun belakang"
+    },
+    "detail": {
+      "layanan": "cuci + gosok",
+      "harga_per_kg": 6000.0,
+      "berat": 1.0,
+      "estimasi": 24,
+      "total_harga": 6000.0
+    },
+    "tanggal_diterima": "2025-12-05T01:29:30.701815",
+    "tanggal_selesai": "2025-12-06T01:29:30.701815",
+    "status": "Belum dibayar"
   }
 ]

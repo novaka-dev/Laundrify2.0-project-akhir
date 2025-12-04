@@ -8,8 +8,8 @@ MENU_FILE = os.path.join(DATA_DIR, "satuan.json")
 CUSTOMERS_FILE = os.path.join(DATA_DIR, "customers.json")
 ORDERS_FILE = os.path.join(DATA_DIR, "orders1.json")
 
-with open(MENU_FILE, "r", encoding="utf-8") as file:
-    data_satuan = json.load(file)
+# with open(MENU_FILE, "r", encoding="utf-8") as file:
+#     data_satuan = json.load(file)
 
 # ============================================
 #         FUNGSI FORMAT TANGGAL
@@ -23,6 +23,7 @@ def format_tanggal(dt: str):
 #         PILIH LAYANAN SATUAN
 # ============================================
 def satuan(customer):
+    data_satuan = data_json(FILE_SATUAN)
     print("\n=== TRANSAKSI SATUAN ===")
 
     # Tampilkan menu layanan
@@ -42,7 +43,7 @@ def satuan(customer):
 
     jumlah = int(input("Masukkan jumlah item : "))
     total = jumlah * item["harga_satuan"]
-    stats = ["Proses", "Selesai", "Diantar", "Diterima"]
+    stats = ["Belum dibayar","Proses", "Selesai", "Diantar", "Diterima"]
 
     # tanggal diterima (hari ini)
     today = datetime.now().isoformat()

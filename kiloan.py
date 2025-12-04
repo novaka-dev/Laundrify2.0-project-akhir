@@ -75,7 +75,7 @@ def kiloan(customer):
             print("harus angka contoh 2/3")
 
     total = kg * item["harga_per_kg"]
-    stats = ["Proses", "Selesai", "Diantar", "Diterima"]
+    stats = ["Belum dibayar","Proses", "Selesai", "Diantar", "Diterima"]
     # today = datetime.date.today().isoformat()
     today = datetime.now()
     est = item["est_days"]

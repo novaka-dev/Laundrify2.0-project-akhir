@@ -112,6 +112,7 @@ def pilih_customer():
 data_pelanggan = []
 keluar = True
 while keluar:
+    print("****************************************************")
     print("                     ★ LAUNDRIFY ★                 ")
     print("****************************************************")
     print("1.  Buat Order")
@@ -125,27 +126,29 @@ while keluar:
 
     #Tambah Pelanggan
     if menu == 1:
-      print("\n=== PILIH KATEGORI LAYANAN ===")
-      print("1. Laundry Kiloan")
-      print("2. Laundry Satuan")
+        print("\n=== PILIH KATEGORI LAYANAN ===")
+        print("1. Laundry Kiloan")
+        print("2. Laundry Satuan")
 
-      kategori = int(input("Silahkan Memilih Kategori Layanan : "))
-      customer = pilih_customer()
-      # layanan kiloan
-      if kategori == 1 :
-          transaksi = kiloan(customer)
-          print_ringkasan_kiloan(transaksi)
+        while True:
+            kategori = int(input("Silahkan Memilih Kategori Layanan : "))
+        
+            if kategori == 1 or kategori == 2:
+                break
+            else:
+                print("Kategori Tidak Valid!")
 
-      # Layanan Satuan
-      elif kategori == 2:
-          transaksi = satuan(customer)
-      else:
-          print("Kategori Tidak Valid!")
-          continue
-
-      #tekan enter maka akan kembali
-      input("tekan ENTER untuk kembali ke menu...")
-      print("\n")
+        customer = pilih_customer()
+        # layanan kiloan
+        if kategori == 1 :
+            transaksi = kiloan(customer)
+            print_ringkasan_kiloan(transaksi)
+        # Layanan Satuan
+        elif kategori == 2:
+            transaksi = satuan(customer)
+        #tekan enter maka akan kembali
+        input("tekan ENTER untuk kembali ke menu...")
+        print("\n")
 
     #Lihat Detail Order
     elif menu == 2:
@@ -172,3 +175,5 @@ while keluar:
     #Keluar Program
     elif menu == 0:
         keluar = False
+    else:
+        print("Menu Tidak ada!😡😡")

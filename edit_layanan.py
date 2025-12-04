@@ -13,8 +13,18 @@ def edit_layanan():
 
         if jenis == 1:
             print("=== DAFTAR LAYANAN KILOAN ===")
+            print(f"{'Kode':5} {'Nama Layanan':28} {'Harga/Kg':15} {'Estimasi'}")
+            print("-" * 70)
+
+            #Ambil Data
             for item in kiloan:
-                print(f"{item['kode']}. {item['nama']} - Rp.{item['harga_per_kg']} - {item['est_days']}")
+                harga = int(item['harga_per_kg'])
+                print(
+                    f"{item['kode']:5}"
+                    f"{item['nama']:30}"
+                    f"Rp.{harga:<13}"
+                    f"{item['est_days']}"
+                )
 
             kode = input("Masukan kode layanan yang mau di ubah🤪🤘 : ")
             layanan = next((x for x in kiloan if x['kode'] == kode), None)
@@ -45,8 +55,18 @@ def edit_layanan():
         
         elif jenis == 2:
             print("=== DAFTAR LAYANAN SATUAN ===")
+            print(f"{'Kode':5} {'Nama Layanan':28} {'Harga/Jumlah':15} {'Estimasi'}")
+            print("-" * 70)
+
+            #Ambil Data
             for item in satuan:
-                print(f"{item['kode']}. {item['nama']} - Rp.{item['harga_per_kg']} - {item['est_days']}")
+                harga = int(item['harga_satuan'])
+                print(
+                    f"{item['kode']:5}"
+                    f"{item['nama']:30}"
+                    f"Rp.{harga:<13}"
+                    f"{item['est_days']}"
+                )
 
             kode = input("Masukan kode layanan yang mau di ubah🤪🤘 : ")
             layanan = next((x for x in satuan if x['kode'] == kode), None)
@@ -57,7 +77,7 @@ def edit_layanan():
 
             print("\n=== EDIT LAYANANAN SATUAN ===")
             nama = input(f"Input Nama Layanan Baru ({layanan['nama']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
-            harga = input(f"Input harga Kg Layanan Baru ({layanan['harga_item']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
+            harga = input(f"Input harga Kg Layanan Baru ({layanan['harga_satuan']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
             estimasi = input(f"Input estimasi Layanan Baru ({layanan['est_days']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
 
             if not nama and not harga and not estimasi:
@@ -67,7 +87,7 @@ def edit_layanan():
             if nama:
                 layanan['nama'] = nama
             if harga:
-                layanan['harga_item'] = float(harga)
+                layanan['harga_satuan'] = float(harga)
             if estimasi:
                 layanan['est_days'] = estimasi
 
