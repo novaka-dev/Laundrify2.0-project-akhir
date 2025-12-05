@@ -30,10 +30,6 @@ def pilih_customer():
     if len(customers) == 0:
         print("(Belum ada customer)")
 
-    # for c in customers:
-    #     print(f"{c['id']} - {c['name']} ({c['phone']}) {c['address']}")
-
-    #edit
     print(f'{"ID Customer":20} {"Nama":30} {"No. Telp":20} {"Alamat":10}')
     print("-" * 130)
 
@@ -149,11 +145,11 @@ while keluar:
             continue
         customer = pilih_customer()
         # layanan kiloan
-        if kategori == 1 :
+        if kategori == "1" :
             transaksi = kiloan(customer)
             print_ringkasan_kiloan(transaksi)
         # Layanan Satuan
-        elif kategori == 2:
+        elif kategori == "2":
             transaksi = satuan(customer)
         #tekan enter maka akan kembali
         input("tekan ENTER untuk kembali ke menu...")
