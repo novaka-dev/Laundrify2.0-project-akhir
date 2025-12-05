@@ -418,5 +418,25 @@
     "tanggal_diterima": "2025-12-05T09:57:21.981557",
     "tanggal_selesai": "2025-12-06T09:57:21.981557",
     "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-97e62f84",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-288cc3ca",
+      "name": "Miku",
+      "phone": "90978687879",
+      "address": "fwefwefwef"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Reguler)",
+      "harga_per_kg": 10000.0,
+      "berat": 23.0,
+      "estimasi": 72,
+      "total_harga": 230000.0
+    },
+    "tanggal_diterima": "2025-12-05T20:49:45.222948",
+    "tanggal_selesai": "2025-12-08T20:49:45.222948",
+    "status": "Belum dibayar"
   }
 ]

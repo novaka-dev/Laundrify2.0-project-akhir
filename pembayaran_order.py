@@ -85,7 +85,7 @@ def pembayaran_order():
         print(f"Jumlah       : {detail.get('jumlah')} item")
         print(f"Harga/item   : Rp{detail.get('harga_satuan', 0):,}")
 
-    print(f"Estimasi     : {detail.get('estimasi', '-')} ")
+    print(f"Estimasi     : {detail.get('estimasi', '-')} jam")
     print(f"Total Harga  : Rp{total:,}")
 
     # ============================

@@ -40,5 +40,47 @@
     "nama": "gosok",
     "harga_per_kg": 10000.0,
     "est_days": "2 jam"
+  },
+  {
+    "kode": "8",
+    "nama": "Contoh",
+    "harga_per_kg": 12000.0,
+    "est_days": "3 jam"
+  },
+  {
+    "kode": "9",
+    "nama": "contoh2",
+    "harga_per_kg": 3000.0,
+    "est_days": "4 jam"
+  },
+  {
+    "kode": "10",
+    "nama": "Somay",
+    "harga_per_kg": 9000.0,
+    "est_days": "3 hari"
+  },
+  {
+    "kode": "11",
+    "nama": "fsdfgd",
+    "harga_per_kg": 12000.0,
+    "est_days": "3"
+  },
+  {
+    "kode": "12",
+    "nama": "bga",
+    "harga_per_kg": 10000.0,
+    "est_days": "fsdf"
+  },
+  {
+    "kode": "13",
+    "nama": "fsdf",
+    "harga_per_kg": 12000.0,
+    "est_days": 3.0
+  },
+  {
+    "kode": "14",
+    "nama": "fsdfsdf",
+    "harga_per_kg": 5000.0,
+    "est_days": "3 jam"
   }
 ]
