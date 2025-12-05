@@ -139,7 +139,7 @@ while keluar:
                 back = True
                 break
             else:
-                print("Kode yang anda masukkan tidak sesuai dengan kategori yang ada!\n")
+                print("Kode yang anda masukkan tidak sesuai dengan kategori yang ada!😡\n")
 
         if back:
             continue

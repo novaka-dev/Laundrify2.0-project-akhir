@@ -277,7 +277,7 @@
     },
     "tanggal_diterima": "2025-12-04T22:44:52.163425",
     "tanggal_selesai": "2025-12-05T22:44:52.163425",
-    "status": "Proses"
+    "status": "Lunas"
   },
   {
     "id": "ORD-SAT-84eb6a1e",
@@ -297,26 +297,6 @@
     },
     "tanggal_diterima": "2025-12-04T22:45:33.574978",
     "tanggal_selesai": "2025-12-04T23:45:33.575021",
-    "status": "Proses"
-  },
-  {
-    "id": "ORD-KIL-f6351506",
-    "tipe": "kiloan",
-    "customer": {
-      "id": "CUS-086385e1",
-      "name": "muhib",
-      "phone": "08865",
-      "address": "tambun belakang"
-    },
-    "detail": {
-      "layanan": "Cuci Kering",
-      "harga_per_kg": 8000.0,
-      "berat": 2.0,
-      "estimasi": 48,
-      "total_harga": 16000.0
-    },
-    "tanggal_diterima": "2025-12-04T22:54:17.407526",
-    "tanggal_selesai": "2025-12-06T22:54:17.407526",
     "status": "Lunas"
   },
   {

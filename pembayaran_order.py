@@ -1,6 +1,10 @@
 import json
 from satuan import format_tanggal
 from manage_data import *
+from typing import List , Dict , Any
+
+folder_path = "data_laundry/receipts"
+os.makedirs(folder_path, exist_ok=True)
 
 def pembayaran_order():
     orders = data_json(FILE_ORDER)
@@ -106,13 +110,58 @@ def pembayaran_order():
     # Hitung kembalian
     kembalian = bayar - total
 
-    print("\nPembayaran Berhasil:")
-    print(f"Uang bayar   : Rp{bayar:,}")
-    print(f"Total        : Rp{total:,}")
-    print(f"Kembalian    : Rp{kembalian:,}")
+    #struk pembayaran
 
     # Update status jadi LUNAS
     cocok['status'] = "Lunas"
     save_data(FILE_ORDER, orders)
 
     print("\nTransaksi berhasil yey horrey🤘🤪🤘!\n")
+
+    # ubah menjadi file txt
+    nama_file = os.path.join(folder_path , f"{cocok['id']}.txt")
+    with open(nama_file, "w", encoding="utf-8") as f:
+        f.write(struk_pembayaran(cocok, bayar , kembalian))
+    print(struk_pembayaran(cocok , bayar , kembalian))
+
+def struk_pembayaran(order: Dict[str, Any], bayar: int, kembalian: int) -> str:
+    struk = []
+    struk.append("=" * 45)
+    struk.append("              NOTA LAUNDRY")
+    struk.append("=" * 45)
+    struk.append(f"ID Order       : {order.get('id','-')}")
+
+    cust = order.get("customer", {})
+    struk.append(f"Nama Customer  : {cust.get('name','-')}")
+
+    tipe = order.get("tipe", "-")
+    detail = order.get("detail", {})
+    struk.append(f"Tipe Layanan   : {tipe.upper()}")
+    struk.append(f"Nama Layanan   : {detail.get('layanan','-')}")
+
+    if tipe == "kiloan":
+        struk.append(f"Berat          : {detail.get('berat')} kg")
+        struk.append(f"Harga/kg       : {detail.get('harga_per_kg' , 0):,}")
+    elif tipe == "satuan":
+        struk.append(f"Jumlah         : {detail.get('jumlah')} pcs")
+        struk.append(f"Harga Satuan   : {detail.get('harga_satuan'):,}")
+
+    struk.append("")
+    total = detail.get("total_harga", 0)
+    struk.append(f"Subtotal       : {total:,}")
+    struk.append(f"Bayar          : {bayar:,}")
+    struk.append(f"Kembalian      : {kembalian:,}")
+    struk.append(f"Estimasi       : {detail.get('estimasi','-')}")
+    struk.append("")
+
+    struk.append(f"Tanggal Terima : {order.get('tanggal_diterima','-')}")
+    struk.append(f"Tanggal Selesai: {order.get('tanggal_selesai','-')}")
+    struk.append("")
+    struk.append("=" * 45)
+    struk.append("    TERIMA KASIH TELAH MENGGUNAKAN")
+    struk.append("         LAYANAN LAUNDRY KAMI")
+    struk.append("=" * 45)
+
+    return "\n".join(struk)
+
+pembayaran_order()

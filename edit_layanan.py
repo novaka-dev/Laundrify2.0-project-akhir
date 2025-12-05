@@ -9,7 +9,7 @@ def edit_layanan():
         print("1. Kiloan")
         print("2. Satuan")
         print("0. Kembali ke Menu Utama")
-        jenis = input("Masukan jenis layanan (1/2): ")
+        jenis = input("Masukan jenis layanan (1/2)🤔🤔: ")
 
         if jenis == "1":
             print("=== DAFTAR LAYANAN KILOAN ===")
@@ -25,33 +25,33 @@ def edit_layanan():
                     f"Rp.{harga:<13}"
                     f"{item['est_days']}"
                 )
+            while True:
+                kode = input("Masukan kode layanan yang ingin anda ubah🤔🤔: ")
+                layanan = next((x for x in kiloan if x['kode'] == kode), None)
 
-            kode = input("Masukan kode layanan yang ingin anda ubah : ")
-            layanan = next((x for x in kiloan if x['kode'] == kode), None)
+                if not layanan:
+                    print("Kode tidak ditemukan!😡😡")
+                    continue
 
-            if not layanan:
-                print("Kode tidak ditemukan!")
-                return
+                print("\n=== EDIT LAYANANAN KILOAN ===")
+                nama = input(f"Input Nama Layanan Baru ({layanan['nama']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
+                harga = input(f"Input harga Kg Layanan Baru ({layanan['harga_per_kg']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
+                estimasi = input(f"Input estimasi Layanan Baru ({layanan['est_days']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
 
-            print("\n=== EDIT LAYANANAN KILOAN ===")
-            nama = input(f"Input Nama Layanan Baru ({layanan['nama']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
-            harga = input(f"Input harga Kg Layanan Baru ({layanan['harga_per_kg']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
-            estimasi = input(f"Input estimasi Layanan Baru ({layanan['est_days']}) (ENTER JIKA TIDAK INGIN DIUBAH) : ").strip()
+                if not nama and not harga and not estimasi:
+                    print("Tidak ada data yang diubah👍")
+                    return
 
-            if not nama and not harga and not estimasi:
-                print("Tidak ada data yang diubah👍")
-                return
+                if nama:
+                    layanan['nama'] = nama
+                if harga:
+                    layanan['harga_per_kg'] = float(harga)
+                if estimasi:
+                    layanan['est_days'] = estimasi
 
-            if nama:
-                layanan['nama'] = nama
-            if harga:
-                layanan['harga_per_kg'] = float(harga)
-            if estimasi:
-                layanan['est_days'] = estimasi
-
-            save_data(FILE_KILOAN, kiloan)
-            print("Layanan kiloan berhasil diubah🤘😎🤘")
-            break
+                save_data(FILE_KILOAN, kiloan)
+                print("Layanan kiloan berhasil diubah🤘😎🤘")
+                break
         
         elif jenis == "2":
             print("=== DAFTAR LAYANAN SATUAN ===")
@@ -68,11 +68,11 @@ def edit_layanan():
                     f"{item['est_days']}"
                 )
 
-            kode = input("Masukan kode layanan yang mau di ubah🤪🤘 : ")
+            kode = input("Masukan kode layanan yang mau di ubah🤔🤔: ")
             layanan = next((x for x in satuan if x['kode'] == kode), None)
 
             if not layanan:
-                print("Kode tidak ditemukan!")
+                print("Kode tidak ditemukan!😡😡")
                 return
 
             print("\n=== EDIT LAYANANAN SATUAN ===")
@@ -98,4 +98,4 @@ def edit_layanan():
             break
 
         else:
-            print("Kode yang anda masukkan tidak sesuai dengan jenis layanan yang ada!\n")
+            print("Kode yang anda masukkan tidak sesuai dengan jenis layanan yang ada!😡😡\n")
