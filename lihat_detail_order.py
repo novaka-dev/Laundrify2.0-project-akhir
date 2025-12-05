@@ -69,17 +69,23 @@ def update_order():
     print(f"Nama Pelanggan : {selected['customer']['name']}")
     print(f"Status Saat Ini: {selected['status']}")
 
-    new_status = input("Masukkan status baru (Proses / Selesai / Diantar / Diterima): ")
+    stats2 = ["Belum dibayar","Proses", "Selesai", "Diantar", "Diterima"]
+    while True:
+        new_status = input("Masukkan status baru (Proses / Selesai / Diantar / Diterima): ")
+        if new_status not in stats2:
+            print("Input yang anda masukkan tidak valid!")
+            continue
+        else:
+            selected["status"] = new_status
 
-    selected["status"] = new_status
+            # Update ke list asli
+            for i, order in enumerate(orders):
+                if order["id"] == selected["id"]:
+                    orders[i] = selected
+                    break
 
-    # Update ke list asli
-    for i, order in enumerate(orders):
-        if order["id"] == selected["id"]:
-            orders[i] = selected
+            save_data(FILE_ORDER, orders)
+
+            print("\nStatus berhasil diperbarui!\n")
             break
-
-    save_data(FILE_ORDER, orders)
-
-    print("\nStatus berhasil diperbarui!")
     
