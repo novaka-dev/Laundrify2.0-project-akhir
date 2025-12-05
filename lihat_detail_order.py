@@ -37,28 +37,31 @@ def detail_order():
         print(f"   STATUS          : {order.get('status', '')}")
         print("-" * 50)
 
-    try:
-        pilihan = int(input("\nPilih nomor order untuk update (0 = batal): "))
+    while True:
+        pilihan = input("\nPilih nomor order untuk update. Pilih 0 untuk kembali ke menu utama: ")
+        try:
+            pilihan = int(pilihan)
+        except ValueError:
+            print("Anda harus memasukkan angka!")
+            continue
 
         if pilihan == 0:
             return None
-        
+                
         if 1 <= pilihan <= len(orders):
-            return orders[pilihan - 1]
+                return orders[pilihan - 1]
+            
         else:
-            print("Nomor tidak valid!")
-            return None
-
-    except ValueError:
-        print("Input harus angka.")
-        return None
+            print("Nomor yang anda masukkan tidak sesuai dengan data yang ada!")
+            continue
+            
 
 def update_order():
     orders = data_json(FILE_ORDER)
     selected = detail_order()
 
     if not selected:
-        print("Batal update.")
+        # print("Batal update.")
         return
 
     print("\n=== UPDATE ORDER ===")
