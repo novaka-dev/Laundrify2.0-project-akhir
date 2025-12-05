@@ -8,10 +8,10 @@ def tambah_layanan():
         satuan = data_json(FILE_SATUAN)
 
         print("=== Pilih Jenis Layanan ===")
-        print("1. Kiloan")
-        print("2. Satuan")
-        print("0. Kembali")
-        jenis = int(input("Masukan jenis layanan (1/2): "))
+        print("👍1. Kiloan")
+        print("✌️2. Satuan")
+        print("👌0. Kembali")
+        jenis = int(input("Masukan jenis layanan (1/2)🤔🤔: "))
 
         # tambah menu layanan
         if jenis == 1:
@@ -31,7 +31,7 @@ def tambah_layanan():
             kiloan.append(layanan)
             save_data(FILE_KILOAN, kiloan)
 
-            print("Menu Layanan Kiloan Berhasil Dibuat🤪🤪")
+            print("Menu Layanan Kiloan Berhasil Dibuat🤘😎🤘")
             break
 
         # tambah menu satuan
@@ -52,11 +52,11 @@ def tambah_layanan():
             satuan.append(layanan)
             save_data(FILE_SATUAN, satuan)
 
-            print("Menu Layanan Satuan Berhasil Dibuat🤪🤪")
+            print("Menu Layanan Satuan Berhasil Dibuat🤘😎🤘")
             break
         # menu keluar
         elif jenis == 0:
             break
 
         else:
-            print("Nomor Layanan Tidak Ada!!")
+            print("Nomor Layanan Tidak Ada!!😡😡")

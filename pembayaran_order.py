@@ -1,12 +1,12 @@
 import json
 from satuan import format_tanggal
-from manage_data import data_json, save_data, FILE_ORDER
+from manage_data import *
 
 def pembayaran_order():
     orders = data_json(FILE_ORDER)
 
     if not orders:
-        print("Belum ada order.")
+        print("Belum ada order.🤔🤔")
         return
 
     print("\n================================================= PEMBAYARAN ORDER =================================================")
@@ -50,11 +50,11 @@ def pembayaran_order():
             order_id = input("Masukkan ID Order: ").strip()
             cocok = next((c for c in orders if c["id"] == order_id), None)
             if cocok is None:
-                print("ID tidak ditemukan, coba lagi.\n")
+                print("ID tidak ditemukan, coba lagi🤘🤪🤘.\n")
                 continue
             if cocok["status"] == "Lunas":
             # if cocok.get("status") == "Lunas":
-                print("Order ini sudah lunas.\n")
+                print("Order ini sudah lunas🤘😎🤘.\n")
                 continue
             else:
                 # return cocok
@@ -95,11 +95,11 @@ def pembayaran_order():
         try:
             bayar = int(input("\nMasukkan nominal pembayaran: "))
         except ValueError:
-            print("transaksi gagal. Coba lagi.")
+            print("transaksi gagal. Coba lagi🤪🤪.")
             return
 
         if bayar < total:
-            print(f"transaksi gagal. Uang bayar kurang Rp{total:,}. Coba lagi.")
+            print(f"transaksi gagal. Uang bayar kurang Rp{total:,}. Coba lagi🤘🤪🤘.")
         else:
             break
 
@@ -112,7 +112,7 @@ def pembayaran_order():
     print(f"Kembalian    : Rp{kembalian:,}")
 
     # Update status jadi LUNAS
-    order["status"] = "Lunas"
+    cocok['status'] = "Lunas"
     save_data(FILE_ORDER, orders)
 
-    print("\nTransaksi berhasil yey horrey!\n")
+    print("\nTransaksi berhasil yey horrey🤘🤪🤘!\n")
