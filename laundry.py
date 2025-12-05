@@ -39,81 +39,83 @@ def pilih_customer():
 
     for c in customers:
         print(f'{c["id"]:<20} {c["name"]:<30} {c["phone"]:<20} {c["address"]:<10}')
-    #edit
 
-    opsi = input("\nPakai customer existing? (y/n): ").lower()
+    while True:
+        opsi = input("\nPakai customer yang sudah ada? (y/n): ").lower()
 
-    if opsi == "y":
-        while True:
-            cid = input("Masukkan ID customer: ")
-            cocok = next((c for c in customers if c["id"] == cid), None)
-            if cocok:
-                return cocok
-            print("ID tidak ditemukan, coba lagi.")
-    else:
-        nama = input("Nama customer: ")
-        telepon = input("No. telepon: ")
-        alamat = input("Alamat: ")
-        cus_id = gen_id("CUS")
+        if opsi == "y":
+            while True:
+                cid = input("Masukkan ID customer: ")
+                cocok = next((c for c in customers if c["id"] == cid), None)
+                if cocok:
+                    return cocok
+                print("ID tidak ditemukan, coba lagi.")
+        elif opsi == "n":
+            nama = input("Nama customer: ")
+            telepon = input("No. telepon: ")
+            alamat = input("Alamat: ")
+            cus_id = gen_id("CUS")
 
-        new_cus = {
-            "id": cus_id,
-            "name": nama,        # PERBAIKAN
-            "phone": telepon,
-            "address": alamat
-        }
+            new_cus = {
+                "id": cus_id,
+                "name": nama,        # PERBAIKAN
+                "phone": telepon,
+                "address": alamat
+            }
 
-        customers.append(new_cus)
-        save_data(CUSTOMERS_FILE, customers)
-        print("-" * 80)
-        print("Data Customer berhasil disimpan")
-        print("-" * 80)
-        return new_cus
-
+            customers.append(new_cus)
+            save_data(CUSTOMERS_FILE, customers)
+            print("-" * 80)
+            print("Data Customer berhasil disimpan")
+            print("-" * 80)
+            return new_cus
+        else:
+            print("Kode yang anda masukkan tidak valid!")
+            continue
 # def pilih_customer():
-    customers = data_json(CUSTOMERS_FILE)
+#     customers = data_json(CUSTOMERS_FILE)
 
-    print("\n=== DATA CUSTOMER ===")
-    if len(customers) == 0:
-        print("(Belum ada customer)")
+#     print("\n=== DATA CUSTOMER ===")
+#     if len(customers) == 0:
+#         print("(Belum ada customer)")
 
-    for c in customers:
-        print(f"{c['id']} - {c['name']} ({c['phone']}) {c['address']}")
+#     for c in customers:
+#         print(f"{c['id']} - {c['name']} ({c['phone']}) {c['address']}")
 
-    opsi = input("\nPakai customer existing? (y/n): ").lower()
+#     opsi = input("\nPakai customer yang sudah ada? (y/n): ").lower()
 
-    if opsi == "y":
-        while True:
-            cid = input("Masukkan ID customer: ")
-            cocok = next((c for c in customers if c["id"] == cid), None)
-            if cocok:
-                return cocok
-            print("ID tidak ditemukan, coba lagi.")
-    else:
-        nama = input("Nama customer: ")
-        telepon = input("No. telepon: ")
-        alamat = input("Alamat: ")
-        cus_id = gen_id("CUS")
+#     if opsi == "y":
+#         while True:
+#             cid = input("Masukkan ID customer: ")
+#             cocok = next((c for c in customers if c["id"] == cid), None)
+#             if cocok:
+#                 return cocok
+#             print("ID tidak ditemukan, coba lagi.")
+#     else:
+#         nama = input("Nama customer: ")
+#         telepon = input("No. telepon: ")
+#         alamat = input("Alamat: ")
+#         cus_id = gen_id("CUS")
 
-        new_cus = {
-            "id": cus_id,
-            "name": nama,        # PERBAIKAN
-            "phone": telepon,
-            "address": alamat
-        }
+#         new_cus = {
+#             "id": cus_id,
+#             "name": nama,        # PERBAIKAN
+#             "phone": telepon,
+#             "address": alamat
+#         }
 
-        customers.append(new_cus)
-        save_data(CUSTOMERS_FILE, customers)
-        print("-" * 80)
-        print("Data Customer berhasil disimpan")
-        print("-" * 80)
-        return new_cus
+#         customers.append(new_cus)
+#         save_data(CUSTOMERS_FILE, customers)
+#         print("-" * 80)
+#         print("Data Customer berhasil disimpan")
+#         print("-" * 80)
+#         return new_cus
 
-data_pelanggan = []
+# data_pelanggan = []
 keluar = True
 while keluar:
     print("****************************************************")
-    print("                     ★ LAUNDRIFY ★                 ")
+    print("                     ★  LAUNDRIFY ★                 ")
     print("****************************************************")
     print("1.  Buat Order")
     print("2.  Lihat Detail Order")
@@ -122,22 +124,29 @@ while keluar:
     print("5.  Edit Layanan")
     print("6.  Laporan Pendapatan")
     print("0.  Keluar Program")
-    menu = int(input("Pilih Menu:"))
+    menu = input("Pilih Menu:")
 
     #Tambah Pelanggan
-    if menu == 1:
+    if menu == "1":
         print("\n=== PILIH KATEGORI LAYANAN ===")
         print("1. Laundry Kiloan")
         print("2. Laundry Satuan")
+        print("0. Kembali ke Menu Utama")
 
+        back = False
         while True:
-            kategori = int(input("Silahkan Memilih Kategori Layanan : "))
+            kategori = input("Silahkan Memilih Kategori Layanan : ")
         
-            if kategori == 1 or kategori == 2:
+            if kategori == "1" or kategori == "2":
+                break
+            elif kategori == "0":
+                back = True
                 break
             else:
-                print("Kategori Tidak Valid!")
+                print("Kode yang anda masukkan tidak sesuai dengan kategori yang ada!\n")
 
+        if back:
+            continue
         customer = pilih_customer()
         # layanan kiloan
         if kategori == 1 :
@@ -151,29 +160,30 @@ while keluar:
         print("\n")
 
     #Lihat Detail Order
-    elif menu == 2:
+    elif menu == "2":
         update_order()
 
     #Pembayaran Order
-    elif menu == 3:
+    elif menu == "3":
         pembayaran = pembayaran_order()
         input("tekan ENTER untuk kembali ke menu...")
         print("\n")
 
     #Tambah Layanan
-    elif menu == 4:
+    elif menu == "4":
         tambah_layanan()
 
     #Edit Layanan
-    elif menu == 5:
+    elif menu == "5":
         edit_layanan()
 
     #Laporan Pendapatan
-    elif menu == 6:
+    elif menu == "6":
         menu_laporan()
 
     #Keluar Program
-    elif menu == 0:
+    elif menu == "0":
         keluar = False
+
     else:
-        print("Menu Tidak ada!😡😡")
+        print("Kode yang anda masukkan tidak sesuai dengan menu yang ada!\n\n")

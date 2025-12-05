@@ -52,5 +52,17 @@
     "name": "muhib",
     "phone": "08865",
     "address": "tambun belakang"
+  },
+  {
+    "id": "CUS-6a5d49a6",
+    "name": "Novaka",
+    "phone": "09876876678",
+    "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+  },
+  {
+    "id": "CUS-8ca173e5",
+    "name": "tes",
+    "phone": "0897",
+    "address": "tes"
   }
 ]

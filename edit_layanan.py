@@ -8,10 +8,10 @@ def edit_layanan():
         print("=== Pilih Jenis Layanan ===")
         print("1. Kiloan")
         print("2. Satuan")
-        print("0. Kembali")
-        jenis = int(input("Masukan jenis layanan (1/2): "))
+        print("0. Kembali ke Menu Utama")
+        jenis = input("Masukan jenis layanan (1/2): ")
 
-        if jenis == 1:
+        if jenis == "1":
             print("=== DAFTAR LAYANAN KILOAN ===")
             print(f"{'Kode':5} {'Nama Layanan':28} {'Harga/Kg':15} {'Estimasi'}")
             print("-" * 70)
@@ -26,7 +26,7 @@ def edit_layanan():
                     f"{item['est_days']}"
                 )
 
-            kode = input("Masukan kode layanan yang mau di ubah🤪🤘 : ")
+            kode = input("Masukan kode layanan yang ingin anda ubah : ")
             layanan = next((x for x in kiloan if x['kode'] == kode), None)
 
             if not layanan:
@@ -53,7 +53,7 @@ def edit_layanan():
             print("Layanan kiloan berhasil diubah🤘😎🤘")
             break
         
-        elif jenis == 2:
+        elif jenis == "2":
             print("=== DAFTAR LAYANAN SATUAN ===")
             print(f"{'Kode':5} {'Nama Layanan':28} {'Harga/Jumlah':15} {'Estimasi'}")
             print("-" * 70)
@@ -94,8 +94,8 @@ def edit_layanan():
             save_data(FILE_SATUAN, satuan)
             print("Layanan satuan berhasil  diubah🤘😎🤘")
             break
-        elif jenis == 0:
+        elif jenis == "0":
             break
 
         else:
-            print("Input salah ulangi!!!😡😡")
+            print("Kode yang anda masukkan tidak sesuai dengan jenis layanan yang ada!\n")
