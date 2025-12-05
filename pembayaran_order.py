@@ -154,8 +154,8 @@ def struk_pembayaran(order: Dict[str, Any], bayar: int, kembalian: int) -> str:
     struk.append(f"Estimasi       : {detail.get('estimasi','-')}")
     struk.append("")
 
-    struk.append(f"Tanggal Terima : {order.get('tanggal_diterima','-')}")
-    struk.append(f"Tanggal Selesai: {order.get('tanggal_selesai','-')}")
+    struk.append(f"Tanggal Terima : {format_tanggal(order.get('tanggal_diterima','-'))}")
+    struk.append(f"Tanggal Selesai: {format_tanggal(order.get('tanggal_selesai','-'))}")
     struk.append("")
     struk.append("=" * 45)
     struk.append("    TERIMA KASIH TELAH MENGGUNAKAN")
@@ -163,5 +163,3 @@ def struk_pembayaran(order: Dict[str, Any], bayar: int, kembalian: int) -> str:
     struk.append("=" * 45)
 
     return "\n".join(struk)
-
-pembayaran_order()
