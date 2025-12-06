@@ -578,5 +578,45 @@
     "tanggal_diterima": "2025-12-06T15:12:01.389779",
     "tanggal_selesai": "2025-12-09T15:12:01.389861",
     "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-0d8cd35e",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "joko",
+      "phone": "0897",
+      "address": "solo"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Super Express)",
+      "harga_per_kg": 20000.0,
+      "berat": 10.0,
+      "estimasi": 6,
+      "total_harga": 200000.0
+    },
+    "tanggal_diterima": "2025-12-06T23:13:39.707311",
+    "tanggal_selesai": "2025-12-07T05:13:39.707311",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-cf7f4412",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-086385e1",
+      "name": "muhib",
+      "phone": "08865",
+      "address": "tambun belakang"
+    },
+    "detail": {
+      "layanan": "dompet kosong",
+      "harga_satuan": 10000.0,
+      "jumlah": 2,
+      "estimasi": "1 jam",
+      "total_harga": 20000.0
+    },
+    "tanggal_diterima": "2025-12-06T23:14:17.468483",
+    "tanggal_selesai": "2025-12-07T00:14:17.468513",
+    "status": "Lunas"
   }
 ]

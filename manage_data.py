@@ -10,7 +10,7 @@ FILE_ORDER = os.path.join(DATA_DIR, "orders1.json")
 def data_manage():
     os.makedirs(DATA_DIR, exist_ok=True)
 
-    for path in (FILE_KILOAN, FILE_SATUAN, FILE_ORDER):
+    for path in (FILE_KILOAN, FILE_SATUAN, FILE_ORDER , FILE_CUSTOMER):
         if not os.path.exists(path):
             with open(path , "w") as file:
                 json.dump([], file)

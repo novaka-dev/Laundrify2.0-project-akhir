@@ -1,4 +1,5 @@
 from satuan import *
+from edit_customer import *
 from kiloan import *
 from tambah_layanan import *
 from edit_layanan import *
@@ -11,10 +12,10 @@ import os
 from manage_data import *
 
 DATA_DIR = "data_laundry"
-CUSTOMERS_FILE = os.path.join(DATA_DIR, "customers.json")
+FILE_CUSTOMER = os.path.join(DATA_DIR, "customers.json")
 
 def pilih_customer():
-    customers = data_json(CUSTOMERS_FILE)
+    customers = data_json(FILE_CUSTOMER)
 
     # print("\n=== DATA CUSTOMER ===")
     if len(customers) == 0:
@@ -53,7 +54,7 @@ def pilih_customer():
         }
 
         customers.append(new_cus2)
-        save_data(CUSTOMERS_FILE, customers)
+        save_data(FILE_CUSTOMER, customers)
         print("-" * 80)
         print("Data Customer berhasil disimpan")
         print("-" * 80)
@@ -129,10 +130,11 @@ while keluar:
     print("****************************************************")
     print("1.  Buat Order")
     print("2.  Lihat Detail Order")
-    print("3.  Pembayaran Order")
-    print("4.  Tambah Layanan")
-    print("5.  Edit Layanan")
-    print("6.  Laporan Pendapatan")
+    print("3.  Edit Data Customer")
+    print("4.  Pembayaran Order")
+    print("5.  Tambah Layanan")
+    print("6.  Edit Layanan")
+    print("7.  Laporan Pendapatan")
     print("0.  Keluar Program")
     menu = input("Pilih Menu:")
 
@@ -177,22 +179,26 @@ while keluar:
     elif menu == "2":
         update_order()
 
-    #Pembayaran Order
+    # edit data order
     elif menu == "3":
+        edit_customer()
+
+    #Pembayaran Order
+    elif menu == "4":
         pembayaran = pembayaran_order()
         input("tekan ENTER untuk kembali ke menu...")
         print("\n")
 
     #Tambah Layanan
-    elif menu == "4":
+    elif menu == "5":
         tambah_layanan()
 
     #Edit Layanan
-    elif menu == "5":
+    elif menu == "6":
         edit_layanan()
 
     #Laporan Pendapatan
-    elif menu == "6":
+    elif menu == "7":
         menu_laporan()
 
     #Keluar Program
