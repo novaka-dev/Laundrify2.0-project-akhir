@@ -418,5 +418,165 @@
     "tanggal_diterima": "2025-12-05T20:49:45.222948",
     "tanggal_selesai": "2025-12-08T20:49:45.222948",
     "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-b3ee7900",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "tes",
+      "phone": "0897",
+      "address": "tes"
+    },
+    "detail": {
+      "layanan": "Bed Cover",
+      "harga_satuan": 30000.0,
+      "jumlah": 12,
+      "estimasi": "72 jam",
+      "total_harga": 360000.0
+    },
+    "tanggal_diterima": "2025-12-06T13:05:45.526285",
+    "tanggal_selesai": "2025-12-09T13:05:45.526348",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-65efa189",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "tes",
+      "phone": "0897",
+      "address": "tes"
+    },
+    "detail": {
+      "layanan": "mousepad",
+      "harga_satuan": 5000.0,
+      "jumlah": 1,
+      "estimasi": "1 jam",
+      "total_harga": 5000.0
+    },
+    "tanggal_diterima": "2025-12-06T13:06:26.003233",
+    "tanggal_selesai": "2025-12-06T14:06:26.003257",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-4eb6c0fd",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "tes",
+      "phone": "0897",
+      "address": "tes"
+    },
+    "detail": {
+      "layanan": "Karpet",
+      "harga_satuan": 50000.0,
+      "jumlah": 10,
+      "estimasi": "120 jam",
+      "total_harga": 500000.0
+    },
+    "tanggal_diterima": "2025-12-06T13:07:17.099107",
+    "tanggal_selesai": "2025-12-11T13:07:17.099163",
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-KIL-4306c7c9",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "tes",
+      "phone": "0897",
+      "address": "tes"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Super Express)",
+      "harga_per_kg": 20000.0,
+      "berat": 10.0,
+      "estimasi": 6,
+      "total_harga": 200000.0
+    },
+    "tanggal_diterima": "2025-12-06T13:08:23.417675",
+    "tanggal_selesai": "2025-12-06T19:08:23.417675",
+    "status": "Lunas"
+  },
+  {
+    "id": "ORD-KIL-ef8fc2a1",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "tes",
+      "phone": "0897",
+      "address": "tes"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Super Express)",
+      "harga_per_kg": 20000.0,
+      "berat": 10.0,
+      "estimasi": 6,
+      "total_harga": 200000.0
+    },
+    "tanggal_diterima": "2025-12-06T14:36:37.389903",
+    "tanggal_selesai": "2025-12-06T20:36:37.389903",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-1ba9638a",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "tes",
+      "phone": "0897",
+      "address": "tes"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Super Express)",
+      "harga_per_kg": 20000.0,
+      "berat": 70.0,
+      "estimasi": 6,
+      "total_harga": 1400000.0
+    },
+    "tanggal_diterima": "2025-12-06T14:40:33.689105",
+    "tanggal_selesai": "2025-12-06T20:40:33.689105",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-e92c112b",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "tes",
+      "phone": "0897",
+      "address": "tes"
+    },
+    "detail": {
+      "layanan": "Cuci + Gosok (Super Express)",
+      "harga_per_kg": 20000.0,
+      "berat": 10.0,
+      "estimasi": 6,
+      "total_harga": 200000.0
+    },
+    "tanggal_diterima": "2025-12-06T14:42:25.818041",
+    "tanggal_selesai": "2025-12-06T20:42:25.818041",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-f87edf80",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "tes",
+      "phone": "0897",
+      "address": "tes"
+    },
+    "detail": {
+      "layanan": "Jas",
+      "harga_satuan": 25000.0,
+      "jumlah": 10,
+      "estimasi": "72 jam",
+      "total_harga": 250000.0
+    },
+    "tanggal_diterima": "2025-12-06T15:12:01.389779",
+    "tanggal_selesai": "2025-12-09T15:12:01.389861",
+    "status": "Belum dibayar"
   }
 ]

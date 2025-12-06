@@ -147,10 +147,14 @@ while keluar:
         # layanan kiloan
         if kategori == "1" :
             transaksi = kiloan(customer)
-            print_ringkasan_kiloan(transaksi)
+            if transaksi is None:
+                continue
+            ringkasan_kiloan(transaksi)
         # Layanan Satuan
         elif kategori == "2":
             transaksi = satuan(customer)
+            if transaksi is None:
+                continue
         #tekan enter maka akan kembali
         input("tekan ENTER untuk kembali ke menu...")
         print("\n")

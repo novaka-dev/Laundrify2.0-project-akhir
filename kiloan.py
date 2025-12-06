@@ -48,6 +48,7 @@ def kiloan(customer):
     print("-"* 58)
     for item in data:
         print(f'{item["kode"]}. {item["nama"]:<31} Rp{item["harga_per_kg"]:<10,.0f}  {item["est_days"]}')
+    print(f"0. Keluar")
     print("-"* 58)
 
     while True:
@@ -56,6 +57,8 @@ def kiloan(customer):
             if not pilihan.isdigit():
                 print("pilihan tidak ada")
                 continue
+            if pilihan == "0":
+                return None
             item = next((x for x in data if x["kode"] == pilihan), None)
             if item is None:
                 print("kode tidak ditemukan")
@@ -114,7 +117,7 @@ def kiloan(customer):
 
     return new_order
 # ringkasan order
-def print_ringkasan_kiloan(transaksi):
+def ringkasan_kiloan(transaksi):
     print("\n===== RINGKASAN ORDER (KILOAN) =====")
     print(f"Id order                  : {transaksi['id']}")
     print(f"Nama Pelanggan            : {transaksi['customer']['name']}")

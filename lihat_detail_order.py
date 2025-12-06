@@ -49,7 +49,13 @@ def detail_order():
             return None
                 
         if 1 <= pilihan <= len(orders):
-                return orders[pilihan - 1]
+            selected = orders[pilihan - 1]
+            
+            # cek status pembayaran
+            if selected['status'].lower() == "belum dibayar":
+                print("Order ini belum dibayar. Harap Lakukan pembayaran terlebih dahulu.")
+                continue
+            return selected
             
         else:
             print("Nomor yang anda masukkan tidak sesuai dengan data yang ada!")
@@ -63,7 +69,7 @@ def update_order():
     if not selected:
         # print("Batal update.")
         return
-
+    
     print("\n=== UPDATE ORDER ===")
     print(f"ID Order       : {selected['id']}")
     print(f"Nama Pelanggan : {selected['customer']['name']}")

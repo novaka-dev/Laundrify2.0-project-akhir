@@ -32,16 +32,31 @@ def satuan(customer):
 
     for item in data_satuan:
         print(f'{item["kode"]:<8} {item["nama"]:<25} Rp{item["harga_satuan"]:<10,.0f} {item["est_days"]:<10}')
+    print("0.       Keluar")
 
     # Pilih layanan
     while True:
         kode = input("Pilih layanan: ")
+        if kode == "0":
+            return None
         item = next((x for x in data_satuan if x["kode"] == kode), None)
-        if item:
-            break
-        print("Kode tidak ditemukan!")
+        if item is None:
+            print("Kode tidak ditemukan!")
+            continue
+        break
 
-    jumlah = int(input("Masukkan jumlah item : "))
+    while True:
+        try:
+            jumlah = int(input("Masukkan jumlah item : "))
+
+            if jumlah <= 0:
+                print("jumlah harus lebih dari 0!😡")
+                continue
+            break
+
+        except ValueError:
+            print("input harus angka!😡 2/3")
+
     total = jumlah * item["harga_satuan"]
     stats = ["Belum dibayar","Proses", "Selesai", "Diantar", "Diterima"]
 
@@ -70,12 +85,12 @@ def satuan(customer):
     print(f"ID Order            : {order_id}")
     print(f"Customer            : {customer['name']}")
     print(f"Layanan             : {ringkasan['layanan']}")
-    print(f"Harga/unit          : Rp{ringkasan['harga_satuan']}")
+    print(f"Harga/unit          : Rp{ringkasan['harga_satuan']:,}")
     print(f"Jumlah              : {ringkasan['jumlah']}")
     print(f"Estimasi            : {ringkasan['estimasi']}")
     print(f"Tanggal order Dibuat: {format_tanggal(today)}")
     print(f"Tanggal Selesai     : {format_tanggal(tanggal_selesai)}")
-    print(f"Total Harga         : Rp{ringkasan['total_harga']}")
+    print(f"Total Harga         : Rp{ringkasan['total_harga']:,}")
 
     # simpan order ke json
     orders = data_json(ORDERS_FILE)
