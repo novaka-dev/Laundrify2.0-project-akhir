@@ -4,6 +4,7 @@ import math
 import json
 import uuid
 from satuan import *
+
 # def load_json(path):
 #     with open(path, "r") as f:
 #         try:
@@ -47,81 +48,129 @@ def list_customers():
 # kiloan
 def kiloan(customer):
     data = data_json(FILE_KILOAN)
-
-    print(f'{"kode":8} {"Nama Layanan":25} {"Harga/kg":13} {"Estimasi":13}')
-    print("-"* 58)
-    for item in data:
-        print(f'{item["kode"]}. {item["nama"]:<31} Rp{item["harga_per_kg"]:<10,.0f}  {item["est_days"]}')
-    print(f"0. Keluar")
-    print("-"* 58)
-
-    while True:
-            pilihan = input("Pilih layanan : ")
-
-            if not pilihan.isdigit():
-                print("Inputan harus berupa angka!")
+    if len(data) == 0:
+        print("Layanan belum ada, silahkan tambahkan layanan terlebih dahulu!\n")
+        while True:
+            nama = input("Input Nama Menu Baru (Contoh: Cuci + Setrika): ")
+            if nama == "":
+                print("Nama menu tidak boleh kosong!")
                 continue
-            if pilihan == "0":
-                return None
-            item = next((x for x in data if x["kode"] == pilihan), None)
-            if item is None:
-                print("kode tidak ditemukan")
+            else:
+                break
+        while True:
+            harga = input("Input harga Menu Baru (Contoh: 12000) : ")
+            if type(harga) == str:
+                try:
+                    harga = float(harga)
+                    break
+                except ValueError:
+                    print("Inputan harus berupa angka!")
+                    continue
+            elif harga == "":
+                print("Harga menu tidak boleh kosong!")
                 continue
-            break
-
-    while True:
-        try:
-            kg = float(input("Masukan berat (kg) : "))
-
-            if kg < 1 :
-                print("Minimal berat harus 1 kg")
+            else:
+                break
+        while True:
+            estimasi = input("Input Estimasi Menu Baru (3 jam): ")
+            if estimasi.find("jam") == -1:
+                print("Inputan harus sesuai contoh!")
                 continue
-            break
+            elif estimasi == "":
+                print("Harga menu tidak boleh kosong!")
+                continue
+            else:
+                break
+        kode_baru = str(len(data) + 1)
 
-        except ValueError:
-            print("Inputan harus berupa angka")
+        layanan = {
+            "kode" : kode_baru,
+            "nama" : nama,
+            "harga_per_kg" : harga,
+            "est_days" : estimasi,
+        }
 
-    # if str(kg).find(".") != -1:
-    #     kg = pembulatan(kg)
-    total = kg * item["harga_per_kg"]
-    stats = ["Belum dibayar","Proses", "Selesai", "Diantar", "Diterima", "Dibayar"]
-    # today = datetime.date.today().isoformat()
-    today = datetime.now()
-    est = item["est_days"]
-    index = est.find(" ")
-    est = est[:index]
-    est = int(est)
-    estimasi_hasil = today + timedelta(hours=est)
+        data.append(layanan)
+        save_data(FILE_KILOAN, data)
 
-    today = today.isoformat()
-    estimasi_hasil = estimasi_hasil.isoformat()
-    # simpan order ke json
-    orders = data_json(FILE_ORDER)
-    new_order = {
-        "id": gen_id("ORD-KIL"),
-        "tipe": "kiloan",
-        "customer": {
-            "id": customer["id"],
-            "name": customer["name"],
-            "phone": customer.get("phone", ""),
-            "address": customer.get("address", "")
-        },
-        "detail": {
-            "layanan": item["nama"],
-            "harga_per_kg": item["harga_per_kg"],
-            "berat": kg,
-            "estimasi": int(est),
-            "total_harga": total
-        },
-        "tanggal_diterima": today,
-        "tanggal_selesai": estimasi_hasil,
-        "status": stats[0]
-    }
-    print("Order berhasil dibuat!\n")
-    orders.append(new_order)
-    save_data(FILE_ORDER, orders)
+        print("Menu Layanan Kiloan Berhasil Dibuat🤘😎🤘")
+        
+    else:
 
-    return new_order
+        print(f'{"kode":8} {"Nama Layanan":31} {"Harga/kg":13} {"Estimasi":13}')
+        print("-"* 58)
+        for item in data:
+            print(f'{item["kode"]:8} {item["nama"]:<31} Rp{item["harga_per_kg"]:<10,.0f}  {item["est_days"]}')
+        print(f"0.       Keluar")
+        print("-"* 58)
+
+        while True:
+                pilihan = input("Pilih layanan : ")
+
+                if not pilihan.isdigit():
+                    print("Inputan harus berupa angka!")
+                    continue
+                if pilihan == "0":
+                    return None
+                item = next((x for x in data if x["kode"] == pilihan), None)
+                if item is None:
+                    print("kode tidak ditemukan")
+                    continue
+                break
+
+        while True:
+            try:
+                kg = float(input("Masukan berat (kg) : "))
+
+                if kg < 1 :
+                    print("Minimal berat harus 1 kg")
+                    continue
+                break
+
+            except ValueError:
+                print("Inputan harus berupa angka")
+
+        # if str(kg).find(".") != -1:
+        #     kg = pembulatan(kg)
+        total = kg * item["harga_per_kg"]
+        stats = ["Belum dibayar","Proses", "Selesai", "Diantar", "Diterima", "Dibayar"]
+        # today = datetime.date.today().isoformat()
+        today = datetime.now()
+        est = item["est_days"]
+        index = est.find(" ")
+        est = est[:index]
+        est = int(est)
+        estimasi_hasil = today + timedelta(hours=est)
+
+        today = today.isoformat()
+        estimasi_hasil = estimasi_hasil.isoformat()
+        # simpan order ke json
+        orders = data_json(FILE_ORDER)
+        new_order = {
+            "id": gen_id("ORD-KIL"),
+            "tipe": "kiloan",
+            "customer": {
+                "id": customer["id"],
+                "name": customer["name"],
+                "phone": customer.get("phone", ""),
+                "address": customer.get("address", "")
+            },
+            "detail": {
+                "layanan": item["nama"],
+                "harga_per_kg": item["harga_per_kg"],
+                "berat": kg,
+                "estimasi": int(est),
+                "total_harga": total
+            },
+            "tanggal_diterima": today,
+            "tanggal_selesai": estimasi_hasil,
+            "status": stats[0]
+        }
+        print("Order berhasil dibuat!\n")
+        orders.append(new_order)
+        save_data(FILE_ORDER, orders)
+
+        return new_order
 # ringkasan order
 def ringkasan_kiloan(transaksi):
     print("\n===== RINGKASAN ORDER (KILOAN) =====")

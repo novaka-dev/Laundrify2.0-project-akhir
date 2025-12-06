@@ -24,7 +24,7 @@ def format_tanggal(dt: str):
 # ============================================
 def satuan(customer):
     data_satuan = data_json(FILE_SATUAN)
-    print("\n=== TRANSAKSI SATUAN ===")
+    print("\n=== LAYANAN LAUNDRY SATUAN ===")
 
     # Tampilkan menu layanan
     print(f'{"kode":8} {"Nama Layanan":25} {"Harga":13} {"Estimasi":10}')
@@ -32,6 +32,7 @@ def satuan(customer):
 
     for item in data_satuan:
         print(f'{item["kode"]:<8} {item["nama"]:<25} Rp{item["harga_satuan"]:<10,.0f} {item["est_days"]:<10}')
+    print("="*100)
     print("0.       Keluar")
 
     # Pilih layanan
@@ -41,7 +42,7 @@ def satuan(customer):
             return None
         item = next((x for x in data_satuan if x["kode"] == kode), None)
         if item is None:
-            print("Kode tidak ditemukan!")
+            print("Layanan tidak ditemukan!")
             continue
         break
 

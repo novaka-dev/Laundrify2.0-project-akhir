@@ -1,56 +1,8 @@
 [
   {
     "kode": "1",
-    "nama": "Karpet",
-    "harga_satuan": 50000.0,
-    "est_days": "120 jam"
-  },
-  {
-    "kode": "2",
-    "nama": "Jas",
-    "harga_satuan": 25000.0,
-    "est_days": "72 jam"
-  },
-  {
-    "kode": "3",
-    "nama": "Bed Cover",
-    "harga_satuan": 30000.0,
-    "est_days": "72 jam"
-  },
-  {
-    "kode": "4",
-    "nama": "Selimut",
-    "harga_satuan": 25000.0,
-    "est_days": "72 jam"
-  },
-  {
-    "kode": "5",
-    "nama": "Boneka",
-    "harga_satuan": 20000.0,
-    "est_days": "72 jam"
-  },
-  {
-    "kode": "6",
-    "nama": "sarung gajah duduk",
-    "harga_satuan": 20000.0,
-    "est_days": "24 jam"
-  },
-  {
-    "kode": "7",
-    "nama": "Kasur dewasa",
-    "harga_satuan": 300000.0,
-    "est_days": "168 jam"
-  },
-  {
-    "kode": "8",
-    "nama": "dompet kosong",
-    "harga_satuan": 10000.0,
-    "est_days": "1 jam"
-  },
-  {
-    "kode": "9",
-    "nama": "mousepad",
-    "harga_satuan": 5000.0,
-    "est_days": "1 jam"
+    "nama": "cuci boneka",
+    "harga_satuan": 12888.0,
+    "est_days": "3 jam"
   }
 ]

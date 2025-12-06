@@ -66,9 +66,40 @@ def tambah_layanan():
             # tambah menu satuan
             elif jenis == "2":
                 print("=== Tambah Layanan Satuan ===")
-                nama = input("Input Nama Menu Baru : ")
-                harga = float(input("Input harga Menu Baru : "))
-                estimasi = input("Input Estimasi Menu Baru : ")
+                # nama = input("Input Nama Menu Baru : ")
+                while True:
+                    nama = input("Input Nama Menu Baru (Contoh: Cuci Boneka): ")
+                    if nama == "":
+                        print("Nama menu tidak boleh kosong!")
+                        continue
+                    else:
+                        break
+                while True:
+                    harga = input("Input harga Menu Baru (Contoh: 12000) : ")
+                    if type(harga) == str:
+                        try:
+                            harga = float(harga)
+                            break
+                        except ValueError:
+                            print("Inputan harus berupa angka!")
+                            continue
+                    elif harga == "":
+                        print("Harga menu tidak boleh kosong!")
+                        continue
+                    else:
+                        break
+                # harga = float(input("Input harga Menu Baru : "))
+                while True:
+                    estimasi = input("Input Estimasi Menu Baru (3 jam): ")
+                    if estimasi.find("jam") == -1:
+                        print("Inputan harus sesuai contoh!")
+                        continue
+                    elif estimasi == "":
+                        print("Harga menu tidak boleh kosong!")
+                        continue
+                    else:
+                        break
+                # estimasi = input("Input Estimasi Menu Baru : ")
                 kode_baru = str(len(satuan) + 1)
 
                 layanan = {
@@ -84,7 +115,7 @@ def tambah_layanan():
                 break
             # menu keluar
             elif jenis == "0":
-                return
+                return  
 
             else:
-                print("Nomor Layanan Tidak Ada!!😡😡")
+                print("Jenis Layanan Tidak Ada!!😡😡")

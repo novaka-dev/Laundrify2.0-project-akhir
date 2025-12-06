@@ -7,7 +7,6 @@ from lihat_detail_order import *
 from pembayaran_order import *
 from laporan_pendapatan import *
 import random
-
 import os
 from manage_data import *
 
@@ -79,17 +78,17 @@ def pilih_customer():
             # nama = input("Nama customer: ")
             # telepon = input("No. telepon: ")
             # alamat = input("Alamat: ")
-            while True:
-                nama = input("Nama customer: ")
-                if not nama.replace(" ", "").isalpha():
-                    print("Nama tidak boleh mengandung angka!")
-                    continue
-                else:
-                    # nama3 = nama2
-                    break
+                while True:
+                    nama = input("Nama customer: ")
+                    if not nama.replace(" ", "").isalpha():
+                        print("Nama tidak boleh mengandung angka!")
+                        continue
+                    else:
+                        # nama3 = nama2
+                        break
 
                 while True:
-                    telepon = input("No. telepon: ")
+                    telepon = input("No. Telepon: ")
                     try:
                         telepon = int(telepon)
                         break
@@ -103,21 +102,21 @@ def pilih_customer():
                         continue
                     else:
                         break
-            cus_id = gen_id("CUS")
+                cus_id = gen_id("CUS")
 
-            new_cus = {
-                "id": cus_id,
-                "name": nama,        # PERBAIKAN
-                "phone": telepon,
-                "address": alamat
-            }
+                new_cus = {
+                    "id": cus_id,
+                    "name": nama,        # PERBAIKAN
+                    "phone": telepon,
+                    "address": alamat
+                }
 
-            customers.append(new_cus)
-            save_data(CUSTOMERS_FILE, customers)
-            print("-" * 80)
-            print("Data Customer berhasil disimpan")
-            print("-" * 80)
-            return new_cus
+                customers.append(new_cus)
+                save_data(CUSTOMERS_FILE, customers)
+                print("-" * 80)
+                print("Data Customer berhasil disimpan")
+                print("-" * 80)
+                return new_cus
         else:
             print("Input tidak valid!")
             continue
