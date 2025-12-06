@@ -9,14 +9,20 @@ os.makedirs(folder_path, exist_ok=True)
 def pembayaran_order():
     orders = data_json(FILE_ORDER)
 
+    belum_dibayar = [order for order in orders if order.get("status") == "Belum dibayar"]
+
     if not orders:
         print("Belum ada order.🤔🤔")
+        return
+
+    if not belum_dibayar:
+        print("tidak ada status yang belum dibayar.🤔🤔")
         return
 
     print("\n================================================= PEMBAYARAN ORDER =================================================")
     print(f"{'ID Order':20} {'Nama Pelanggan':20} {'Layanan':30} {'Status':15} {'Tanggal Diterima'}")
     print("====================================================================================================================")
-    for i in orders:
+    for i in belum_dibayar:
         print(
             f"{i['id']:20} "
             f"{i['customer']['name']:20} "
@@ -59,6 +65,9 @@ def pembayaran_order():
             if cocok["status"] == "Lunas":
             # if cocok.get("status") == "Lunas":
                 print("Order ini sudah lunas🤘😎🤘.\n")
+                continue
+            elif cocok["status"] != "Lunas":
+                print(f"Order ini sudah di {cocok['status']}")
                 continue
             else:
                 # return cocok

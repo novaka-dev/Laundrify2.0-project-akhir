@@ -97,7 +97,7 @@
     },
     "tanggal_diterima": "2025-12-03T22:20:58.202533",
     "tanggal_selesai": "2025-12-04T02:20:58.202533",
-    "status": "Proses"
+    "status": "diterima"
   },
   {
     "id": "ORD-KIL-42798232",
@@ -597,6 +597,6 @@
     },
     "tanggal_diterima": "2025-12-06T23:11:09.300666",
     "tanggal_selesai": "2025-12-07T00:11:09.300709",
-    "status": "Belum dibayar"
+    "status": "Lunas"
   }
 ]
