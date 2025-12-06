@@ -1,13 +1,3 @@
-# print("****************************************************")
-# print("                    ✦  Kelompok 2  ✦             ")
-# print("----------------------------------------------------")
-# print("   -Muhamad Adli Akbar                              ")
-# print("   -Novaka Rizky Heny Saputra                       ")
-# print("   -Restu Aji Prasetyo                              ")
-# print("   -Rifky Al Adli                                   ")
-# print("   -Arya Luqmannul Hakim                            ")
-# print("****************************************************")
-
 from satuan import *
 from kiloan import *
 from tambah_layanan import *
@@ -26,10 +16,48 @@ CUSTOMERS_FILE = os.path.join(DATA_DIR, "customers.json")
 def pilih_customer():
     customers = data_json(CUSTOMERS_FILE)
 
-    print("\n=== DATA CUSTOMER ===")
+    # print("\n=== DATA CUSTOMER ===")
     if len(customers) == 0:
-        print("(Belum ada customer)")
+        
+        while True:
+            nama2 = input("Nama customer: ")
+            if not nama2.replace(" ", "").isalpha():
+                print("Nama tidak boleh mengandung angka!")
+                continue
+            else:
+                # nama3 = nama2
+                break
 
+        while True:
+            telepon2 = input("No. telepon: ")
+            try:
+                telepon2 = int(telepon2)
+                break
+            except ValueError:
+                print("Anda harus memasukkan angka!")
+                continue
+        while True:
+            alamat2 = input("Alamat: ")
+            if alamat2 == "":
+                print("Alamat wajib diisi!")
+                continue
+            else:
+                break
+        cus_id2 = gen_id("CUS")
+
+        new_cus2 = {
+            "id": cus_id2,
+            "name": nama2,        # PERBAIKAN
+            "phone": telepon2,
+            "address": alamat2
+        }
+
+        customers.append(new_cus2)
+        save_data(CUSTOMERS_FILE, customers)
+        print("-" * 80)
+        print("Data Customer berhasil disimpan")
+        print("-" * 80)
+    print("\n=== DATA CUSTOMER ===")
     print(f'{"ID Customer":20} {"Nama":30} {"No. Telp":20} {"Alamat":10}')
     print("-" * 130)
 
@@ -47,9 +75,33 @@ def pilih_customer():
                     return cocok
                 print("ID tidak ditemukan, coba lagi.")
         elif opsi == "n":
-            nama = input("Nama customer: ")
-            telepon = input("No. telepon: ")
-            alamat = input("Alamat: ")
+            # nama = input("Nama customer: ")
+            # telepon = input("No. telepon: ")
+            # alamat = input("Alamat: ")
+            while True:
+                nama = input("Nama customer: ")
+                if not nama.replace(" ", "").isalpha():
+                    print("Nama tidak boleh mengandung angka!")
+                    continue
+                else:
+                    # nama3 = nama2
+                    break
+
+                while True:
+                    telepon = input("No. telepon: ")
+                    try:
+                        telepon = int(telepon)
+                        break
+                    except ValueError:
+                        print("Anda harus memasukkan angka!")
+                        continue
+                while True:
+                    alamat = input("Alamat: ")
+                    if alamat == "":
+                        print("Alamat wajib diisi!")
+                        continue
+                    else:
+                        break
             cus_id = gen_id("CUS")
 
             new_cus = {
@@ -68,44 +120,6 @@ def pilih_customer():
         else:
             print("Input tidak valid!")
             continue
-# def pilih_customer():
-#     customers = data_json(CUSTOMERS_FILE)
-
-#     print("\n=== DATA CUSTOMER ===")
-#     if len(customers) == 0:
-#         print("(Belum ada customer)")
-
-#     for c in customers:
-#         print(f"{c['id']} - {c['name']} ({c['phone']}) {c['address']}")
-
-#     opsi = input("\nPakai customer yang sudah ada? (y/n): ").lower()
-
-#     if opsi == "y":
-#         while True:
-#             cid = input("Masukkan ID customer: ")
-#             cocok = next((c for c in customers if c["id"] == cid), None)
-#             if cocok:
-#                 return cocok
-#             print("ID tidak ditemukan, coba lagi.")
-#     else:
-#         nama = input("Nama customer: ")
-#         telepon = input("No. telepon: ")
-#         alamat = input("Alamat: ")
-#         cus_id = gen_id("CUS")
-
-#         new_cus = {
-#             "id": cus_id,
-#             "name": nama,        # PERBAIKAN
-#             "phone": telepon,
-#             "address": alamat
-#         }
-
-#         customers.append(new_cus)
-#         save_data(CUSTOMERS_FILE, customers)
-#         print("-" * 80)
-#         print("Data Customer berhasil disimpan")
-#         print("-" * 80)
-#         return new_cus
 
 # data_pelanggan = []
 keluar = True
