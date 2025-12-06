@@ -37,7 +37,7 @@ def pilih_customer():
         print(f'{c["id"]:<20} {c["name"]:<30} {c["phone"]:<20} {c["address"]:<10}')
 
     while True:
-        opsi = input("\nPakai customer yang sudah ada? (y/n): ").lower()
+        opsi = input("\nPilih customer yang sudah ada? (y/n): ").lower()
 
         if opsi == "y":
             while True:
@@ -66,7 +66,7 @@ def pilih_customer():
             print("-" * 80)
             return new_cus
         else:
-            print("Kode yang anda masukkan tidak valid!")
+            print("Input tidak valid!")
             continue
 # def pilih_customer():
 #     customers = data_json(CUSTOMERS_FILE)

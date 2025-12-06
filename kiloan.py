@@ -1,5 +1,6 @@
 from manage_data import * #data_json, save_data, FILE_KILOAN, FILE_ORDER, FILE_CUSTOMER
 from datetime import *
+import math
 import json
 import uuid
 from satuan import *
@@ -40,6 +41,9 @@ def list_customers():
     for c in customers:
         print(f"{c['id']:10} {c['name'][:25]:25} {c.get('phone','')[:15]:15} {c['address'][:25]:25}")
 
+# def pembulatan(berat):
+#     return math.ceil(berat * 2) /2
+
 # kiloan
 def kiloan(customer):
     data = data_json(FILE_KILOAN)
@@ -52,10 +56,10 @@ def kiloan(customer):
     print("-"* 58)
 
     while True:
-            pilihan = input("masukan input layanan : ")
+            pilihan = input("Pilih layanan : ")
 
             if not pilihan.isdigit():
-                print("pilihan tidak ada")
+                print("Inputan harus berupa angka!")
                 continue
             if pilihan == "0":
                 return None
@@ -67,18 +71,20 @@ def kiloan(customer):
 
     while True:
         try:
-            kg = float(input("masukan berat(kg) : "))
+            kg = float(input("Masukan berat (kg) : "))
 
-            if kg <= 0 :
-                print("berat harus lebih dari 0")
+            if kg < 1 :
+                print("Minimal berat harus 1 kg")
                 continue
             break
 
         except ValueError:
-            print("harus angka contoh 2/3")
+            print("Inputan harus berupa angka")
 
+    # if str(kg).find(".") != -1:
+    #     kg = pembulatan(kg)
     total = kg * item["harga_per_kg"]
-    stats = ["Belum dibayar","Proses", "Selesai", "Diantar", "Diterima"]
+    stats = ["Belum dibayar","Proses", "Selesai", "Diantar", "Diterima", "Dibayar"]
     # today = datetime.date.today().isoformat()
     today = datetime.now()
     est = item["est_days"]
@@ -111,7 +117,7 @@ def kiloan(customer):
         "tanggal_selesai": estimasi_hasil,
         "status": stats[0]
     }
-
+    print("Order berhasil dibuat!\n")
     orders.append(new_order)
     save_data(FILE_ORDER, orders)
 
