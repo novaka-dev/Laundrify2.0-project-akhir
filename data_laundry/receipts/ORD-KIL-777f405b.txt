@@ -1,0 +1,22 @@
+=============================================
+              NOTA LAUNDRY
+=============================================
+ID Order       : ORD-KIL-777f405b
+Nama Customer  : muhib
+Tipe Layanan   : KILOAN
+Nama Layanan   : cuci + gosok
+Berat          : 1.0 kg
+Harga/kg       : 6,000.0
+
+Subtotal       : 6,000.0
+Bayar          : 6,000
+Kembalian      : 0.0
+Estimasi       : 24
+
+Tanggal Terima : 05-12-2025 01:29
+Tanggal Selesai: 06-12-2025 01:29
+
+=============================================
+    TERIMA KASIH TELAH MENGGUNAKAN
+         LAYANAN LAUNDRY KAMI
+=============================================

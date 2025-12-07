@@ -1,0 +1,20 @@
+[
+  {
+    "kode": "1",
+    "nama": "cuci boneka",
+    "harga_satuan": 12888.0,
+    "est_days": "3 jam"
+  },
+  {
+    "kode": "2",
+    "nama": "fds",
+    "harga_satuan": 43.0,
+    "est_days": "4 jam"
+  },
+  {
+    "kode": "3",
+    "nama": "jonie",
+    "harga_satuan": 12000.0,
+    "est_days": "2 jam"
+  }
+]

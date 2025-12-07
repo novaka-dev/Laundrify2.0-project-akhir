@@ -1,0 +1,22 @@
+=============================================
+              NOTA LAUNDRY
+=============================================
+ID Order       : ORD-KIL-e92c112b
+Nama Customer  : tes
+Tipe Layanan   : KILOAN
+Nama Layanan   : Cuci + Gosok (Super Express)
+Berat          : 10.0 kg
+Harga/kg       : 20,000.0
+
+Subtotal       : 200,000.0
+Bayar          : 200,000
+Kembalian      : 0.0
+Estimasi       : 6
+
+Tanggal Terima : 06-12-2025 14:42
+Tanggal Selesai: 06-12-2025 20:42
+
+=============================================
+    TERIMA KASIH TELAH MENGGUNAKAN
+         LAYANAN LAUNDRY KAMI
+=============================================

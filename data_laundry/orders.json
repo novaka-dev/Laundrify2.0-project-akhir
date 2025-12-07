@@ -1,0 +1,40 @@
+[
+  {
+    "id": "OR-demo01",
+    "customer_id": "CU-demo01",
+    "customer_name": "Budi Santoso",
+    "service_code": "SV-CG",
+    "service_name": "Cuci + Gosok (Reguler)",
+    "weight_kg": 3.5,
+    "subtotal": 35000.0,
+    "notes": "Baju kerja, tas kecil",
+    "tanggal_received": "2025-11-24",
+    "expected_ready": "2025-11-26",
+    "actual_ready": null,
+    "tanggal_delivered": null,
+    "status": "RECEIVED",
+    "paid": false,
+    "paid_amount": 0.0,
+    "late_fee_per_day": 5000.0,
+    "damage_fee": 0.0
+  },
+  {
+    "id": "OR-3e4d13be",
+    "customer_id": "CU-demo01",
+    "customer_name": "Budi Santoso",
+    "service_code": "SV-C",
+    "service_name": "Cuci Kering",
+    "weight_kg": 3.0,
+    "subtotal": 24000.0,
+    "notes": "tes",
+    "tanggal_received": "2025-11-24",
+    "expected_ready": "2025-11-26",
+    "actual_ready": null,
+    "tanggal_delivered": null,
+    "status": "RECEIVED",
+    "paid": false,
+    "paid_amount": 0.0,
+    "late_fee_per_day": 5000.0,
+    "damage_fee": 0.0
+  }
+]

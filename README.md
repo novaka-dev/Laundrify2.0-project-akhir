@@ -1,127 +1,84 @@
-# 👥 Panduan Kolaborasi Proyek (Git + GitHub)
-
-Panduan ini dibuat agar semua kolaborator dapat bekerja secara
-**tertata, aman, dan tidak menimpa pekerjaan satu sama lain.**\
-Gunakan README ini sebagai pedoman utama saat bekerja di repository ini.
+Oke bro, gua buatin README yang **lebih simple**, **lebih pendek**, dan jelas banget kalau **projek masih dalam pengembangan**. Tinggal copas, udah aman 👇
 
 ---
 
-## 🚀 1. Clone Repository (Hanya Pertama Kali)
+# 🧺 LAUNDRIFY — Projek Python
+
+**Status:** 🚧 *Masih Dalam Pengembangan*
+
+Laundryfy adalah aplikasi laundry berbasis Python yang sedang dibuat sebagai **projek akhir**.
+Project ini **belum selesai** dan masih dalam tahap pembuatan fitur inti.
+
+---
+
+## 👥 Anggota Kelompok
+
+* Muhamad Adli Akbar
+* Novaka Rizky Heny Saputra
+* Restu Aji Prasetyo
+* Rifky Al Adli
+* Arya Luqmannul Hakim
+
+---
+
+## 🎯 Deskripsi Singkat
+
+Project ini bertujuan untuk membuat aplikasi yang dapat:
+
+* Mencatat pesanan laundry
+* Menghitung total biaya
+* Menampilkan daftar pesanan
+* Membuat struk sederhana
+
+> Semua fitur di atas **masih dalam proses pengembangan**.
+
+---
+
+## 🚧 Progress Sementara
+
+* Struktur project dasar: **Selesai**
+* Menu utama: *On Progress*
+* Input pesanan: *On Progress*
+* Hitung harga otomatis: *Belum*
+* Struk transaksi: *Belum*
+
+---
+
+## 🏗️ Teknologi
+
+* Python 3.x
+* CLI (Command Line Interface)
+
+---
+
+## 📂 Struktur Project (Sementara)
 
 ```bash
-git clone https://github.com/novaka-dev/Laundrify2.0-project-akhir.git
-cd Laundrify2.0-project-akhir
+Laundryfy/
+│
+├── main.py
+└── README.md
 ```
 
 ---
 
-## 🔄 2. Workflow Diagram (Alur Kerja Kolaborator)
+## ▶️ Cara Menjalankan (Nanti)
 
-              ┌──────────────┐
-              │   git pull   │   ← ambil update terbaru
-              └──────┬───────┘
-                     │
-          ┌──────────▼───────────┐
-          │   Buat / Masuk Branch│
-          └──────────┬───────────┘
-                     │
-              ┌──────▼───────┐
-              │     Coding   │
-              └──────┬───────┘
-                     │
-             ┌───────▼────────┐
-             │  git add .     │
-             │  git commit -m │
-             └───────┬────────┘
-                     │
-             ┌───────▼────────┐
-             │   git push     │
-             └───────┬────────┘
-                     │
-             ┌───────▼──────────────┐
-             │  Pull Request (PR)   │ ← merge ke main
-             └──────────────────────┘
+```bash
+python main.py
+```
+
+> Program belum bisa dijalankan penuh karena masih dikerjakan.
 
 ---
 
-## 🌿 3. Cara Kerja Menggunakan Branch (Sangat Direkomendasikan)
+## 🔧 Next Update
 
-Agar kode aman dan tidak bentrok, setiap kolaborator **WAJIB bekerja di
-branch masing-masing.**
-
-### ✔️ Buat branch baru (pertama kali)
-
-```bash
-git checkout -b fitur-transaksi
-```
-
-### ✔️ Pindah ke branch yang sudah ada
-
-```bash
-git checkout fitur-transaksi
-```
-
-### ✔️ Cek branch yang aktif
-
-```bash
-git branch
-```
+* Menyelesaikan fitur input pesanan
+* Menambahkan perhitungan total harga
+* Menyimpan riwayat pesanan
+* Menambahkan struk output
 
 ---
 
-## 🔄 4. WAJIB: git pull Sebelum Mulai Kerja
 
-Selalu lakukan ini supaya branch kalian up-to-date:
-
-```bash
-git pull origin main
-```
-
----
-
-## ✏️ 5. Add → Commit → Push (Langkah Kerja Harian)
-
-### ✔️ Add file yang berubah
-
-```bash
-git add .
-```
-
-### ✔️ Commit perubahan
-
-```bash
-git commit -m "deskripsi perubahan yang jelas"
-```
-
-### ✔️ Push ke branch masing-masing
-
-```bash
-git push origin nama-branch-kamu
-```
-
----
-
-## 🔃 6. Buat Pull Request (PR) untuk Merge ke Main
-
-Setelah push:
-
-1.  Buka repo di GitHub\
-2.  Klik **Compare & Pull Request**\
-3.  Isi deskripsi PR\
-4.  Klik **Create Pull Request**
-
----
-
-## ⚠️ 7. Aturan Penting Kolaborasi
-
-- Jangan coding tanpa git pull dulu\
-- Jangan push langsung ke main\
-- Semua perubahan harus lewat branch → PR\
-- Commit harus jelas & deskriptif\
-- Jangan ubah file orang tanpa izin
-
----
-
-# 🎉 8. Selesai!
-
-Selamat bekerja tim!
