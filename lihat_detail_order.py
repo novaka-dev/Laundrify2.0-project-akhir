@@ -67,7 +67,7 @@ def update_order():
     selected = detail_order()
 
     if not selected:
-        # print("Batal update.")
+        print("Batal update.")
         return
     
     print("\n=== UPDATE ORDER ===")

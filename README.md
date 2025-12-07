@@ -17,6 +17,7 @@ Project ini **belum selesai** dan masih dalam tahap pembuatan fitur inti.
 * Novaka Rizky Heny Saputra
 * Restu Aji Prasetyo
 * Rifky Al Adli
+* Arya Luqmannul Hakim
 
 ---
 

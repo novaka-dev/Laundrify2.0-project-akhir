@@ -3,21 +3,12 @@ import json
 from datetime import *
 from manage_data import *
 
-DATA_DIR = "data_laundry"
-MENU_FILE = os.path.join(DATA_DIR, "satuan.json")
-CUSTOMERS_FILE = os.path.join(DATA_DIR, "customers.json")
-ORDERS_FILE = os.path.join(DATA_DIR, "orders1.json")
-
-# with open(MENU_FILE, "r", encoding="utf-8") as file:
-#     data_satuan = json.load(file)
-
 # ============================================
 #         FUNGSI FORMAT TANGGAL
 # ============================================
 def format_tanggal(dt: str):
     d = datetime.fromisoformat(dt)
     return d.strftime("%d-%m-%Y %H:%M")
-
 
 # ============================================
 #         PILIH LAYANAN SATUAN
@@ -94,7 +85,7 @@ def satuan(customer):
     print(f"Total Harga         : Rp{ringkasan['total_harga']:,}")
 
     # simpan order ke json
-    orders = data_json(ORDERS_FILE)
+    orders = data_json(FILE_ORDER)
     new_order = {
         "id": order_id,
         "tipe": "satuan",
@@ -105,7 +96,7 @@ def satuan(customer):
         "status": stats[0]
     }
     orders.append(new_order)
-    save_data(ORDERS_FILE, orders)
+    save_data(FILE_ORDER, orders)
 
     return new_order
 

@@ -63,7 +63,7 @@
     "kode": "11",
     "nama": "fsdfgd",
     "harga_per_kg": 12000.0,
-    "est_days": "3"
+    "est_days": "4 jam"
   },
   {
     "kode": "12",
@@ -82,5 +82,11 @@
     "nama": "fsdfsdf",
     "harga_per_kg": 5000.0,
     "est_days": "3 jam"
+  },
+  {
+    "kode": "15",
+    "nama": "bakso pentol",
+    "harga_per_kg": 50000.0,
+    "est_days": "40 jam"
   }
 ]

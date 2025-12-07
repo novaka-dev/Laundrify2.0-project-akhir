@@ -5,32 +5,6 @@ import json
 import uuid
 from satuan import *
 
-# def load_json(path):
-#     with open(path, "r") as f:
-#         try:
-#             return json.load(f)
-#         except json.JSONDecodeError:
-#             return []
-# tambahkan pelanggan
-# pilih_customer()
-# def add_customer():
-#     customers = data_json(FILE_CUSTOMER)
-#     name = input("Nama pelanggan: ").strip()
-#     if not name:
-#         print("Nama wajib diisi.")
-#         return
-#     phone = input("No. HP (opsional): ").strip()
-#     address = input("Alamat: ").strip()
-#     existing = next((c for c in customers if c["name"].lower()==name.lower() and c.get("phone","")==phone and c["address"]==address), None)
-#     if existing:
-#         print("Pelanggan sudah terdaftar:", existing["id"])
-#         return
-#     cid = gen_id("CU")
-#     customers.append({"id": cid, "name": name, "phone": phone, "address": address})
-#     save_data(FILE_CUSTOMER, customers)
-#     print(f"Pelanggan berhasil ditambahkan. ID: {cid}")
-#     return cid, name
-
 # list customer
 def list_customers():
     customers = data_json(FILE_CUSTOMER)

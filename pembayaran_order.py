@@ -31,30 +31,6 @@ def pembayaran_order():
             f"{format_tanggal(i['tanggal_diterima'])}"
         )
     print("="*116)
-
-    # ulang = True
-    # while ulang:
-    #     order_id = input("Masukkan ID Order: ").strip()
-
-    #     # Cari order
-    #     order = None
-    #     for o in orders:
-    #         # if o.get("id") == order_id:
-    #         #     order = o
-    #         #     break
-    #         if o["id"] == order_id:
-    #             order = o
-
-    #     if order is None:
-    #         print("Order tidak ditemukan.")
-    #         ulang = False
-
-    #     # if order.get("status") == "P":
-    #     #     print("Order ini sudah lunas.")
-    #     #     return
-    #     if order["status"] == "P":
-    #         print("Order ini sudah lunas.")
-    #         return
     
     while True:
             order_id = input("Masukkan ID Order: ").strip()
@@ -66,7 +42,7 @@ def pembayaran_order():
             # if cocok.get("status") == "Lunas":
                 print("Order ini sudah lunas🤘😎🤘.\n")
                 continue
-            elif cocok["status"] != "Lunas":
+            elif cocok["status"] != "Lunas" and cocok['status'] != "Belum dibayar":
                 print(f"Order ini sudah di {cocok['status']}")
                 continue
             else:
@@ -82,7 +58,7 @@ def pembayaran_order():
     # total  = detail.get("total_harga", 0)
 
    
-    print("\nDetail Order:")
+    print("\nDetail Pemabayaran Order:")
     print(f"ID Order     : {cocok.get('id')}")
     print(f"Customer     : {cstm.get('name')}")
     print(f"Layanan      : {detail.get('layanan', '-')}")
@@ -98,7 +74,7 @@ def pembayaran_order():
         print(f"Jumlah       : {detail.get('jumlah')} item")
         print(f"Harga/item   : Rp{detail.get('harga_satuan', 0):,}")
 
-    print(f"Estimasi     : {detail.get('estimasi', '-')} jam")
+    print(f"Estimasi     : {detail.get('estimasi', '-')}")
     print(f"Total Harga  : Rp{total:,}")
 
     # ============================

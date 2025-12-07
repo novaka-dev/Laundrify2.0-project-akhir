@@ -10,13 +10,10 @@ import random
 import os
 from manage_data import *
 
-DATA_DIR = "data_laundry"
-FILE_CUSTOMER = os.path.join(DATA_DIR, "customers.json")
-
+# memilih customer
 def pilih_customer():
     customers = data_json(FILE_CUSTOMER)
 
-    # print("\n=== DATA CUSTOMER ===")
     if len(customers) == 0:
         
         while True:
@@ -25,7 +22,6 @@ def pilih_customer():
                 print("Nama tidak boleh mengandung angka!")
                 continue
             else:
-                # nama3 = nama2
                 break
 
         while True:
@@ -47,7 +43,7 @@ def pilih_customer():
 
         new_cus2 = {
             "id": cus_id2,
-            "name": nama2,        # PERBAIKAN
+            "name": nama2,       
             "phone": telepon2,
             "address": alamat2
         }
@@ -75,16 +71,12 @@ def pilih_customer():
                     return cocok
                 print("ID tidak ditemukan, coba lagi.")
         elif opsi == "n":
-            # nama = input("Nama customer: ")
-            # telepon = input("No. telepon: ")
-            # alamat = input("Alamat: ")
                 while True:
                     nama = input("Nama customer: ")
                     if not nama.replace(" ", "").isalpha():
                         print("Nama tidak boleh mengandung angka!")
                         continue
                     else:
-                        # nama3 = nama2
                         break
 
                 while True:
@@ -106,7 +98,7 @@ def pilih_customer():
 
                 new_cus = {
                     "id": cus_id,
-                    "name": nama,        # PERBAIKAN
+                    "name": nama,        
                     "phone": telepon,
                     "address": alamat
                 }
@@ -121,7 +113,6 @@ def pilih_customer():
             print("Input tidak valid!")
             continue
 
-# data_pelanggan = []
 keluar = True
 while keluar:
     print("****************************************************")

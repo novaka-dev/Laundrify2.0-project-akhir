@@ -4,5 +4,11 @@
     "nama": "cuci boneka",
     "harga_satuan": 12888.0,
     "est_days": "3 jam"
+  },
+  {
+    "kode": "2",
+    "nama": "Kursi Gaming",
+    "harga_satuan": 70000.0,
+    "est_days": "24 jam"
   }
 ]

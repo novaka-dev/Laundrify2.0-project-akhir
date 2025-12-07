@@ -437,7 +437,7 @@
     },
     "tanggal_diterima": "2025-12-06T13:05:45.526285",
     "tanggal_selesai": "2025-12-09T13:05:45.526348",
-    "status": "Belum dibayar"
+    "status": "Lunas"
   },
   {
     "id": "ORD-SAT-65efa189",
@@ -597,6 +597,46 @@
     },
     "tanggal_diterima": "2025-12-06T23:11:09.300666",
     "tanggal_selesai": "2025-12-07T00:11:09.300709",
-    "status": "Lunas"
+    "status": "Proses"
+  },
+  {
+    "id": "ORD-SAT-abf62574",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "joko",
+      "phone": "0897",
+      "address": "solo"
+    },
+    "detail": {
+      "layanan": "cuci boneka",
+      "harga_satuan": 12888.0,
+      "jumlah": 3,
+      "estimasi": "3 jam",
+      "total_harga": 38664.0
+    },
+    "tanggal_diterima": "2025-12-07T11:25:57.771777",
+    "tanggal_selesai": "2025-12-07T14:25:57.771930",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-2f963f16",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-8ca173e5",
+      "name": "joko",
+      "phone": "0897",
+      "address": "solo"
+    },
+    "detail": {
+      "layanan": "Somay",
+      "harga_per_kg": 9000.0,
+      "berat": 10.0,
+      "estimasi": 3,
+      "total_harga": 90000.0
+    },
+    "tanggal_diterima": "2025-12-07T11:26:38.182426",
+    "tanggal_selesai": "2025-12-07T14:26:38.182426",
+    "status": "Belum dibayar"
   }
 ]
