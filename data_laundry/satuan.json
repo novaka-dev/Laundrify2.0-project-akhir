@@ -7,8 +7,14 @@
   },
   {
     "kode": "2",
-    "nama": "Kursi Gaming",
-    "harga_satuan": 70000.0,
-    "est_days": "24 jam"
+    "nama": "fds",
+    "harga_satuan": 43.0,
+    "est_days": "4 jam"
+  },
+  {
+    "kode": "3",
+    "nama": "jonie",
+    "harga_satuan": 12000.0,
+    "est_days": "2 jam"
   }
 ]

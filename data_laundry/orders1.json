@@ -357,7 +357,7 @@
     },
     "tanggal_diterima": "2025-12-05T01:29:30.701815",
     "tanggal_selesai": "2025-12-06T01:29:30.701815",
-    "status": "Belum dibayar"
+    "status": "Lunas"
   },
   {
     "id": "ORD-KIL-2c81961d",
@@ -417,7 +417,7 @@
     },
     "tanggal_diterima": "2025-12-05T20:49:45.222948",
     "tanggal_selesai": "2025-12-08T20:49:45.222948",
-    "status": "Belum dibayar"
+    "status": "Lunas"
   },
   {
     "id": "ORD-SAT-b3ee7900",
@@ -457,7 +457,7 @@
     },
     "tanggal_diterima": "2025-12-06T13:06:26.003233",
     "tanggal_selesai": "2025-12-06T14:06:26.003257",
-    "status": "Belum dibayar"
+    "status": "Lunas"
   },
   {
     "id": "ORD-SAT-4eb6c0fd",
@@ -537,7 +537,7 @@
     },
     "tanggal_diterima": "2025-12-06T14:40:33.689105",
     "tanggal_selesai": "2025-12-06T20:40:33.689105",
-    "status": "Belum dibayar"
+    "status": "Lunas"
   },
   {
     "id": "ORD-KIL-e92c112b",
@@ -557,7 +557,7 @@
     },
     "tanggal_diterima": "2025-12-06T14:42:25.818041",
     "tanggal_selesai": "2025-12-06T20:42:25.818041",
-    "status": "Belum dibayar"
+    "status": "Lunas"
   },
   {
     "id": "ORD-SAT-f87edf80",
@@ -600,43 +600,23 @@
     "status": "Proses"
   },
   {
-    "id": "ORD-SAT-abf62574",
-    "tipe": "satuan",
-    "customer": {
-      "id": "CUS-8ca173e5",
-      "name": "joko",
-      "phone": "0897",
-      "address": "solo"
-    },
-    "detail": {
-      "layanan": "cuci boneka",
-      "harga_satuan": 12888.0,
-      "jumlah": 3,
-      "estimasi": "3 jam",
-      "total_harga": 38664.0
-    },
-    "tanggal_diterima": "2025-12-07T11:25:57.771777",
-    "tanggal_selesai": "2025-12-07T14:25:57.771930",
-    "status": "Belum dibayar"
-  },
-  {
-    "id": "ORD-KIL-2f963f16",
+    "id": "ORD-KIL-5bf19dcc",
     "tipe": "kiloan",
     "customer": {
-      "id": "CUS-8ca173e5",
-      "name": "joko",
-      "phone": "0897",
-      "address": "solo"
+      "id": "CUS-ffae6a43",
+      "name": "Jonathan Joestar",
+      "phone": 89637756829,
+      "address": "Jl. Jojo Adventure"
     },
     "detail": {
-      "layanan": "Somay",
-      "harga_per_kg": 9000.0,
-      "berat": 10.0,
-      "estimasi": 3,
-      "total_harga": 90000.0
+      "layanan": "rrrrrrrrrrrrrrr",
+      "harga_per_kg": 8000.0,
+      "berat": 4.0,
+      "estimasi": 2,
+      "total_harga": 32000.0
     },
-    "tanggal_diterima": "2025-12-07T11:26:38.182426",
-    "tanggal_selesai": "2025-12-07T14:26:38.182426",
-    "status": "Belum dibayar"
+    "tanggal_diterima": "2025-12-07T16:27:57.421370",
+    "tanggal_selesai": "2025-12-07T18:27:57.421370",
+    "status": "Lunas"
   }
 ]

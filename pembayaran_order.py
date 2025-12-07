@@ -42,8 +42,13 @@ def pembayaran_order():
             # if cocok.get("status") == "Lunas":
                 print("Order ini sudah lunas🤘😎🤘.\n")
                 continue
-            elif cocok["status"] != "Lunas" and cocok['status'] != "Belum dibayar":
-                print(f"Order ini sudah di {cocok['status']}")
+# <<<<<<< Updated upstream
+#             elif cocok["status"] != "Lunas" and cocok['status'] != "Belum dibayar":
+#                 print(f"Order ini sudah di {cocok['status']}")
+# =======
+            elif cocok["status"] != "Lunas" and cocok["status"] != "Belum dibayar":
+                print(f"Order ini sudah memiliki status: {cocok['status']}")
+# >>>>>>> Stashed changes
                 continue
             else:
                 # return cocok
@@ -58,24 +63,38 @@ def pembayaran_order():
     # total  = detail.get("total_harga", 0)
 
    
-    print("\nDetail Pemabayaran Order:")
-    print(f"ID Order     : {cocok.get('id')}")
-    print(f"Customer     : {cstm.get('name')}")
-    print(f"Layanan      : {detail.get('layanan', '-')}")
+# <<<<<<< Updated upstream
+#     print("\nDetail Pemabayaran Order:")
+#     print(f"ID Order     : {cocok.get('id')}")
+#     print(f"Customer     : {cstm.get('name')}")
+#     print(f"Layanan      : {detail.get('layanan', '-')}")
+# =======
+    print("\nDetail Pembayaran Order:")
+    print(f"ID Order       : {cocok.get('id')}")
+    print(f"Customer       : {cstm.get('name')}")
+    print(f"Layanan        : {detail.get('layanan', '-')}")
+# >>>>>>> Stashed changes
 
     # ==============================
     #   AUTO DETECT KILOAN / SATUAN
     # ==============================
     if "berat" in detail:   # ← KILOAN
-        print(f"Berat        : {detail.get('berat')} kg")
-        print(f"Harga/kg     : Rp{detail.get('harga_per_kg', 0):,}")
+        print(f"Berat          : {detail.get('berat')} kg")
+        print(f"Harga/kg       : Rp{detail.get('harga_per_kg', 0):,}")
 
     if "jumlah" in detail:  # ← SATUAN
         print(f"Jumlah       : {detail.get('jumlah')} item")
-        print(f"Harga/item   : Rp{detail.get('harga_satuan', 0):,}")
+        print(f"Harga/item       : Rp{detail.get('harga_satuan', 0):,}")
 
-    print(f"Estimasi     : {detail.get('estimasi', '-')}")
-    print(f"Total Harga  : Rp{total:,}")
+# <<<<<<< Updated upstream
+#     print(f"Estimasi     : {detail.get('estimasi', '-')}")
+#     print(f"Total Harga  : Rp{total:,}")
+# =======
+    print(f"Estimasi       : {detail.get('estimasi', '-')}")
+    print(f"Tanggal Terima : {format_tanggal(cocok.get('tanggal_diterima', '-'))}")
+    print(f"Tanggal Selesai: {format_tanggal(cocok.get('tanggal_selesai', '-'))}")
+    print(f"Total Harga    : Rp{total:,}")
+# >>>>>>> Stashed changes
 
     # ============================
     #        LOOP PEMBAYARAN
@@ -84,11 +103,11 @@ def pembayaran_order():
         try:
             bayar = int(input("\nMasukkan nominal pembayaran: "))
         except ValueError:
-            print("transaksi gagal. Coba lagi🤪🤪.")
-            return
+            print("Input harus berupa angka!")
+            continue
 
         if bayar < total:
-            print(f"transaksi gagal. Uang bayar kurang Rp{total:,}. Coba lagi🤘🤪🤘.")
+            print(f"transaksi gagal. Uang bayar kurang Rp{total - bayar:,}. Coba lagi🤘🤪🤘.")
         else:
             break
 

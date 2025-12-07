@@ -1,13 +1,13 @@
 [
   {
     "id": "CU-1406729b",
-    "name": "Vaya",
+    "name": "Novaka",
     "phone": "0897564383445",
     "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
   },
   {
     "id": "CU-741ddafb",
-    "name": "Restu Aji",
+    "name": "Restu Aji Prasetyo",
     "phone": "089637756829",
     "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
   },
@@ -64,5 +64,23 @@
     "name": "joko",
     "phone": "0897",
     "address": "solo"
+  },
+  {
+    "id": "CUS-ffae6a43",
+    "name": "Jonathan Joline",
+    "phone": 89637756829,
+    "address": "Jl. Jojo Adventure"
+  },
+  {
+    "id": "CUS-c6446bb7",
+    "name": "Jogo Torusa",
+    "phone": "089637756829",
+    "address": "Jalan jalan"
+  },
+  {
+    "id": "CUS-433e0ac8",
+    "name": "Sukuna",
+    "phone": "089637756829",
+    "address": "jalan jalan"
   }
 ]

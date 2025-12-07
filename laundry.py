@@ -26,10 +26,15 @@ def pilih_customer():
 
         while True:
             telepon2 = input("No. telepon: ")
-            try:
-                telepon2 = int(telepon2)
+            # try:
+            #     telepon2 = int(telepon2)
+            #     break
+            # except ValueError:
+            #     print("Anda harus memasukkan angka!")
+            #     continue
+            if telepon.isdigit():  # cek semuanya angka
                 break
-            except ValueError:
+            else:
                 print("Anda harus memasukkan angka!")
                 continue
         while True:
@@ -81,10 +86,9 @@ def pilih_customer():
 
                 while True:
                     telepon = input("No. Telepon: ")
-                    try:
-                        telepon = int(telepon)
+                    if telepon.isdigit():  # cek semuanya angka
                         break
-                    except ValueError:
+                    else:
                         print("Anda harus memasukkan angka!")
                         continue
                 while True:

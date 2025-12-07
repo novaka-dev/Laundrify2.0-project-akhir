@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from manage_data import *
+from satuan import format_tanggal
 
 # ====== LAPORAN HARIAN ======
 def laporan_pendapatan_harian():
@@ -28,8 +29,9 @@ def laporan_pendapatan_harian():
         print("Tidak ada transaksi hari ini.")
         return
 
+    print(f"{'ID Order':20} {'Nama Pelanggan':20} {'Tanggal Order':30} {'Harga':30} ")
     for o in data_filter:
-        print(f"- {o['id']} | {o['customer']['name']} | Rp{int(o['detail']['total_harga']):,}")
+        print(f"{o['id']:<20} {o['customer']['name']:<20} {format_tanggal(o["tanggal_diterima"]):<30} Rp{int(o['detail']['total_harga']):,} ")
 
 
 # ====== LAPORAN MINGGUAN ======
@@ -64,8 +66,9 @@ def laporan_pendapatan_mingguan():
         print("Tidak ada transaksi dalam minggu ini.")
         return
 
+    print(f"{'ID Order':20} {'Nama Pelanggan':20} {'Tanggal Order':30} {'Harga':30} ")
     for o in data_filter:
-        print(f"- {o['id']} | {o['customer']['name']} | Rp{int(o['detail']['total_harga']):,}")
+        print(f"{o['id']:<20} {o['customer']['name']:<20} {format_tanggal(o["tanggal_diterima"]):<30} Rp{int(o['detail']['total_harga']):,} ")
 
 # ====== LAPORAN BULANAN ======
 def laporan_pendapatan_bulanan():
@@ -93,8 +96,11 @@ def laporan_pendapatan_bulanan():
         print("Tidak ada transaksi bulan ini.")
         return
 
+    # for o in data_filter:
+    #     print(f"- {o['id']} | {o['customer']['name']} | Rp{int(o['detail']['total_harga']):,}")
+    print(f"{'ID Order':20} {'Nama Pelanggan':20} {'Tanggal Order':30} {'Harga':30} ")
     for o in data_filter:
-        print(f"- {o['id']} | {o['customer']['name']} | Rp{int(o['detail']['total_harga']):,}")
+        print(f"{o['id']:<20} {o['customer']['name']:<20} {format_tanggal(o["tanggal_diterima"]):<30} Rp{int(o['detail']['total_harga']):,} ")
 
 
 # ========= MENU =========
@@ -105,15 +111,17 @@ def menu_laporan():
         print("2. Pendapatan Mingguan")
         print("3. Pendapatan Bulanan")
         print("0. Kembali")
-        menu = input("Pilih Menu : ")
+        while True:
+            menu = input("\nPilih Menu : ")
 
-        if menu == "1":
-            laporan_pendapatan_harian()
-        elif menu == "2":
-            laporan_pendapatan_mingguan()
-        elif menu == "3":
-            laporan_pendapatan_bulanan()
-        elif menu == "0":
-            break
-        else:
-            print("Menu tidak valid.")
+            if menu == "1":
+                laporan_pendapatan_harian()
+            elif menu == "2":
+                laporan_pendapatan_mingguan()
+            elif menu == "3":
+                laporan_pendapatan_bulanan()
+            elif menu == "0":
+                return
+            else:
+                print("Input anda tidak sesuai dengan kategori laporan yang ada di menu.")
+                continue

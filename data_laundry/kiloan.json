@@ -67,9 +67,9 @@
   },
   {
     "kode": "12",
-    "nama": "bga",
-    "harga_per_kg": 10000.0,
-    "est_days": "fsdf"
+    "nama": "GGGGGGGGGGGGGGG",
+    "harga_per_kg": 12000.0,
+    "est_days": "3 jam"
   },
   {
     "kode": "13",
@@ -85,8 +85,14 @@
   },
   {
     "kode": "15",
-    "nama": "bakso pentol",
-    "harga_per_kg": 50000.0,
-    "est_days": "40 jam"
+    "nama": "fdsf",
+    "harga_per_kg": 4324.0,
+    "est_days": "4 jam"
+  },
+  {
+    "kode": "16",
+    "nama": "zzzzzzz",
+    "harga_per_kg": 30000.0,
+    "est_days": "2 jam"
   }
 ]
