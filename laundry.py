@@ -104,7 +104,7 @@ def pilih_customer():
                 }
 
                 customers.append(new_cus)
-                save_data(CUSTOMERS_FILE, customers)
+                save_data(FILE_CUSTOMER, customers)
                 print("-" * 80)
                 print("Data Customer berhasil disimpan")
                 print("-" * 80)
