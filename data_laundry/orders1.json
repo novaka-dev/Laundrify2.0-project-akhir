@@ -417,7 +417,7 @@
     },
     "tanggal_diterima": "2025-12-05T20:49:45.222948",
     "tanggal_selesai": "2025-12-08T20:49:45.222948",
-    "status": "Lunas"
+    "status": "Proses"
   },
   {
     "id": "ORD-SAT-b3ee7900",
@@ -517,7 +517,7 @@
     },
     "tanggal_diterima": "2025-12-06T14:36:37.389903",
     "tanggal_selesai": "2025-12-06T20:36:37.389903",
-    "status": "Belum dibayar"
+    "status": "Lunas"
   },
   {
     "id": "ORD-KIL-1ba9638a",
@@ -618,5 +618,45 @@
     "tanggal_diterima": "2025-12-07T16:27:57.421370",
     "tanggal_selesai": "2025-12-07T18:27:57.421370",
     "status": "Lunas"
+  },
+  {
+    "id": "ORD-KIL-5e03bd07",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-b39b44f5",
+      "name": "sdsd",
+      "phone": "081818181",
+      "address": "asdsadadadadadadaddada d///'/sd sd:?"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 3.0,
+      "estimasi": 48,
+      "total_harga": 24000.0
+    },
+    "tanggal_diterima": "2025-12-07T20:16:05.658425",
+    "tanggal_selesai": "2025-12-09T20:16:05.658425",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-2e92ac6f",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-b39b44f5",
+      "name": "sdsd",
+      "phone": "081818181",
+      "address": "asdsadadadadadadaddada d///'/sd sd:?"
+    },
+    "detail": {
+      "layanan": "cuci boneka",
+      "harga_satuan": 12888.0,
+      "jumlah": 2,
+      "estimasi": "3 jam",
+      "total_harga": 25776.0
+    },
+    "tanggal_diterima": "2025-12-07T20:17:43.619741",
+    "tanggal_selesai": "2025-12-07T23:17:43.619741",
+    "status": "Belum dibayar"
   }
 ]

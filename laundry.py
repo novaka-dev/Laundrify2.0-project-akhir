@@ -15,7 +15,7 @@ def pilih_customer():
     customers = data_json(FILE_CUSTOMER)
 
     if len(customers) == 0:
-        
+
         while True:
             nama2 = input("Nama customer: ")
             if not nama2.replace(" ", "").isalpha():
@@ -32,7 +32,7 @@ def pilih_customer():
             # except ValueError:
             #     print("Anda harus memasukkan angka!")
             #     continue
-            if telepon.isdigit():  # cek semuanya angka
+            if telepon2.isdigit():  # cek semuanya angka
                 break
             else:
                 print("Anda harus memasukkan angka!")
@@ -48,7 +48,7 @@ def pilih_customer():
 
         new_cus2 = {
             "id": cus_id2,
-            "name": nama2,       
+            "name": nama2,
             "phone": telepon2,
             "address": alamat2
         }
@@ -102,7 +102,7 @@ def pilih_customer():
 
                 new_cus = {
                     "id": cus_id,
-                    "name": nama,        
+                    "name": nama,
                     "phone": telepon,
                     "address": alamat
                 }
@@ -142,7 +142,7 @@ while keluar:
         back = False
         while True:
             kategori = input("Silahkan Memilih Kategori Layanan : ")
-        
+
             if kategori == "1" or kategori == "2":
                 break
             elif kategori == "0":
