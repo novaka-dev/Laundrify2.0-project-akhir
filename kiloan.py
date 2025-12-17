@@ -68,7 +68,7 @@ def kiloan(customer):
         save_data(FILE_KILOAN, data)
 
         print("Menu Layanan Kiloan Berhasil Dibuat🤘😎🤘")
-        
+
     else:
 
         print(f'{"kode":8} {"Nama Layanan":31} {"Harga/kg":13} {"Estimasi":13}')

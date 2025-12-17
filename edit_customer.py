@@ -5,7 +5,7 @@ from manage_data import *
 
 # edit customer
 def edit_customer():
-    customers = data_json(FILE_CUSTOMER)
+    customers = data_json(FILE_ORDER)
 
     print("="*105)
     print("                  DATA CUSTOMER")
@@ -13,17 +13,17 @@ def edit_customer():
     print(f"{"Id Customer":15} {"Nama Customer":30} {"No Telpon":20} {"Alamat"}")
     print("-"*105)
     for data in customers:
-        print(f"{data['id']:<15} {data['name']:<30} {data['phone']:<20} {data['address']}")
+        print(f"{data['customer']['id']:<15} {data['customer']['name']:<30} {data['customer']['phone']:<20} {data['customer']['address']}")
     print("-"*105)
 
     while True:
         id_customer = input("Masukkan Id Customer🤔🤔: ")
-        data_pelanggan = next((x for x in customers if x['id'] == id_customer), None)
+        data_pelanggan = next((x for x in customers if x['customer']['id'] == id_customer), None)
 
         if not data_pelanggan:
             print("Id Customer tidak ditemukan!😡😡")
             continue
-        
+
         print("\n         EDIT DATA CUSTOMER")
         # nama_cus = input("Input Nama Customer Baru (ENTER jika tidak ingin diubah):").strip()
         # phone_cus = input("Input No Telp Customer Baru  (ENTER jika tidak ingin diubah):").strip()
@@ -47,19 +47,19 @@ def edit_customer():
                 print("Anda harus memasukkan angka!")
                 continue
         address_cus = input("Input Alamat Customer Baru (ENTER jika tidak ingin diubah):").strip()
-        
+
 
         if not nama_cus and not phone_cus and not address_cus:
             print("Tidak ada data yang diubah!👍")
             return
 
         if nama_cus:
-            data_pelanggan['name'] = nama_cus
+            data_pelanggan['customer']['name'] = nama_cus
         if phone_cus:
-            data_pelanggan['phone'] = phone_cus
+            data_pelanggan['customer']['phone'] = phone_cus
         if address_cus:
-            data_pelanggan['address'] = address_cus
+            data_pelanggan['customer']['address'] = address_cus
 
-        save_data(FILE_CUSTOMER, customers)
+        save_data(FILE_ORDER, customers)
         print("Data Customer Berhasil Diubah🤘😎🤘")
         break

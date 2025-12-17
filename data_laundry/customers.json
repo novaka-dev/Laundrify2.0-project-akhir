@@ -1,7 +1,7 @@
 [
   {
     "id": "CU-1406729b",
-    "name": "Novaka",
+    "name": "Aku Novaka",
     "phone": "0897564383445",
     "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
   },
@@ -22,5 +22,17 @@
     "name": "Maki",
     "phone": "089637756829",
     "address": "Jl. Alinda, RT 06, RW 034, Kel. Kaliabang"
+  },
+  {
+    "id": "CUS-5617da61",
+    "name": "Fushiguro",
+    "phone": "089637756829",
+    "address": "Jalan Jujutsu Kaisen"
+  },
+  {
+    "id": "CUS-ad431df9",
+    "name": "Witwicky",
+    "phone": "089637756829",
+    "address": "Jalan jalan"
   }
 ]

@@ -13,7 +13,7 @@ from manage_data import *
 # memilih customer
 def pilih_customer():
     customers = data_json(FILE_CUSTOMER)
-
+    customers2 = data_json(FILE_ORDER)
     if len(customers) == 0:
 
         while True:
@@ -56,14 +56,12 @@ def pilih_customer():
         customers.append(new_cus2)
         save_data(FILE_CUSTOMER, customers)
         print("-" * 80)
-        print("Data Customer berhasil disimpan")
-        print("-" * 80)
     print("\n=== DATA CUSTOMER ===")
     print(f'{"ID Customer":20} {"Nama":30} {"No. Telp":20} {"Alamat":10}')
     print("-" * 130)
 
-    for c in customers:
-        print(f'{c["id"]:<20} {c["name"]:<30} {c["phone"]:<20} {c["address"]:<10}')
+    for c in customers2:
+        print(f'{c['customer']["id"]:<20} {c['customer']["name"]:<30} {c['customer']["phone"]:<20} {c['customer']["address"]:<10}')
 
     while True:
         opsi = input("\nPilih customer yang sudah ada? (y/n): ").lower()
@@ -71,7 +69,7 @@ def pilih_customer():
         if opsi == "y":
             while True:
                 cid = input("Masukkan ID customer: ")
-                cocok = next((c for c in customers if c["id"] == cid), None)
+                cocok = next((c for c in customers2 if c['customer']["id"] == cid), None)
                 if cocok:
                     return cocok
                 print("ID tidak ditemukan, coba lagi.")
@@ -107,8 +105,8 @@ def pilih_customer():
                     "address": alamat
                 }
 
-                customers.append(new_cus)
-                save_data(FILE_CUSTOMER, customers)
+                # customers.append(new_cus)
+                # save_data(FILE_CUSTOMER, customers)
                 print("-" * 80)
                 print("Data Customer berhasil disimpan")
                 print("-" * 80)

@@ -24,7 +24,7 @@
     "tipe": "kiloan",
     "customer": {
       "id": "CU-741ddafb",
-      "name": "Restu Aji",
+      "name": "Restuuuuuuuuuuu",
       "phone": "089637756829",
       "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
     },
@@ -37,6 +37,66 @@
     },
     "tanggal_diterima": "2025-12-03T21:37:25.809416",
     "tanggal_selesai": "2025-12-04T01:37:25.809416",
-    "status": "Selesai"
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-9086ef63",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-5617da61",
+      "name": "Toji Fushiguro",
+      "phone": "089637756829",
+      "address": "Jalan Jujutsu Kaisen"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 2.0,
+      "estimasi": 48,
+      "total_harga": 16000.0
+    },
+    "tanggal_diterima": "2025-12-12T22:07:48.180203",
+    "tanggal_selesai": "2025-12-14T22:07:48.180203",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-4c878b9e",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-ad431df9",
+      "name": "Witwicky",
+      "phone": "089637756829",
+      "address": "Jalan jalan"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 2.0,
+      "estimasi": 48,
+      "total_harga": 16000.0
+    },
+    "tanggal_diterima": "2025-12-17T21:38:34.823226",
+    "tanggal_selesai": "2025-12-19T21:38:34.823226",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-2b66515c",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-962ad349",
+      "name": "Asek",
+      "phone": "089637756829",
+      "address": "Mangseng"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 3.0,
+      "estimasi": 48,
+      "total_harga": 24000.0
+    },
+    "tanggal_diterima": "2025-12-17T22:48:24.126816",
+    "tanggal_selesai": "2025-12-19T22:48:24.126816",
+    "status": "Belum dibayar"
   }
 ]
