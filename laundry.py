@@ -124,8 +124,6 @@ def pilih_customer():
                 # customers.append(new_cus)
                 # save_data(FILE_CUSTOMER, customers)
                 print("-" * 80)
-                print("Data Customer berhasil disimpan")
-                print("-" * 80)
                 return new_cus
         else:
             print("Input tidak valid!")

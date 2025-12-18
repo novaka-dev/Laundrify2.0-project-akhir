@@ -78,5 +78,105 @@
     "tanggal_diterima": "2025-12-18T10:05:49.434287",
     "tanggal_selesai": "2025-12-21T10:05:49.434287",
     "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-1b25a6a5",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-22d9254d",
+      "name": "Apipp",
+      "phone": "08776677889",
+      "address": "\"Jl. Kenanga II No. 21, RT 06/RW 09, Kel. Margahayu, Kec. Bekasi Selatan\""
+    },
+    "detail": {
+      "layanan": "cuci boneka",
+      "harga_satuan": 12888.0,
+      "jumlah": 2,
+      "estimasi": "3 jam",
+      "total_harga": 25776.0
+    },
+    "tanggal_diterima": "2025-12-18T10:36:33.949387",
+    "tanggal_selesai": "2025-12-18T13:36:33.949413",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-c6ab2d8d",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-22d9254d",
+      "name": "Apipp",
+      "phone": "08776677889",
+      "address": "\"Jl. Kenanga II No. 21, RT 06/RW 09, Kel. Margahayu, Kec. Bekasi Selatan\""
+    },
+    "detail": {
+      "layanan": "cuci boneka",
+      "harga_satuan": 12888.0,
+      "jumlah": 3,
+      "estimasi": "3 jam",
+      "total_harga": 38664.0
+    },
+    "tanggal_diterima": "2025-12-18T10:37:38.909874",
+    "tanggal_selesai": "2025-12-18T13:37:38.909895",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-6c4736c5",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-afd9c421",
+      "name": "Jokowi",
+      "phone": "089637756829",
+      "address": "jalan jalan"
+    },
+    "detail": {
+      "layanan": "Cuci Kering",
+      "harga_per_kg": 8000.0,
+      "berat": 2.0,
+      "estimasi": 48,
+      "total_harga": 16000.0
+    },
+    "tanggal_diterima": "2025-12-18T10:43:24.626289",
+    "tanggal_selesai": "2025-12-20T10:43:24.626289",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-095c19e4",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-0a87e0a2",
+      "name": "Mitra",
+      "phone": "08445566554",
+      "address": "Jl. Flamboyan No. 8, RT 01/RW 05, Kel. Jatimakmur, Kec. Pondok Gede"
+    },
+    "detail": {
+      "layanan": "Kasurrr",
+      "harga_satuan": 50000.0,
+      "jumlah": 3,
+      "estimasi": "5 jam",
+      "total_harga": 150000.0
+    },
+    "tanggal_diterima": "2025-12-18T10:43:52.606830",
+    "tanggal_selesai": "2025-12-18T15:43:52.606854",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-10206ad2",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-0a87e0a2",
+      "name": "Mitra",
+      "phone": "08445566554",
+      "address": "Jl. Flamboyan No. 8, RT 01/RW 05, Kel. Jatimakmur, Kec. Pondok Gede"
+    },
+    "detail": {
+      "layanan": "Kasur",
+      "harga_satuan": 100000.0,
+      "jumlah": 3,
+      "estimasi": "3 jam",
+      "total_harga": 300000.0
+    },
+    "tanggal_diterima": "2025-12-18T11:05:14.222841",
+    "tanggal_selesai": "2025-12-18T14:05:14.222868",
+    "status": "Belum dibayar"
   }
 ]

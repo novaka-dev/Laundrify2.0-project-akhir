@@ -20,17 +20,22 @@ def edit_customer():
             print(f"{c['id']:<15} {c['name']:<30} {c['phone']:<20} {c['address']}")
 
     print("-"*105)
+    while True:
+        id_customer = input("Masukkan Id Customer🤔🤔: ").strip()
 
-    id_customer = input("Masukkan Id Customer🤔🤔: ").strip()
+    # ditemukan = False
+    # for order in orders:
+    #     if order['customer']['id'] == id_customer:
+    #         ditemukan = True
 
-    ditemukan = False
-    for order in orders:
-        if order['customer']['id'] == id_customer:
-            ditemukan = True
-
-    if not ditemukan:
-        print("Id Customer tidak ditemukan!😡😡")
-        return
+        data_pelanggan = next((x for x in customers if x['customer']['id'] == id_customer), None)
+        if not data_pelanggan:
+            print("Id Customer tidak ditemukan!😡😡")
+            continue
+    # if not ditemukan:
+    #     while True:
+    #         print("Id Customer tidak ditemukan!😡😡")
+    #         continue
 
     print("\n         EDIT DATA CUSTOMER")
 

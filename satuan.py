@@ -15,7 +15,8 @@ def format_tanggal(dt: str):
 # ============================================
 def satuan(customer):
     data_satuan = data_json(FILE_SATUAN)
-    print("\n=== LAYANAN LAUNDRY SATUAN ===")
+    print("\n")
+    print("LAYANAN LAUNDRY SATUAN".center(80))
 
     # Tampilkan menu layanan
     print(f'{"kode":8} {"Nama Layanan":25} {"Harga":13} {"Estimasi":10}')

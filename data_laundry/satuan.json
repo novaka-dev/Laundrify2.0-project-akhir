@@ -1,26 +1,26 @@
 [
   {
     "kode": "1",
-    "nama": "cuci boneka",
+    "nama": "Boneka",
     "harga_satuan": 12888.0,
     "est_days": "3 jam"
   },
   {
     "kode": "2",
-    "nama": "Kasurrr",
+    "nama": "Karpet",
     "harga_satuan": 50000.0,
     "est_days": "5 jam"
   },
   {
     "kode": "3",
-    "nama": "Jasssssssss",
+    "nama": "Kasur",
     "harga_satuan": 100000.0,
     "est_days": "3 jam"
   },
   {
     "kode": "4",
-    "nama": "Jelanaaa jeansss",
+    "nama": "Jas",
     "harga_satuan": 11000.0,
-    "est_days": "1 jam"
+    "est_days": "5 jam"
   }
 ]
