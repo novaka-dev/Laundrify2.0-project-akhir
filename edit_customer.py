@@ -62,5 +62,5 @@ def edit_customer():
                     order['customer']['address'] = address_cus
 
         save_data(FILE_ORDER, orders)
-        print("Data Customer Berhasil Diubah 🤘😎🤘")
+        print("Data Customer Berhasil Diubah!🤘😎🤘")
         return
