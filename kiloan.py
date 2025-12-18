@@ -71,10 +71,10 @@ def kiloan(customer):
 
     else:
 
-        print(f'{"kode":8} {"Nama Layanan":31} {"Harga/kg":13} {"Estimasi":13}')
+        print(f'{"kode":8} {"Nama Layanan":41} {"Harga/kg":13} {"Estimasi":13}')
         print("-"* 58)
         for item in data:
-            print(f'{item["kode"]:8} {item["nama"]:<31} Rp{item["harga_per_kg"]:<10,.0f}  {item["est_days"]}')
+            print(f'{item["kode"]:8} {item["nama"]:<41} Rp{item["harga_per_kg"]:<10,.0f}  {item["est_days"]}')
         print(f"0.       Keluar")
         print("-"* 58)
 

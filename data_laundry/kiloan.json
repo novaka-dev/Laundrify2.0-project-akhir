@@ -7,19 +7,19 @@
   },
   {
     "kode": "2",
-    "nama": "Cuci + Gosok (Reguler)",
+    "nama": "Cuci Kering + Setrika",
     "harga_per_kg": 10000.0,
     "est_days": "72 jam"
   },
   {
     "kode": "3",
-    "nama": "Cuci + Gosok (Express)",
+    "nama": "Cuci Kering + Setrika (Express)",
     "harga_per_kg": 15000.0,
     "est_days": "24 jam"
   },
   {
     "kode": "4",
-    "nama": "Cuci + Gosok (Super Express)",
+    "nama": "Cuci Kering + Setrika (Super Express)",
     "harga_per_kg": 20000.0,
     "est_days": "6 jam"
   }

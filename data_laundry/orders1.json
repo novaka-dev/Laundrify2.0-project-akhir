@@ -4,7 +4,7 @@
     "tipe": "kiloan",
     "customer": {
       "id": "CU-1406729b",
-      "name": "Vaya",
+      "name": "Novaka",
       "phone": "0897564383445",
       "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
     },
@@ -24,7 +24,7 @@
     "tipe": "kiloan",
     "customer": {
       "id": "CU-741ddafb",
-      "name": "Restuuuuuuuuuuu",
+      "name": "Restu",
       "phone": "089637756829",
       "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
     },
@@ -44,9 +44,9 @@
     "tipe": "kiloan",
     "customer": {
       "id": "CUS-5617da61",
-      "name": "Toji Fushiguro",
+      "name": "Adli",
       "phone": "089637756829",
-      "address": "Jalan Jujutsu Kaisen"
+      "address": "Jl. Permata Hijau, Kel. Permata, Kec. Bekasi Utara"
     },
     "detail": {
       "layanan": "Cuci Kering",
@@ -64,9 +64,9 @@
     "tipe": "kiloan",
     "customer": {
       "id": "CUS-ad431df9",
-      "name": "Witwicky",
+      "name": "Arya",
       "phone": "089637756829",
-      "address": "Jalan jalan"
+      "address": "Jl. Perwira, RT 06, RW 21, Kel. Perwira, Kec. Bekasi Utara"
     },
     "detail": {
       "layanan": "Cuci Kering",
@@ -84,9 +84,9 @@
     "tipe": "kiloan",
     "customer": {
       "id": "CUS-962ad349",
-      "name": "Asek",
+      "name": "Jokowi",
       "phone": "089637756829",
-      "address": "Mangseng"
+      "address": "Jl. Mangseng, RT 03, RW 05, Kel. Alinda, Kec. Bekasi Utara"
     },
     "detail": {
       "layanan": "Cuci Kering",
@@ -97,6 +97,26 @@
     },
     "tanggal_diterima": "2025-12-17T22:48:24.126816",
     "tanggal_selesai": "2025-12-19T22:48:24.126816",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-aacf7e8a",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-b536ab13",
+      "name": "Muhib",
+      "phone": "089765788555",
+      "address": "Jl. Pondok Ungu, RT 05, RW 12, Kel. Nangka, Kec. Bekasi Timur"
+    },
+    "detail": {
+      "layanan": "cuci boneka",
+      "harga_satuan": 12888.0,
+      "jumlah": 2,
+      "estimasi": "3 jam",
+      "total_harga": 25776.0
+    },
+    "tanggal_diterima": "2025-12-18T08:10:48.422902",
+    "tanggal_selesai": "2025-12-18T11:10:48.422937",
     "status": "Belum dibayar"
   }
 ]
