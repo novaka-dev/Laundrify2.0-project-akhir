@@ -8,9 +8,9 @@ def tambah_layanan():
         satuan = data_json(FILE_SATUAN)
 
         print("=== Pilih Jenis Layanan ===")
-        print("👍1. Kiloan")
-        print("✌️2. Satuan")
-        print("👌0. Kembali")
+        print("1. Kiloan")
+        print("2. Satuan")
+        print("0. Kembali")
         while True:
             jenis = input("Masukan jenis layanan (1/2)🤔🤔: ")
 
@@ -117,7 +117,7 @@ def tambah_layanan():
                 break
             # menu keluar
             elif jenis == "0":
-                return  
+                return
 
             else:
                 print("Jenis Layanan Tidak Ada!!😡😡")

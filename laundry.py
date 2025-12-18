@@ -12,9 +12,8 @@ from manage_data import *
 
 # memilih customer
 def pilih_customer():
-    customers = data_json(FILE_CUSTOMER)
     customers2 = data_json(FILE_ORDER)
-    if len(customers) == 0:
+    if len(customers2) == 0:
 
         while True:
             nama2 = input("Nama customer: ")
@@ -53,15 +52,31 @@ def pilih_customer():
             "address": alamat2
         }
 
-        customers.append(new_cus2)
-        save_data(FILE_CUSTOMER, customers)
+        return new_cus2
         print("-" * 80)
     print("\n=== DATA CUSTOMER ===")
     print(f'{"ID Customer":20} {"Nama":30} {"No. Telp":20} {"Alamat":10}')
     print("-" * 130)
 
-    for c in customers2:
-        print(f'{c['customer']["id"]:<20} {c['customer']["name"]:<30} {c['customer']["phone"]:<20} {c['customer']["address"]:<10}')
+    # for c in customers2:
+    #     print(f'{c['customer']["id"]:<20} {c['customer']["name"]:<30} {c['customer']["phone"]:<20} {c['customer']["address"]:<10}')
+
+    sudah_tampil = set()
+    for order in customers2:
+        cust = order["customer"]
+        cid = cust["id"]
+
+        if cid in sudah_tampil:
+            continue
+
+        sudah_tampil.add(cid)
+
+        print(
+            f"{cust['id']:<20} "
+            f"{cust['name']:<30} "
+            f"{cust['phone']:<20} "
+            f"{cust['address']:<10}"
+        )
 
     while True:
         opsi = input("\nPilih customer yang sudah ada? (y/n): ").lower()
@@ -71,7 +86,8 @@ def pilih_customer():
                 cid = input("Masukkan ID customer: ")
                 cocok = next((c for c in customers2 if c['customer']["id"] == cid), None)
                 if cocok:
-                    return cocok
+                    return cocok["customer"]
+
                 print("ID tidak ditemukan, coba lagi.")
         elif opsi == "n":
                 while True:

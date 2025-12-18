@@ -7,14 +7,20 @@
   },
   {
     "kode": "2",
-    "nama": "fds",
-    "harga_satuan": 43.0,
-    "est_days": "4 jam"
+    "nama": "Kasurrr",
+    "harga_satuan": 50000.0,
+    "est_days": "5 jam"
   },
   {
     "kode": "3",
-    "nama": "jonie",
-    "harga_satuan": 12000.0,
-    "est_days": "2 jam"
+    "nama": "Jasssssssss",
+    "harga_satuan": 100000.0,
+    "est_days": "3 jam"
+  },
+  {
+    "kode": "4",
+    "nama": "Jelanaaa jeansss",
+    "harga_satuan": 11000.0,
+    "est_days": "1 jam"
   }
 ]

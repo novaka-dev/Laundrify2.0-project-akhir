@@ -22,6 +22,10 @@ def list_customers():
 # kiloan
 def kiloan(customer):
     data = data_json(FILE_KILOAN)
+    print("\n")
+    print("LAYANAN LAUNDRY KILOAN".center(80))
+
+
     if len(data) == 0:
         print("Layanan belum ada, silahkan tambahkan layanan terlebih dahulu!\n")
         while True:
@@ -71,12 +75,13 @@ def kiloan(customer):
 
     else:
 
+        print("-"* 80)
         print(f'{"kode":8} {"Nama Layanan":41} {"Harga/kg":13} {"Estimasi":13}')
-        print("-"* 58)
+        print("-"* 80)
         for item in data:
             print(f'{item["kode"]:8} {item["nama"]:<41} Rp{item["harga_per_kg"]:<10,.0f}  {item["est_days"]}')
+        print("-"* 80)
         print(f"0.       Keluar")
-        print("-"* 58)
 
         while True:
                 pilihan = input("Pilih layanan : ")

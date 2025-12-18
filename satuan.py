@@ -19,11 +19,11 @@ def satuan(customer):
 
     # Tampilkan menu layanan
     print(f'{"kode":8} {"Nama Layanan":25} {"Harga":13} {"Estimasi":10}')
-    print("-" * 60)
+    print("-"* 80)
 
     for item in data_satuan:
         print(f'{item["kode"]:<8} {item["nama"]:<25} Rp{item["harga_satuan"]:<10,.0f} {item["est_days"]:<10}')
-    print("="*100)
+    print("-"* 80)
     print("0.       Keluar")
 
     # Pilih layanan

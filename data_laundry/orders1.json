@@ -1,122 +1,82 @@
 [
   {
-    "id": "ORD-KIL-0899e034",
+    "id": "ORD-KIL-917838ed",
     "tipe": "kiloan",
     "customer": {
-      "id": "CU-1406729b",
-      "name": "Novaka",
-      "phone": "0897564383445",
-      "address": "Jl. Nangka, RT 06, RW 024, No. 9, Kel. Kaliabang"
+      "id": "CUS-b4337287",
+      "name": "Dafa",
+      "phone": "087866754352",
+      "address": "Jl. Melati Raya No. 12, RT 04/RW 07, Kel. Sukamaju, Kec. Bekasi Utara"
     },
     "detail": {
       "layanan": "Cuci Kering",
       "harga_per_kg": 8000.0,
-      "berat": 2.0,
-      "estimasi": 4,
-      "total_harga": 16000.0
-    },
-    "tanggal_diterima": "2025-12-03T21:32:23.405958",
-    "tanggal_selesai": "2025-12-04T01:32:23.405958",
-    "status": "diterima"
-  },
-  {
-    "id": "ORD-KIL-9d0ae638",
-    "tipe": "kiloan",
-    "customer": {
-      "id": "CU-741ddafb",
-      "name": "Restu",
-      "phone": "089637756829",
-      "address": "Jl. Jokowi, RT 06, RW 024, Kel. Kaliabang, No. 10"
-    },
-    "detail": {
-      "layanan": "Cuci Kering",
-      "harga_per_kg": 8000.0,
-      "berat": 1.0,
-      "estimasi": 4,
-      "total_harga": 8000.0
-    },
-    "tanggal_diterima": "2025-12-03T21:37:25.809416",
-    "tanggal_selesai": "2025-12-04T01:37:25.809416",
-    "status": "Belum dibayar"
-  },
-  {
-    "id": "ORD-KIL-9086ef63",
-    "tipe": "kiloan",
-    "customer": {
-      "id": "CUS-5617da61",
-      "name": "Adli",
-      "phone": "089637756829",
-      "address": "Jl. Permata Hijau, Kel. Permata, Kec. Bekasi Utara"
-    },
-    "detail": {
-      "layanan": "Cuci Kering",
-      "harga_per_kg": 8000.0,
-      "berat": 2.0,
+      "berat": 4.0,
       "estimasi": 48,
-      "total_harga": 16000.0
+      "total_harga": 32000.0
     },
-    "tanggal_diterima": "2025-12-12T22:07:48.180203",
-    "tanggal_selesai": "2025-12-14T22:07:48.180203",
+    "tanggal_diterima": "2025-12-18T10:01:41.624852",
+    "tanggal_selesai": "2025-12-20T10:01:41.624852",
     "status": "Belum dibayar"
   },
   {
-    "id": "ORD-KIL-4c878b9e",
-    "tipe": "kiloan",
-    "customer": {
-      "id": "CUS-ad431df9",
-      "name": "Arya",
-      "phone": "089637756829",
-      "address": "Jl. Perwira, RT 06, RW 21, Kel. Perwira, Kec. Bekasi Utara"
-    },
-    "detail": {
-      "layanan": "Cuci Kering",
-      "harga_per_kg": 8000.0,
-      "berat": 2.0,
-      "estimasi": 48,
-      "total_harga": 16000.0
-    },
-    "tanggal_diterima": "2025-12-17T21:38:34.823226",
-    "tanggal_selesai": "2025-12-19T21:38:34.823226",
-    "status": "Belum dibayar"
-  },
-  {
-    "id": "ORD-KIL-2b66515c",
-    "tipe": "kiloan",
-    "customer": {
-      "id": "CUS-962ad349",
-      "name": "Jokowi",
-      "phone": "089637756829",
-      "address": "Jl. Mangseng, RT 03, RW 05, Kel. Alinda, Kec. Bekasi Utara"
-    },
-    "detail": {
-      "layanan": "Cuci Kering",
-      "harga_per_kg": 8000.0,
-      "berat": 3.0,
-      "estimasi": 48,
-      "total_harga": 24000.0
-    },
-    "tanggal_diterima": "2025-12-17T22:48:24.126816",
-    "tanggal_selesai": "2025-12-19T22:48:24.126816",
-    "status": "Belum dibayar"
-  },
-  {
-    "id": "ORD-SAT-aacf7e8a",
+    "id": "ORD-SAT-7d0f122a",
     "tipe": "satuan",
     "customer": {
-      "id": "CUS-b536ab13",
-      "name": "Muhib",
-      "phone": "089765788555",
-      "address": "Jl. Pondok Ungu, RT 05, RW 12, Kel. Nangka, Kec. Bekasi Timur"
+      "id": "CUS-f90af9ec",
+      "name": "Muhibb",
+      "phone": "087789875453",
+      "address": "Jl. Anggrek Indah No. 5, RT 02/RW 03, Kel. Harapan Jaya, Kec. Bekasi Timur"
     },
     "detail": {
       "layanan": "cuci boneka",
       "harga_satuan": 12888.0,
-      "jumlah": 2,
+      "jumlah": 4,
       "estimasi": "3 jam",
-      "total_harga": 25776.0
+      "total_harga": 51552.0
     },
-    "tanggal_diterima": "2025-12-18T08:10:48.422902",
-    "tanggal_selesai": "2025-12-18T11:10:48.422937",
+    "tanggal_diterima": "2025-12-18T10:02:29.516655",
+    "tanggal_selesai": "2025-12-18T13:02:29.516655",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-SAT-41f0f7dd",
+    "tipe": "satuan",
+    "customer": {
+      "id": "CUS-22d9254d",
+      "name": "Apipp",
+      "phone": "08776677889",
+      "address": "\"Jl. Kenanga II No. 21, RT 06/RW 09, Kel. Margahayu, Kec. Bekasi Selatan\""
+    },
+    "detail": {
+      "layanan": "Kasurrr",
+      "harga_satuan": 50000.0,
+      "jumlah": 4,
+      "estimasi": "5 jam",
+      "total_harga": 200000.0
+    },
+    "tanggal_diterima": "2025-12-18T10:04:31.728026",
+    "tanggal_selesai": "2025-12-18T15:04:31.728026",
+    "status": "Belum dibayar"
+  },
+  {
+    "id": "ORD-KIL-be0eb982",
+    "tipe": "kiloan",
+    "customer": {
+      "id": "CUS-0a87e0a2",
+      "name": "Mitra",
+      "phone": "08445566554",
+      "address": "Jl. Flamboyan No. 8, RT 01/RW 05, Kel. Jatimakmur, Kec. Pondok Gede"
+    },
+    "detail": {
+      "layanan": "Cuci Kering + Setrika",
+      "harga_per_kg": 10000.0,
+      "berat": 4.0,
+      "estimasi": 72,
+      "total_harga": 40000.0
+    },
+    "tanggal_diterima": "2025-12-18T10:05:49.434287",
+    "tanggal_selesai": "2025-12-21T10:05:49.434287",
     "status": "Belum dibayar"
   }
 ]
