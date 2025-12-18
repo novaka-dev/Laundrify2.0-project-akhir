@@ -22,54 +22,45 @@ def edit_customer():
     print("-"*105)
     while True:
         id_customer = input("Masukkan Id Customer🤔🤔: ").strip()
+        data_pelanggan = next((x for x in orders if x['customer']['id'] == id_customer), None)
 
-    # ditemukan = False
-    # for order in orders:
-    #     if order['customer']['id'] == id_customer:
-    #         ditemukan = True
-
-        data_pelanggan = next((x for x in customers if x['customer']['id'] == id_customer), None)
         if not data_pelanggan:
             print("Id Customer tidak ditemukan!😡😡")
             continue
-    # if not ditemukan:
-    #     while True:
-    #         print("Id Customer tidak ditemukan!😡😡")
-    #         continue
 
-    print("\n         EDIT DATA CUSTOMER")
+        print("\n         EDIT DATA CUSTOMER")
+        while True:
+            nama_cus = input("Input Nama Customer Baru (ENTER jika tidak ingin diubah): ").strip()
+            if nama_cus == "":
+                break
+            elif not nama_cus.replace(" ", "").isalpha():
+                print("Nama tidak boleh mengandung angka!")
+            else:
+                break
 
-    while True:
-        nama_cus = input("Input Nama Customer Baru (ENTER jika tidak ingin diubah): ").strip()
-        if nama_cus == "":
-            break
-        elif not nama_cus.replace(" ", "").isalpha():
-            print("Nama tidak boleh mengandung angka!")
-        else:
-            break
+        while True:
+            phone_cus = input("Input No Telp Customer Baru (ENTER jika tidak ingin diubah): ").strip()
+            if phone_cus == "" or phone_cus.isdigit():
+                break
+            else:
+                print("Anda harus memasukkan angka!")
 
-    while True:
-        phone_cus = input("Input No Telp Customer Baru (ENTER jika tidak ingin diubah): ").strip()
-        if phone_cus == "" or phone_cus.isdigit():
-            break
-        else:
-            print("Anda harus memasukkan angka!")
+        address_cus = input("Input Alamat Customer Baru (ENTER jika tidak ingin diubah): ").strip()
 
-    address_cus = input("Input Alamat Customer Baru (ENTER jika tidak ingin diubah): ").strip()
+        if not nama_cus and not phone_cus and not address_cus:
+            print("Tidak ada data yang diubah!👍")
+            return
 
-    if not nama_cus and not phone_cus and not address_cus:
-        print("Tidak ada data yang diubah!👍")
+        # 🔥 UPDATE SEMUA ORDER
+        for order in orders:
+            if order['customer']['id'] == id_customer:
+                if nama_cus:
+                    order['customer']['name'] = nama_cus
+                if phone_cus:
+                    order['customer']['phone'] = phone_cus
+                if address_cus:
+                    order['customer']['address'] = address_cus
+
+        save_data(FILE_ORDER, orders)
+        print("Data Customer Berhasil Diubah 🤘😎🤘")
         return
-
-    # 🔥 UPDATE SEMUA ORDER
-    for order in orders:
-        if order['customer']['id'] == id_customer:
-            if nama_cus:
-                order['customer']['name'] = nama_cus
-            if phone_cus:
-                order['customer']['phone'] = phone_cus
-            if address_cus:
-                order['customer']['address'] = address_cus
-
-    save_data(FILE_ORDER, orders)
-    print("Data Customer Berhasil Diubah di SEMUA ORDER 🤘😎🤘")
